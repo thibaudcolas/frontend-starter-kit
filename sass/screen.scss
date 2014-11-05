@@ -64,7 +64,7 @@ p {
  * ----------------------------------------------------------------------------
  */
 
-
+// @import "components/buttons";
 
 
 
@@ -267,4 +267,11 @@ p {
 
 .theme-default {
     background: lightpink;
+}
+
+
+
+.some-tests-here {
+    opacity: .6;
+    font-size: 3rem;
 }

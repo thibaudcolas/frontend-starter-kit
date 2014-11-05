@@ -1,0 +1,9 @@
+{
+    "name": "css-components",
+    "version": "0.0.1",
+    "devDependencies": {
+        "gulp": "^3.8.7",
+        "gulp-sass": "^1.2.2",
+        "gulp-pleeease": "^1.0.4"
+    }
+}
