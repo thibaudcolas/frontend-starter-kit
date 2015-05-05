@@ -1,4 +1,4 @@
-Front-end reference project
-===========================
+Front-end starter kit
+=====================
 
-The place to look for our latest code standards and examples of gulp tasks, CSS components, etc.
+A reference  for our latest code standards and examples of gulp tasks, CSS components, etc.
