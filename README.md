@@ -1,4 +1,4 @@
-css-components
-==============
+Front-end reference project
+===========================
 
-CSS component framework, take two.
+The place to look for our latest code standards and examples of gulp tasks, CSS components, etc.
