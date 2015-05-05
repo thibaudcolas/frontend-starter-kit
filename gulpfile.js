@@ -1,22 +1,52 @@
+/**
+ * ----------------------------------------------------------------------------
+ * Deps
+ * ----------------------------------------------------------------------------
+ */
+
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var pleeease = require('gulp-pleeease');
+var fs = require('fs');
+var del = require('del');
+var path = require("path");
+var uglify = require('gulp-uglify');
+var glob = require('glob');
+var grunt = require('gulp-grunt')(gulp);
+var concat = require('gulp-concat');
+var _ = require("underscore");
+var gutil = require("gulp-util");
+var rename = require("gulp-rename");
+var source = require('vinyl-source-stream');
+var browserify = require('browserify');
+var transform = require('vinyl-transform');
 
-// set minifier to false to keep Sass sourcemaps support
-var PleeeaseOptions = {
-    minifier: false,
-    mqpacker: true,
-    sourcemaps: false,
-    autoprefixer: true,
-    filters: true,
-    rem: true,
-    pseudoElements: true,
-    opacity: true
-};
 
-gulp.task('css', function () {
-    gulp.src('./sass/screen.scss')
-        .pipe(sass())
-        .pipe(pleeease(PleeeaseOptions))
-        .pipe(gulp.dest('./css'));
+/**
+ * ----------------------------------------------------------------------------
+ * Icons
+ * ----------------------------------------------------------------------------
+ *
+ * This is a grunt task. The gulp-grunt bridge lets us run these with a grunt-
+ * prefix, so grunt-clean would run clean from your Gruntfile.
+ *
+ * mind === blown
+ *
+ * [ grunt ] --> [ files ] --> [ grunt-icon-pigment ] --> [ dest ]
+ *
+ */
+
+gulp.task('icon',  function() {
+    gulp.run('grunt-icon');
+});
+
+
+require('./gulp/js');
+require('./gulp/css');
+
+
+gulp.task("build", ['jsbuild', 'css', 'icon'], function() {
+
+});
+
+gulp.task('default', ['build'], function(done) {
+    done();
 });
