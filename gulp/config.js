@@ -9,6 +9,8 @@ var path = require("path");
 var sourcePath = "./static_src";
 var distPath = "./static";
 
+var prod = process.env.NODE_ENV === 'production';
+
 
 module.exports = {
 
@@ -31,15 +33,15 @@ module.exports = {
     },
 
     PlzOptions: {
-        minifier: process.env.NODE_ENV === 'production',
-        sourcemaps: process.env.NODE_ENV !== 'production',
+        minifier: prod,
+        sourcemaps: !prod,
         mqpacker: false,
         filters: false,
         rem: true,
         pseudoElements: true,
         opacity: true,
-        "autoprefixer": {
-            "browsers": ["ie 8", "ie 9", "> 1%"]
+        autoprefixer: {
+            browsers: ['ie 8', 'ie 9', '> 1%']
         }
     }
 
