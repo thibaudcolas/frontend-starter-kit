@@ -42,9 +42,8 @@ gulp.task('css', function (done) {
 gulp.task('lint:sass', function() {
   gulp.src( path.join(config.paths.sass, '**', '*.scss') )
     .pipe(scsslint())
-    .pipe(scsslint.failReporter());
+      .pipe(scsslint.failReporter());
 });
-
 
 
 
@@ -57,10 +56,25 @@ gulp.task('lint:sass', function() {
 gulp.task('report:css', function() {
     return gulp.src( path.join(config.paths.css, '**', '*.css') )
         .pipe(parker({
-            file: 'report.md',
+            file: 'css-report.md',
             title: 'Gulp test report',
             metrics: [
-                "TotalRules",
-                "TotalStylesheets"
-            ]}));
+                'TotalStylesheets',
+                'TotalStylesheetSize',
+                'TotalRules',
+                'TotalSelectors',
+                'TotalIdentifiers',
+                'TotalDeclarations',
+                'SelectorsPerRule',
+                'IdentifiersPerSelector',
+                'SpecificityPerSelector',
+                'TopSelectorSpecificity',
+                'TopSelectorSpecificitySelector',
+                'TotalIdSelectors',
+                'TotalUniqueColours',
+                'TotalImportantKeywords',
+                'TotalMediaQueries'
+            ]
+        })
+    );
 });

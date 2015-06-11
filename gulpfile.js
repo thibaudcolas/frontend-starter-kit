@@ -11,3 +11,4 @@ gulp.task('build', ['js', 'css', 'svg'], function(done) {
 });
 
 gulp.task('default', ['build']);
+
