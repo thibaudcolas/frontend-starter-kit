@@ -1,3 +1,6 @@
+// =============================================================================
+// Scss Starter Project
+// =============================================================================
 
 // Core variables, mixins and functions
 @import "variables";
@@ -5,17 +8,13 @@
 @import "components/mixins";
 @import "components/breakpoints";
 
-
 // Base imports
 @import "components/normalize";
-@import "components/elements";
-@import "components/typography";
-
+@import "elements";
+@import "typography";
 
 // Layout styles
 @import "components/grid";
-@import "components/widths";
-
 
 // Components
 @import "components/buttons";
@@ -24,8 +23,11 @@
 @import "components/tags";
 
 
+// Widths should come near the end, so they're more specific
+@import "components/widths";
+
 // Utility classes
-@import "components/utilities";
+@import "utilities";
 
 
 
