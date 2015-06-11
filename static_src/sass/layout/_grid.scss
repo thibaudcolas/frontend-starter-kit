@@ -1,0 +1,31 @@
+.grid {
+	font-size: 0;
+}
+	.grid > * {
+		@extend %inline-block;
+		vertical-align: top;
+		text-align: left;
+		font-size: medium;    // Font-size medium reset the block to the context of body (ie, 16px)
+		text-justify: auto;
+		margin-top: 0;
+		width: 100%;
+	}
+	.grid:after {
+		@extend %inline-block;
+		content: '';
+		height: 0;
+		width:100%;
+	}
+
+
+
+.grid-float {
+	@extend %clearfix;
+	margin-left: -2rem;
+
+	> * {
+		float: left;
+		display: block;
+		padding-left: 2rem;
+	}
+}

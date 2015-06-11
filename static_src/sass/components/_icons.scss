@@ -1,0 +1,37 @@
+.i {
+
+	$spacing-icon: .25em;
+
+	display: inline-block;
+
+	width: 16px;
+	height: 16px;
+
+	.icon-text > & {
+		margin-top: -.25em;
+		margin-right: $spacing-icon;
+		vertical-align: middle;
+	}
+	.icon-text-rev > & {
+		margin-top: -.25em;
+		margin-left: $spacing-icon;
+		vertical-align: middle;
+	}
+
+	.btn & {
+		margin-top: -.25em;
+	}
+
+
+}
+
+svg use {
+	fill: currentColor;
+}
+
+.i-black {
+	fill: #000;
+}
+.i-white {
+	fill: #FFF;
+}
