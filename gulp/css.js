@@ -9,10 +9,12 @@
 
 var config = require("./config");
 var gulp = require('gulp');
+var path = require('path');
+
 var sass = require('gulp-sass');
 var plz = require("gulp-pleeease");
 var scsslint = require('gulp-scss-lint');
-var path = require('path');
+var parker = require('gulp-parker');
 
 
 gulp.task('css', function (done) {
@@ -44,3 +46,21 @@ gulp.task('lint:sass', function() {
 });
 
 
+
+
+/**
+ * ----------------------------------------------------------------------------
+ * CSS reporter
+ * ----------------------------------------------------------------------------
+ */
+
+gulp.task('report:css', function() {
+    return gulp.src( path.join(config.paths.css, '**', '*.css') )
+        .pipe(parker({
+            file: 'report.md',
+            title: 'Gulp test report',
+            metrics: [
+                "TotalRules",
+                "TotalStylesheets"
+            ]}));
+});
