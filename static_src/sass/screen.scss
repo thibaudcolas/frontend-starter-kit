@@ -1,20 +1,20 @@
 
 // Core variables, mixins and functions
 @import "variables";
-@import "helpers/functions";
-@import "helpers/breakpoints";
-@import "helpers/mixins";
+@import "components/functions";
+@import "components/mixins";
+@import "components/breakpoints";
 
 
 // Base imports
-@import "base/normalize";
-@import "base/elements";
-@import "base/typography";
+@import "components/normalize";
+@import "components/elements";
+@import "components/typography";
 
 
 // Layout styles
-@import "layout/grid";
-@import "layout/widths";
+@import "components/grid";
+@import "components/widths";
 
 
 // Components
@@ -23,7 +23,7 @@
 
 
 // Utility classes
-@import "helpers/utilities";
+@import "components/utilities";
 
 
 
