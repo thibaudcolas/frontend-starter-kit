@@ -3,32 +3,32 @@
 // ----------------------------------------------------------------------------
 
 
-$breakpointSmall: 600;
-$breakpointMedium: $breakpointSmall + 1;
-$breakpointLarge: 1024;
-$breakpointExtraLarge: 1280;
+$breakpoint-small: 			600;
+$breakpoint-medium: 		$breakpoint-small + 1;
+$breakpoint-large: 			1024;
+$breakpoint-extra-large: 	1280;
 
 
 @mixin small {
-	@media only screen and (max-width: rem($breakpointSmall)) {
+	@media only screen and (max-width: #{ $breakpoint-small / 16 }) {
 		@content;
 	}
 }
 
 @mixin medium {
-	@media only screen and (min-width: rem($breakpointMedium)) {
+	@media only screen and (min-width: #{ $breakpoint-medium / 16 }) {
 		@content;
 	}
 }
 
 @mixin large {
-	@media only screen and (min-width: rem($breakpointLarge)) {
+	@media only screen and (min-width: #{ $breakpoint-large / 16 }) {
 		@content;
 	}
 }
 
 @mixin xlarge {
-	@media only screen and (min-width: rem($breakpointExtraLarge) ) {
+	@media only screen and (min-width: #{ $breakpoint-extra-large / 16 } ) {
 		@content;
 	}
 }
