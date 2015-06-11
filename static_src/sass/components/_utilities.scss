@@ -2,7 +2,7 @@
 // Utilities
 // ----------------------------------------------------------------------------
 
-.clearfix,
+.u-clearfix,
 %clearfix {
 	&:after {
 		display: block;
@@ -12,7 +12,7 @@
 	}
 }
 
-.inline-block,
+.u-inline-block,
 %inline-block {
 	display: inline-block;
 	*display: inline;
@@ -73,6 +73,18 @@
 	text-overflow: ellipsis;        // [3]
 }
 
+
+// An accessible label that takes up no visual space
+.u-accessible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
 
 
 // Prevent all user interaction with the element

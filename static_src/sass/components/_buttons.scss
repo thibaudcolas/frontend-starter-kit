@@ -1,4 +1,6 @@
 // -----------------------------------------------------------------------------
+// Buttons
+// -----------------------------------------------------------------------------
 // 1. Allow us to better style box model properties.
 // 2. Line different sized buttons up a little nicer.
 // 3. Stop buttons wrapping and looking broken.
@@ -14,36 +16,54 @@
 
 %btn {
 
-	$padding: 1em;
+    $padding: 1em;
 
-	@extend %inline-block;                          /* [1] */
-	vertical-align: middle;                         /* [2] */
+    @extend %inline-block;                          /* [1] */
+    vertical-align: middle;                         /* [2] */
     border-radius: $padding/4;
-	border-color: transparent;
-	border-style: solid;
-	border-width: 1px;
-	cursor: pointer;                                /* [5] */
-	font-family: inherit;                           /* [4] */
-	line-height: 2.5;                               /* [7] */
-	margin: inherit 0 0 0;                          /* [6] */
-	padding-bottom: 0;                              /* [6] */
-	padding-left: $padding;                         /* [7] */
-	padding-right: $padding;                        /* [7] */
-	padding-top: 0;                                 /* [6] */
-	white-space: nowrap;                            /* [3] */
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;                                /* [5] */
+    font-family: inherit;                           /* [4] */
+    line-height: 2.5;                               /* [7] */
+    margin: inherit 0 0 0;                          /* [6] */
+    padding-bottom: 0;                              /* [6] */
+    padding-left: $padding;                         /* [7] */
+    padding-right: $padding;                        /* [7] */
+    padding-top: 0;                                 /* [6] */
+    white-space: nowrap;                            /* [3] */
 
-	&,
-	&:hover {
-		text-decoration:none;   /* [9] */
-	}
+    &,
+    &:hover {
+        text-decoration:none;   /* [9] */
+    }
 
-	&:active,
-	&:focus {
-		outline:none;
-	}
+    &:active,
+    &:focus {
+        outline:none;
+    }
 
 }
 
 .btn {
-	@extend %btn;
+    @extend %btn;
 }
+
+
+// Double the padding for a wider button. Useful when the primary CTA is
+// a short word, but everyone wants the button to be visually prominent.
+.btn--wide {
+    padding-left: $padding * 2;
+    padding-right: $padding * 2;
+}
+
+
+.btn--block {
+    width: 100%;
+}
+
+
+
+
+
