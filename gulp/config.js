@@ -28,10 +28,6 @@ module.exports = {
         www: "./www"
     },
 
-    livereloadOptions: {
-        port: 35729
-    },
-
     PlzOptions: {
         minifier: prod,
         sourcemaps: !prod,
