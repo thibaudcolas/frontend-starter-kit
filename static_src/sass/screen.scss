@@ -20,8 +20,10 @@
 @import 'components/icons';
 @import 'components/icon-text';
 @import 'components/tags';
-@import 'components/ratio';
-@import 'components/widths';
+@import 'components/modals';
+
+// Page-specific
+// @import 'pages/home';
 
 
 // Widths should come near the end, so they're more specific
@@ -30,9 +32,6 @@
 // Utility classes
 @import 'utilities';
 
-
-
-// Page specific...
 
 
 

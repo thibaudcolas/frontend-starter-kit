@@ -12,23 +12,28 @@ var gulp = require('gulp');
 var path = require('path');
 
 var sass = require('gulp-sass');
+var gutil = require('gulp-util');
 var plz = require("gulp-pleeease");
 var scsslint = require('gulp-scss-lint');
 var parker = require('gulp-parker');
+var bs = require('browser-sync').get('main');
 
 
-gulp.task('css', function (done) {
+gulp.task('css', function() {
 
-    gulp.src(path.join( config.paths.sass, '**', "*.scss" ))
-        .pipe(sass( {
-            errLogToConsole: true,
-            sourceComments: false
-        } ))
+    return gulp.src(path.join( config.paths.sass, '**', "*.scss" ))
+        .pipe(sass({
+            errLogToConsole: false,
+            sourceComments: false,
+            onError: function(err) {
+                var message = err.file + ' (' + err.line + ':' + err.column + '): ' + err.message
+                gutil.log(message);
+                bs.notify(message, 10000);
+            }
+        }))
         .pipe(plz( config.PlzOptions ))
-        .pipe(gulp.dest( config.paths.css ));
-
-    done();
-
+        .pipe(gulp.dest( config.paths.css ))
+        .pipe(bs.stream());
 });
 
 
