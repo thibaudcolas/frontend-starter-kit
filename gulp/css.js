@@ -61,7 +61,7 @@ gulp.task('lint:sass', function() {
 gulp.task('report:css', function() {
     return gulp.src( path.join(config.paths.css, '**', '*.css') )
         .pipe(parker({
-            file: 'css-report.md',
+            file: path.join(config.paths.css, 'css-report.md'),
             title: 'Gulp test report',
             metrics: [
                 'TotalStylesheets',
