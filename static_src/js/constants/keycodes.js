@@ -95,7 +95,7 @@ const KeyCodes = {
     OPEN_BRACKET: 219,
     BACK_SLASH: 220,
     CLOSE_BRAKET: 221,
-    SINGLE_QUOTE: 222
+    SINGLE_QUOTE: 222,
     get(constant) {
         return this[constant] || -1;
     }
