@@ -88,6 +88,11 @@ linters:
     PropertyCount:
         enabled: false
 
+    PropertySpelling:
+        extra_properties:
+            - *display
+            - *zoom
+
     QualifyingElement:
         allow_element_with_attribute: false
         allow_element_with_class: false
