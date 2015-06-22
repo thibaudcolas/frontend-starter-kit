@@ -3,35 +3,35 @@
 // =============================================================================
 
 // Core variables, mixins and functions
-@import "variables";
-@import "components/functions";
-@import "components/mixins";
-@import "components/breakpoints";
+@import 'variables';
+@import 'components/functions';
+@import 'breakpoints';
 
 // Base imports
-@import "lib/normalize";
-@import "elements";
-@import "typography";
+@import 'lib/normalize';
+@import 'elements';
+@import 'typography';
 
 // Layout styles
-@import "components/grid";
+@import 'components/grid';
 
 // Components
-@import "components/buttons";
-@import "components/icons";
-@import "components/icon-text";
-@import "components/tags";
+@import 'components/buttons';
+@import 'components/icons';
+@import 'components/icon-text';
+@import 'components/tags';
+@import 'components/modals';
+
+// Page-specific
+// @import 'pages/home';
 
 
 // Widths should come near the end, so they're more specific
-@import "components/widths";
+@import 'components/widths';
 
 // Utility classes
-@import "utilities";
+@import 'utilities';
 
-
-
-// Page specific...
 
 
 
