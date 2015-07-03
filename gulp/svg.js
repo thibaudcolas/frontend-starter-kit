@@ -32,7 +32,7 @@ gulp.task('svg:inline', function () {
     }
 
     return gulp
-        .src( path.join( config.paths.views, "**", "*.html" ) )
+        .src( path.join( config.paths.views, "index.html" ) )
         .pipe(inject(svgs, { transform: fileContents }))
         .pipe(gulp.dest( config.paths.views ));
 

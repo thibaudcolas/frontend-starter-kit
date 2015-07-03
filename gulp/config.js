@@ -15,10 +15,8 @@ module.exports = {
         js: path.join(distPath, "js"),
         svg: path.join(sourcePath, "svg"),
         images: path.join(distPath, "images"),
-        build: "./build",
         slug: "my-site",
         views: "./templates",
-        www: "./www"
     },
 
     PlzOptions: {
