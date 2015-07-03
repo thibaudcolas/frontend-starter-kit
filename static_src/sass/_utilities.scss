@@ -75,21 +75,22 @@
 
 
 // An accessible label that takes up no visual space
-.u-accessible {
-    position: absolute;
-    width: 1px;
+.u-accessible,
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
     height: 1px;
-    padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 
 // Prevent all user interaction with the element
-
-.is-disabled {
+.disabled,
+.u-disabled {
     pointer-events: none;
     cursor: default;
     opacity: .5;

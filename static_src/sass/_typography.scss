@@ -38,15 +38,18 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
-    margin-bottom: 0;
     line-height: $line-height-headline;
 
-    a {
+    &:first-child {
+        margin-top: 0;
+    }
+
+    > a {
         text-decoration: none;
         font-weight: inherit;
     }
 }
+
 
 h1 {
     font-size: rem(28);
@@ -54,31 +57,27 @@ h1 {
     @include medium {
         font-size: rem(32);
     }
-
-    * + & {
-        margin-top: #{$line-height-headline}em;
-    }
 }
 
-//h2 {
-//
-//}
-//
-//h3 {
-//
-//}
-//
-//h4 {
-//
-//}
-//
-//h5 {
-//
-//}
-//
-//h6 {
-//
-//}
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
 
 
 .h1 { @extend h1; }
@@ -94,7 +93,7 @@ ul,
 ol,
 dl,
 address {
-    margin-bottom: 0;
+    margin-top: 0;
 }
 
 p,

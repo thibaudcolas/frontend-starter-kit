@@ -13,10 +13,11 @@
 // 8. Basic cosmetics for default buttons. Change or override at will.
 // 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
 
+$padding: 1em;
+
 
 %btn {
 
-    $padding: 1em;
 
     @extend %inline-block;                          /* [1] */
     vertical-align: middle;                         /* [2] */

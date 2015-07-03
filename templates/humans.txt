@@ -1,0 +1,32 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Project Manager:
+    Twitter:
+    From:
+
+    Content and writing:
+    Twitter:
+    From:
+
+    Design:
+    Twitter:
+    Location:
+
+    Development:
+    Twitter:
+    Location:
+
+    Front-end:
+    Twitter:
+    Location:
+
+
+# THANKS
+
+
+# TECHNOLOGY COLOPHON
+
+    React, etc.

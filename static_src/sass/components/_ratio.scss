@@ -24,7 +24,11 @@
     padding-top: 100%;
 }
 
-.ratio-square, .ratio-4-3, .ratio-16-9, .ratio-3-4, .ratio-2-1 {
+.ratio-square,
+.ratio-4-3,
+.ratio-16-9,
+.ratio-3-4,
+.ratio-2-1 {
     @extend %ratio;
 }
 
