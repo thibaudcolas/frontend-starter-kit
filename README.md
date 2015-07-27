@@ -16,3 +16,28 @@ discify public/bundle.js > disc-report.html
 ```
 
 Here's an [example report](https://springload.github.io/react-d3-integration/disc-report.html) for the `react-d3-integration` repository.
+
+### [David](https://github.com/alanshaw/david)
+
+> Tells you when your `npm` dependencies are out of date.
+
+```sh
+npm install -g david
+david
+```
+
+Example report:
+
+```
+devDependencies
+
+┌────────────────┬─────────┬────────┐
+│ Name           │ Package │ Latest │
+├────────────────┼─────────┼────────┤
+│ gulp-sass      │ ^1.2.2  │ 2.0.4  │
+├────────────────┼─────────┼────────┤
+│ gulp-scss-lint │ ^0.1.12 │ 0.2.2  │
+├────────────────┼─────────┼────────┤
+│ browserify     │ ^10.1.3 │ 11.0.0 │
+└────────────────┴─────────┴────────┘
+```
