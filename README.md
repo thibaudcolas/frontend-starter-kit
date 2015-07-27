@@ -26,7 +26,7 @@ npm install -g david
 david
 ```
 
-Example report:
+Example report for this repository:
 
 ```
 devDependencies
@@ -40,4 +40,36 @@ devDependencies
 ├────────────────┼─────────┼────────┤
 │ browserify     │ ^10.1.3 │ 11.0.0 │
 └────────────────┴─────────┴────────┘
+```
+
+### [Hyperlink](https://github.com/Munter/hyperlink)
+
+```sh
+npm install -g hyperlink
+hyperlink <htmlFile(s) | url(s)>
+```
+
+Example report for the `react-d3-integration` repository:
+
+```
+TAP version 13
+# Crawling internal assets
+ok 1 loading https://springload.github.io/react-d3-integration/
+ok 2 loading https://springload.github.io/react-d3-integration/public/bundle.js
+# Crawling 1 outgoing urls
+ok 3 URI should have no redirects - https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css
+not ok 4 URI should be secure - https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css
+  ---
+    operator: mixed-content
+    expected:
+      "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    actual:
+      "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    at: https://springload.github.io/react-d3-integration/
+  ...
+
+1..4
+# tests 4
+# pass  3
+# fail  1
 ```
