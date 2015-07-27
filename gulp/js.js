@@ -4,7 +4,6 @@ var path = require('path');
 var browserify = require('browserify');
 var browserifyInc = require('browserify-incremental');
 var babelify = require('babelify');
-var reactify = require('reactify');
 var uglify = require('gulp-uglify');
 var buffer = require('vinyl-buffer');
 var gutil = require('gulp-util');
@@ -16,7 +15,7 @@ var browserifyInstance = prod ? browserify : browserifyInc;
 
 var bundler = browserifyInstance({
     cache: {},
-    transform: [babelify, reactify],
+    transform: [babelify],
     packageCache: {},
     debug: !prod,
     fullPaths: !prod
