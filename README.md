@@ -87,3 +87,36 @@ sitespeed.io -u <URL>
 ```
 
 Example report for the `react-d3-integration` repository: [Sitespeed.io report](https://springload.github.io/react-d3-integration/sitespeed-result/springload.github.io/2015-07-27-12-38-44/).
+
+### [minigun](https://artillery.io/minigun/)
+
+> Simple & powerful load-testing for HTTP(S)
+
+```sh
+npm install -g minigun
+minigun quick -d 30 -r 5 <URL>
+```
+
+Example report for a quick test on an [OpenWeatherMap](http://openweathermap.org/forecast16) API call:
+
+```
+Complete report @ 2015-07-29T22:51:09.558Z
+  Scenarios launched: 148
+  Scenarios completed: 148
+  Number of requests made: 148
+  RPS: 4.48
+  Request latency:
+    min: 402.6
+    max: 1510.88
+    median: 405.97
+    p95: 547.33
+    p99: 1412.49
+  Scenario duration:
+    min: 403.41
+    max: 1521.62
+    median: 407.18
+    p95: 548.31
+    p99: 1420.86
+  Codes:
+    200: 148
+```
