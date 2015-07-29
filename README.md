@@ -44,6 +44,8 @@ devDependencies
 
 ### [Hyperlink](https://github.com/Munter/hyperlink)
 
+> Detect invalid and inefficient links on your webpages.
+
 ```sh
 npm install -g hyperlink
 hyperlink <htmlFile(s) | url(s)>
@@ -75,6 +77,8 @@ not ok 4 URI should be secure - https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/
 ```
 
 ### [sitespeed.io](https://github.com/sitespeedio/sitespeed.io)
+
+> Helps you analyze and optimize your website speed and performance.
 
 ```sh
 npm install -g sitespeed.io
