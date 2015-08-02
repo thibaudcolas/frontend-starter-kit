@@ -1,7 +1,7 @@
-documentation
+Documentation
 =============
 
-## Front-end technologies
+## Front-end technology stack
 
 > The goal of this stack is to empower front-end developers to excel at their craft.
 
@@ -61,3 +61,7 @@ To learn React:
 - [CSSComb](http://csscomb.com/) – A handy CSS reformater.
 - [Chrome DevTools](https://developer.chrome.com/devtools) – Browser developer tools for Chrome.
 - [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) – React developer tools integrated into Chrome.
+
+## Other documentations
+
+- [Useful tooling](https://github.com/springload/frontend-starter-kit/blob/master/docs/useful-tooling.md)
