@@ -89,9 +89,7 @@ linters:
         enabled: false
 
     PropertySpelling:
-        extra_properties:
-            - *display
-            - *zoom
+        enabled: false
 
     QualifyingElement:
         allow_element_with_attribute: false
