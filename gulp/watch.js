@@ -19,5 +19,5 @@ gulp.task('watch', ['js', 'css'], function() {
 
     gulp.watch(justReload, bs.reload);
     gulp.watch(path.join(config.paths.sass, '**', '*.scss'), ['css']);
-    gulp.watch(path.join(config.paths.jsSrc, '**', '*.{js,jsx}'), ['js']);
+    gulp.watch(path.join(config.paths.jsSrc, '**', '*.js'), ['js']);
 });
