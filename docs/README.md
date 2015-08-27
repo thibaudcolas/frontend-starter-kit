@@ -62,6 +62,6 @@ To learn React:
 - [Chrome DevTools](https://developer.chrome.com/devtools) – Browser developer tools for Chrome.
 - [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) – React developer tools integrated into Chrome.
 
-## Other documentations
+## Other documentation
 
 - [Useful tooling](https://github.com/springload/frontend-starter-kit/blob/master/docs/useful-tooling.md)
