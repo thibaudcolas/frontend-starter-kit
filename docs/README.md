@@ -35,6 +35,8 @@ To learn React:
 
 - https://facebook.github.io/react/docs/tutorial.html
 - http://firstdoit.com/react-1/
+- http://www.banderson.me/2014/11/01/react-series-intro/
+- https://www.youtube.com/watch?v=x7cQ3mrcKaY
 - https://github.com/enaqx/awesome-react#react-tutorials
 
 ### Tooling
