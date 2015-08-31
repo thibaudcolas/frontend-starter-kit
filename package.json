@@ -41,6 +41,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "gulp-uglify": "^1.4.0",
     "normalize.css": "^3.0.3",
     "springload-analytics.js": "^2.0.0"
   }
