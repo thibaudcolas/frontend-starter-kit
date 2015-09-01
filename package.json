@@ -25,10 +25,12 @@
     "deploy": "git push -f origin master:deploy/production"
   },
   "devDependencies": {
+    "babel": "^5.8.23",
     "babelify": "^6.0.2",
     "browser-sync": "^2.8.0",
     "browserify": "^11.0.1",
     "browserify-incremental": "^3.0.0",
+    "chai": "^3.2.0",
     "express": "^4.13.0",
     "gulp": "^3.9.0",
     "gulp-inject": "^1.2.0",
@@ -39,17 +41,14 @@
     "gulp-scss-lint": "^0.2.2",
     "gulp-svgmin": "^1.1.2",
     "gulp-svgstore": "^5.0.1",
-    "gulp-uglify": "^1.2.0",
+    "gulp-uglify": "^1.4.0",
     "gulp-util": "^3.0.4",
+    "isparta": "^3.0.4",
+    "mocha": "^2.3.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "babel": "^5.8.23",
-    "chai": "^3.2.0",
-    "gulp-uglify": "^1.4.0",
-    "isparta": "^3.0.4",
-    "mocha": "^2.3.0",
     "normalize.css": "^3.0.3",
     "springload-analytics.js": "^2.0.0"
   }
