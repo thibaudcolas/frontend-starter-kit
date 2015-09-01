@@ -35,6 +35,8 @@ npm install
 npm run start
 # Builds frontend assets.
 npm run build
+# Runs linting.
+npm run lint
 # Runs tests.
 npm run test
 ```

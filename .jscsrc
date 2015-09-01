@@ -10,7 +10,10 @@
     "excludeFiles": [
         "node_modules/**",
         "**/*.min.js",
-        "**/lib/**/*.js"
+        "**/lib/**",
+        ".grunt/**",
+        "coverage/**",
+        "lib-cov/**"
     ],
     "fileExtensions": [".js"],
     "preset":"airbnb",
