@@ -33,11 +33,18 @@ To learn more about those libraries:
 
 To learn React:
 
-- https://facebook.github.io/react/docs/tutorial.html
 - http://firstdoit.com/react-1/
 - http://www.banderson.me/2014/11/01/react-series-intro/
+- http://blog.andrewray.me/reactjs-for-stupid-people/
+- https://facebook.github.io/react/docs/tutorial.html
 - https://www.youtube.com/watch?v=x7cQ3mrcKaY
 - https://github.com/enaqx/awesome-react#react-tutorials
+
+To (try to) understand Flux:
+
+- http://jonathancreamer.com/what-the-flux/
+- http://blog.andrewray.me/flux-for-stupid-people/
+- http://fluxxor.com/
 
 ### Tooling
 
