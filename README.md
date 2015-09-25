@@ -41,6 +41,21 @@ npm run lint
 npm run test
 ```
 
+### Tests
+
+We use `mocha`, `chai`, `sinon` and `isparata` for unit tests.
+
+```sh
+# Run all the tests.
+npm run test
+# Run unit tests.
+npm run test:unit
+# Run unit tests in a watcher.
+npm run test:unit:watch
+# Run your tests and outputs code coverage.
+npm run test:unit:coverage
+```
+
 ## Deploying a new version
 
 ### To production
