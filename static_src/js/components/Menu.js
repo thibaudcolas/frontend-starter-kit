@@ -2,7 +2,7 @@ import { whichTransitionEvent } from '../utils';
 
 export default class {
     constructor(options) {
-        const { trigger, el, store } = options;
+        const { trigger, el } = options;
 
         this.trigger = trigger;
         this.el = el;
