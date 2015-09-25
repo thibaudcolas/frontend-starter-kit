@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+import sinon from 'sinon';
 import { humanNumber, debounce } from '../utils';
 
 describe('Utils', () => {
@@ -19,5 +20,17 @@ describe('Utils', () => {
 
     it('has a debounce function', () => {
         expect(debounce).to.be.a('function');
+    });
+
+    it('debounce calls its callback', () => {
+        const callback = sinon.spy();
+        const proxy = debounce(callback, 100);
+
+        proxy();
+
+        setTimeout(function timeOut() {
+            expect(callback.called).to.be.true;
+            expect(callback.calledOnce).to.be.true;
+        }, 200);
     });
 });
