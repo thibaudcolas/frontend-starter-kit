@@ -12,7 +12,6 @@
   "scripts": {
     "start": "npm run watch -s",
     "lint": "eslint .",
-    "pretest": "npm run lint -s",
     "test": "npm run test:unit -s",
     "test:unit": "mocha --compilers js:babel/register static_src/js/tests",
     "test:unit:watch": "mocha --watch --compilers js:babel/register static_src/js/tests",
@@ -51,6 +50,7 @@
     "gulp-util": "^3.0.4",
     "isparta": "^3.0.4",
     "mocha": "^2.3.0",
+    "sinon": "^1.17.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
