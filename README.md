@@ -24,6 +24,8 @@ npm install --global eslint eslint-plugin-react babel-eslint eslint-config-airbn
 gem install scss_lint
 # Then, install all project dependencies.
 npm install
+# Optionally, install the git hooks.
+./.githooks/deploy
 ```
 
 ## Working on the project
