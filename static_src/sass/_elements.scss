@@ -8,14 +8,18 @@
     box-sizing: border-box;
 }
 
+*:active,
 *:focus {
-    outline: solid 3px $color-focus;
-}
-
-*:active {
     outline: none;
 }
 
+// We have Js that adds outline when
+// keyboard tabbing but add back if no js
+.no-js {
+    *:focus {
+        outline: solid 3px $color-focus;
+    }
+}
 
 html {
     background-color: $color-stage-bg;

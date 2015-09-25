@@ -109,7 +109,6 @@ export function debounce(func, wait, immediate) {
 };
 
 
-
 // Generates a UUID
 export function uuid() {
     var i, random;
@@ -123,6 +122,22 @@ export function uuid() {
         uuid += (i === 12 ? 4 : (i === 16 ? (random & 3 | 8) : random)).toString(16);
     }
     return uuid;
+}
+
+// Remove CSS outlines in an accessible manner
+// Make sure you have an empty style tag that
+// lives after your main style sheet
+export function tabfocus(selector=".accessTab") {
+    const tabFocus = document.querySelector(selector);
+    window.addEventListener('mousedown', function(e){
+        tabFocus.innerHTML = '';
+    },false);
+
+    window.addEventListener('keydown', function(e){
+        if(e.keyCode == 9) {
+            tabFocus.innerHTML = 'a:focus { outline: solid 3px #6cc6ee; }';
+        }
+    },false);
 }
 
 
