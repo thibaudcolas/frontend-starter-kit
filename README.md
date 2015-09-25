@@ -20,7 +20,7 @@ cd frontend-starter-kit
 To install our dependencies:
 
 ```sh
-npm install --global nodemon jscs eslint eslint-plugin-react babel-eslint eslint-config-airbnb
+npm install --global eslint eslint-plugin-react babel-eslint eslint-config-airbnb
 gem install scss_lint
 # Then, install all project dependencies.
 npm install
@@ -39,6 +39,23 @@ npm run build
 npm run lint
 # Runs tests.
 npm run test
+```
+
+### Tests
+
+We use `mocha`, `chai`, `sinon` and `isparata` for unit tests.
+
+```sh
+# Run all the tests.
+npm run test
+# Run unit tests.
+npm run test:unit
+# Run unit tests in a watcher.
+npm run test:unit:watch
+# Run your tests and outputs code coverage.
+npm run test:unit:coverage
+# And then to see the coverage:
+open coverage/lcov-report/index.html
 ```
 
 ## Deploying a new version
