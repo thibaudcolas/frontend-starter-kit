@@ -2,7 +2,17 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import { humanNumber, debounce } from '../utils';
 
+let clock;
+
 describe('Utils', () => {
+    beforeEach('bend time', () => {
+        clock = sinon.useFakeTimers();
+    });
+
+    afterEach('  time', () => {
+        clock.restore();
+    });
+
     it('has a number formatting function', () => {
         expect(humanNumber).to.be.a('function');
         expect(humanNumber(5)).to.be.a('string');
@@ -24,13 +34,14 @@ describe('Utils', () => {
 
     it('debounce calls its callback', () => {
         const callback = sinon.spy();
-        const proxy = debounce(callback, 100);
+        const proxy = debounce(callback, 5000);
 
         proxy();
 
-        setTimeout(function timeOut() {
-            expect(callback.called).to.be.true;
-            expect(callback.calledOnce).to.be.true;
-        }, 200);
+        // Move the sinon clock to 5001ms.
+        clock.tick(5001);
+
+        expect(callback.called).to.be.true;
+        expect(callback.calledOnce).to.be.true;
     });
 });
