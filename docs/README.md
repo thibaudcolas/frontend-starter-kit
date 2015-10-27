@@ -40,7 +40,7 @@ To learn React:
 - https://www.youtube.com/watch?v=x7cQ3mrcKaY
 - https://github.com/enaqx/awesome-react#react-tutorials
 
-To (try to) understand Flux:
+To understand Flux:
 
 - http://jonathancreamer.com/what-the-flux/
 - http://blog.andrewray.me/flux-for-stupid-people/
