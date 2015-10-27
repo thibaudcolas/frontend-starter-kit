@@ -36,9 +36,8 @@ To learn React:
 - http://firstdoit.com/react-1/
 - http://www.banderson.me/2014/11/01/react-series-intro/
 - http://blog.andrewray.me/reactjs-for-stupid-people/
-- https://facebook.github.io/react/docs/tutorial.html
+- https://facebook.github.io/react/docs/thinking-in-react.html
 - https://www.youtube.com/watch?v=x7cQ3mrcKaY
-- https://github.com/enaqx/awesome-react#react-tutorials
 
 To understand Flux:
 
