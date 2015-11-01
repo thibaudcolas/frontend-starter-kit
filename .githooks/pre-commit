@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Check if this is the initial commit
 if git rev-parse --verify HEAD >/dev/null 2>&1
@@ -14,5 +14,26 @@ then
     echo "Aborting commit due to whitespace errors."
     exit 1
 else
-    npm test -s
+    # Fail on first line that fails.
+    set -e
+
+    NEW_FILES=$(git --no-pager diff --name-only --cached)
+    JS_FILES=$(echo "$NEW_FILES" | { grep client/js || true; })
+    SASS_FILES=$(echo "$NEW_FILES" | { grep client/sass || true; })
+
+    if [ -n "$JS_FILES" ];
+    then
+        npm run linter:js -s -- $JS_FILES
+    fi
+
+    if [ -n "$SCSS_FILES" ];
+    then
+        npm run linter:sass -s -- $SCSS_FILES
+    fi
+
+    if [ -n "$JS_FILES" ] || [ -n "$SCSS_FILES" ];
+    then
+        # npm run test -s || true;
+        exit 0
+    fi
 fi
