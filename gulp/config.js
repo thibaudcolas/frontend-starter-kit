@@ -1,7 +1,7 @@
 var path = require('path');
 
-var sourcePath = path.join('.', 'static_src');
-var distPath = path.join('.', 'static');
+var sourcePath = path.join('.', 'core', 'static_src');
+var distPath = path.join('.', 'core', 'static');
 
 var prod = process.env.NODE_ENV === 'production';
 

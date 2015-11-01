@@ -1,5 +1,5 @@
 
-scss_files: 'static_src/**/*.scss'
+scss_files: 'core/static_src/**/*.scss'
 
 linters:
     BorderZero:
