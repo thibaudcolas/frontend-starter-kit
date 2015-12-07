@@ -31,9 +31,11 @@ else
         npm run linter:sass -s -- $SCSS_FILES
     fi
 
-    if [ -n "$JS_FILES" ] || [ -n "$SCSS_FILES" ];
+    # To test if there are changes to Sass files as well (not useful at the moment):
+    # if [ -n "$JS_FILES" ] || [ -n "$SASS_FILES" ];
+    if [ -n "$JS_FILES" ];
     then
-        # npm run test -s || true;
+        npm run test -s;
         exit 0
     fi
 fi
