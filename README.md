@@ -7,7 +7,7 @@ Front-end starter kit [![Dependency Status](https://david-dm.org/springload/fron
 
 ## Installation
 
-> You first need to clone the project on your computer.
+> You first need to clone the project on your computer, and to install [Node](https://nodejs.org). This project also uses [nvm](https://github.com/creationix/nvm).
 
 From the command-line:
 
@@ -20,6 +20,7 @@ cd frontend-starter-kit
 To install our dependencies:
 
 ```sh
+nvm install
 npm install --global eslint eslint-plugin-react babel-eslint eslint-config-airbnb
 gem install scss_lint
 # Then, install all project dependencies.

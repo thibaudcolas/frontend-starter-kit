@@ -58,6 +58,8 @@ To understand Flux:
 - [Pleeease](http://pleeease.io/) – "All the annoying CSS stuff we don't want to do in 1 tool!"
 - [npm](https://www.npmjs.com) – Package manager for everything that runs on Node (and more).
 
+Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm). For Windows users, there are recommended alternatives on the project's homepage. Those tools look at the [`.nvmrc`](https://github.com/springload/frontend-starter-kit/blob/master/.nvmrc) file to determine which version of node to activate when running `nvm install` from within the project's root directory.
+
 #### Development tools
 
 > We rely heavily on tooling to shorten the feedback loop between writing code and having running code in browsers.
