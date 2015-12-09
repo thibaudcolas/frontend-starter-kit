@@ -63,7 +63,7 @@ open coverage/lcov-report/index.html
 
 ## Switching between NodeJS versions
 
-### Use NVM (https://github.com/creationix/nvm)
+### Use NVM
 
 Recommended way to install nvm and use it: (on MAC)
 
@@ -75,12 +75,14 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 ```
 
-then nvm should be accessible in any terminal
+then `nvm` should be accessible in any terminal
 
-few useful commands:
+Few useful commands:
 `nvm ls-remote` (list all the available versions)
 `nvm install v5.1.1` (will download and install v5.1.1 and automatically use it)
 `nvm use v4.2.3` (will use node v4.2.3 if you have already installed it)
+
+For more info about NVM please ref to official nvm repo: https://github.com/creationix/nvm
 
 
 ## Deploying a new version
