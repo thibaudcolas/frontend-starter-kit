@@ -7,7 +7,7 @@
     "url": "https://github.com/springload/frontend-starter-kit"
   },
   "engines": {
-    "node": "0.12"
+    "node": "4.2.2"
   },
   "devDependencies": {
     "babel": "^5.8.23",
