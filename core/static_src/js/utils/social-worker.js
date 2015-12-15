@@ -1,5 +1,5 @@
 export function createYoutubePlayer(videoId, options) {
-    var src = 'https://www.youtube.com/embed/' + videoId + "?";
+    var src = 'https://www.youtube.com/embed/' + videoId + '?';
     var playerElement = document.createElement('iframe');
     var queryString = [];
     var params = {
@@ -30,14 +30,14 @@ export function createYoutubePlayer(videoId, options) {
         queryString.push(str);
     }
 
-    playerElement.setAttribute('src', src + queryString.join("&"));
+    playerElement.setAttribute('src', src + queryString.join('&'));
     return playerElement;
 }
 
 
 // Very basic facebook link sharing
 export function buildFacebookLink(url) {
-    var str = "//www.facebook.com/sharer/sharer.php?u=";
+    var str = '//www.facebook.com/sharer/sharer.php?u=';
     str.push(encodeURIComponent(url));
     return str.join('');
 }
@@ -45,8 +45,8 @@ export function buildFacebookLink(url) {
 // Extremely simple twitter sharing
 export function buildTwitterLink(message, url) {
     var str = ['https://twitter.com/intent/tweet/?'];
-    str.push('text=' + encodeURIComponent(message))
-    str.push('url=' + encodeURIComponent(url))
+    str.push('text=' + encodeURIComponent(message));
+    str.push('url=' + encodeURIComponent(url));
     return str.join('&');
 }
 

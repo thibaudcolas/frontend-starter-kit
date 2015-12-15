@@ -4,7 +4,7 @@ import utils from '../utils/social-worker';
 
 export class SocialShareLightbox extends Lightbox {
     constructor(options) {
-        super(options)
+        super(options);
         this.url = options.url;
 
         if (!this.url) {
@@ -20,8 +20,8 @@ export class SocialShareLightbox extends Lightbox {
         var facebookLink = utils.buildFacebookLink(this.url);
         var twitterLink = utils.buildTwitterLink('Check this out', this.url);
 
-        html.push("<p><a href='" + facebookLink + "' class='icon-text btn-primary btn-icon'><svg><use xlink:href='#twitter'></svg><span>Share on Twitter</span></a></p>")
-        html.push("<p><a href='" + twitterLink + "' class='icon-text btn-primary btn-icon'><svg><use xlink:href='#social-facebook'></svg><span>Share on Facebook</span></a></p>")
+        html.push("<p><a href='" + facebookLink + "' class='icon-text btn-primary btn-icon'><svg><use xlink:href='#twitter'></svg><span>Share on Twitter</span></a></p>");
+        html.push("<p><a href='" + twitterLink + "' class='icon-text btn-primary btn-icon'><svg><use xlink:href='#social-facebook'></svg><span>Share on Facebook</span></a></p>");
         innerDiv.innerHTML = html.join('\n');
 
         this.contentNode.appendChild(innerDiv);

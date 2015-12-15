@@ -1,7 +1,7 @@
 import Lightbox from './Lightbox';
 
 
-class ImageLightbox extends Lightbox  {
+class ImageLightbox extends Lightbox {
     constructor(options) {
         super();
         this.src = options.src;
@@ -18,7 +18,7 @@ class ImageLightbox extends Lightbox  {
         imageEl.className = 'modal__image-actual';
         innerDiv.className = 'modal__image-wrapper';
 
-        this.el.classList.add('modal-image')
+        this.el.classList.add('modal-image');
 
         innerDiv.appendChild(imageEl);
         this.contentNode.appendChild(innerDiv);

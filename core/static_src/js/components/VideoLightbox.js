@@ -1,7 +1,7 @@
 import Lightbox from './Lightbox';
 
 
-class VideoLightbox extends Lightbox  {
+class VideoLightbox extends Lightbox {
     constructor(options) {
         super();
         this.videoId = options.videoId;

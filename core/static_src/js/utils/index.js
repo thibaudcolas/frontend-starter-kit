@@ -14,36 +14,36 @@ export function getCookie(name) {
     return cookieValue;
 }
 
-export function whichTransitionEvent(){
+export function whichTransitionEvent() {
     var t;
     var el = document.createElement('fakeelement');
     var transitions = {
-      'transition':'transitionend',
-      'OTransition':'oTransitionEnd',
-      'MozTransition':'transitionend',
-      'WebkitTransition':'webkitTransitionEnd'
-    }
+        'transition':'transitionend',
+        'OTransition':'oTransitionEnd',
+        'MozTransition':'transitionend',
+        'WebkitTransition':'webkitTransitionEnd'
+    };
 
-    for(t in transitions){
-        if( el.style[t] !== undefined ){
+    for (t in transitions) {
+        if ( el.style[t] !== undefined ) {
             return transitions[t];
         }
     }
 }
 
 
-export function whichAnimationEvent(){
+export function whichAnimationEvent() {
     var t;
     var el = document.createElement('fakeelement');
     var transitions = {
-      'animation':'animationend',
-      'OAnimation':'oAnimationEnd',
-      'MozAnimation':'animationend',
-      'WebkitAnimation':'webkitAnimationEnd'
+        'animation':'animationend',
+        'OAnimation':'oAnimationEnd',
+        'MozAnimation':'animationend',
+        'WebkitAnimation':'webkitAnimationEnd'
     };
 
-    for(t in transitions){
-        if( el.style[t] !== undefined ){
+    for (t in transitions) {
+        if ( el.style[t] !== undefined ) {
             return transitions[t];
         }
     }
@@ -53,15 +53,15 @@ export function whichAnimationEvent(){
 
 export function getTransformPropertyName() {
     const properties = [
-        "transform",
-        "msTransform",
-        "webkitTransform",
-        "mozTransform",
-        "oTransform"
+        'transform',
+        'msTransform',
+        'webkitTransform',
+        'mozTransform',
+        'oTransform'
     ];
 
     for (var i = 0; i < properties.length; i++) {
-        if (typeof document.body.style[properties[i]] != "undefined") {
+        if (typeof document.body.style[properties[i]] != 'undefined') {
             return properties[i];
         }
     }
@@ -98,7 +98,7 @@ export function debounce(func, wait, immediate) {
         timeout = setTimeout(later, wait);
         if (callNow) func.apply(context, args);
     };
-};
+}
 
 
 // Generates a UUID
@@ -119,15 +119,15 @@ export function uuid() {
 // Remove CSS outlines in an accessible manner
 // Make sure you have an empty style tag that
 // lives after your main style sheet
-export function tabfocus(selector=".accessTab") {
+export function tabfocus(selector='.accessTab') {
     const tabFocus = document.querySelector(selector);
-    window.addEventListener('mousedown', function(e){
+    window.addEventListener('mousedown', function(e) {
         tabFocus.innerHTML = '';
-    },false);
+    }, false);
 
-    window.addEventListener('keydown', function(e){
-        if(e.keyCode == 9) {
+    window.addEventListener('keydown', function(e) {
+        if (e.keyCode == 9) {
             tabFocus.innerHTML = 'a:focus { outline: solid 3px #6cc6ee; }';
         }
-    },false);
+    }, false);
 }

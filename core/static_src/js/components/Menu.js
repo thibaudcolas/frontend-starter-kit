@@ -22,7 +22,7 @@ export default class {
 
     closeMenu() {
 
-        this.trigger.forEach(function(item){
+        this.trigger.forEach(function(item) {
             item.classList.remove('-active');
             item.setAttribute('aria-expanded', 'false');
         });
@@ -52,7 +52,7 @@ export default class {
 
     openMenu() {
 
-        this.trigger.forEach(function(item){
+        this.trigger.forEach(function(item) {
             item.classList.add('-active');
             item.setAttribute('aria-expanded', 'true');
         });
@@ -65,7 +65,7 @@ export default class {
         window.addEventListener('keydown', this.handleKeyDown, false);
 
         // focus on first element
-        var firstEl = this.el.querySelector("a");
+        var firstEl = this.el.querySelector('a');
         setTimeout( function() {
             firstEl.focus();
         }, 150);
@@ -73,7 +73,7 @@ export default class {
     }
 
     handleKeyDown(e) {
-        if(e.keyCode == 27) {
+        if (e.keyCode == 27) {
             this.closeMenu();
         }
     }
