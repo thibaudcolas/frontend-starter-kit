@@ -32,12 +32,13 @@
     "gulp-svgstore": "^5.0.1",
     "gulp-uglify": "^1.4.0",
     "gulp-util": "^3.0.4",
+    "hyperlink": "^2.3.0",
+    "iconv": "^2.1.11",
     "isparta": "^3.0.4",
     "mocha": "^2.3.0",
     "sinon": "^1.17.0",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "hyperlink": "^2.3.0"
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "normalize.css": "^3.0.3",
