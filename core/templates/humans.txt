@@ -1,28 +1,35 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
-# TEAM
+# FRONT END TEAM
 
-    Project Manager:
-    Twitter:
+    Josh Barr
+    Email: josh@springload.co.nz
     From:
 
-    Content and writing:
-    Twitter:
+    Thibaud Colas
+    Email: thibaud@springload.co.nz
     From:
 
-    Design:
-    Twitter:
-    Location:
+    Thomas Winter
+    Email: thomas@springload.co.nz
+    From:
 
-    Development:
-    Twitter:
-    Location:
+    Katie Day
+    Email: katie@springload.co.nz
+    From:
 
-    Front-end:
-    Twitter:
-    Location:
+    Claire Campbell
+    Email: claire@springload.co.nz
+    From:
 
+    Samantha Sanders
+    Email: samantha@springload.co.nz
+    From: Christchurch, New Zealand
+
+    Vincent Audebert
+    Email: vincent@springload.co.nz
+    From: Paris, France
 
 # THANKS
 
