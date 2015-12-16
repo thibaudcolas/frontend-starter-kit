@@ -19,30 +19,30 @@ $padding: 1em;
 %btn {
 
 
-    @extend %inline-block;                          /* [1] */
-    vertical-align: middle;                         /* [2] */
-    border-radius: $padding/4;
+    @extend %inline-block;                          // [1]
+    vertical-align: middle;                         // [2]
+    border-radius: $padding / 4;
     border-color: transparent;
     border-style: solid;
     border-width: 1px;
-    cursor: pointer;                                /* [5] */
-    font-family: inherit;                           /* [4] */
-    line-height: 2.5;                               /* [7] */
-    margin: inherit 0 0 0;                          /* [6] */
-    padding-bottom: 0;                              /* [6] */
-    padding-left: $padding;                         /* [7] */
-    padding-right: $padding;                        /* [7] */
-    padding-top: 0;                                 /* [6] */
-    white-space: nowrap;                            /* [3] */
+    cursor: pointer;                                // [5]
+    font-family: inherit;                           // [4]
+    line-height: 2.5;                               // [7]
+    margin: inherit 0 0;                          // [6]
+    padding-bottom: 0;                              // [6]
+    padding-left: $padding;                         // [7]
+    padding-right: $padding;                        // [7]
+    padding-top: 0;                                 // [6]
+    white-space: nowrap;                            // [3]
 
     &,
     &:hover {
-        text-decoration:none;   /* [9] */
+        text-decoration: none;   // [9]
     }
 
     &:active,
     &:focus {
-        outline:none;
+        outline: none;
     }
 
 }

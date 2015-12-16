@@ -18,8 +18,8 @@
 
 .grid {
     font-size: 0;
-}
-    .grid > * {
+
+    > * {
         @extend %inline-block;
         vertical-align: top;
         text-align: left;
@@ -30,13 +30,14 @@
         margin-top: 0;
         width: 100%;
     }
-    .grid:after {
+
+    &:after {
         @extend %inline-block;
         content: '';
         height: 0;
-        width:100%;
+        width: 100%;
     }
-
+}
 
 // -----------------------------------------------------------------------------
 // Float grid
@@ -65,6 +66,7 @@ $grid-row-spacing: 1.5rem;
     &.-gutters-off,
     &.-flush {
         margin-left: 0;
+
         > * {
             padding-left: 0;
         }

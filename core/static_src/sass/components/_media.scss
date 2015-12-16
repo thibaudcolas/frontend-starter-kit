@@ -22,14 +22,14 @@ $spacing-media: 1em;
     @extend %clearfix;
 }
 
-    .media__image {
-        float: left;
-        margin-right: $spacing-media;
-    }
+.media__image {
+    float: left;
+    margin-right: $spacing-media;
+}
 
-    .media__body {
-        @extend %clearfix;
-    }
+.media__body {
+    @extend %clearfix;
+}
 
 
 // Swap the image to the right

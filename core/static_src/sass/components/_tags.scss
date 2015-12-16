@@ -10,11 +10,11 @@ $color-tags: #aaa;
 
 %tag {
     @extend %btn;
+    position: relative;
     background: $color-tags;
     line-height: 1.4;
     font-size: .75rem;
-    color: #fff;
-    position: relative;
+    color: $color-white;
     border-radius: .25em;
     margin-left: .5em;
     margin-right: .5em;
@@ -24,8 +24,8 @@ $color-tags: #aaa;
     border-bottom-left-radius: 0;
 
     &:before {
-        content: "";
         position: absolute;
+        content: '';
         top: 0;
         right: 100%;
         // bottom: 0;
@@ -35,8 +35,8 @@ $color-tags: #aaa;
     }
 
     &:after {
-        content: "";
         position: absolute;
+        content: '';
         top: 50%;
         right: 100%;
         width: 5px;
@@ -49,7 +49,7 @@ $color-tags: #aaa;
 
     &:hover {
         background: darken($color-tags, 10%);
-        color: #fff;
+        color: $color-white;
 
         &:before {
             border-right-color: darken($color-tags, 10%);
@@ -63,6 +63,8 @@ $color-tags: #aaa;
 }
 
 .tag--ghost,
-.tag.-ghost {
-   opacity: .5;
+.tag {
+    .-ghost {
+        opacity: .5;
+    }
 }
