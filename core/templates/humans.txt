@@ -3,33 +3,38 @@
 
 # FRONT END TEAM
 
-    Josh Barr
-    Email: josh@springload.co.nz
-    From:
-
-    Thibaud Colas
-    Email: thibaud@springload.co.nz
-    From:
-
-    Thomas Winter
-    Email: thomas@springload.co.nz
-    From:
-
-    Katie Day
-    Email: katie@springload.co.nz
-    From:
-
     Claire Campbell
-    Email: claire@springload.co.nz
-    From:
-
+    Josh Barr
+    Katie Day
     Samantha Sanders
-    Email: samantha@springload.co.nz
-    From: Christchurch, New Zealand
-
+    Thibaud Colas
+    Thomas Winter
     Vincent Audebert
-    Email: vincent@springload.co.nz
-    From: Paris, France
+
+# BACK END TEAM
+
+    Dave Cartwright
+    Jordi Tablada
+    Richard McMillan
+    Sergei Latyntcev
+
+# DESIGNERS
+
+    Brent Neave
+    Ben Wright
+    Gareth Price
+    Joe Garlick
+    Mike Higham
+    Sam Judson
+    Zak Brown
+
+# ACCOUNT MANAGERS
+
+    Ben Glazewski
+    Jayne Paterson O'Connell
+    Jessica Rudolph
+    Bronwyn Hopkin
+
 
 # THANKS
 
