@@ -4,6 +4,7 @@
 # build
 # dist
 core/static
+static
 
 # -------------------------------------------------
 # OS generated files
