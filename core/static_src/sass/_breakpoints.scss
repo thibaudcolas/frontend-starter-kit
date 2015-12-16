@@ -3,10 +3,10 @@
 // ----------------------------------------------------------------------------
 
 
-$breakpoint-small:             600;
-$breakpoint-medium:         $breakpoint-small + 1;
-$breakpoint-large:             1024;
-$breakpoint-extra-large:     1280;
+$breakpoint-small: 600;
+$breakpoint-medium: $breakpoint-small + 1;
+$breakpoint-large: 1024;
+$breakpoint-extra-large: 1280;
 
 
 @mixin small {

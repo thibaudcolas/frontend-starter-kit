@@ -22,20 +22,21 @@
 }
 
 html {
-    background-color: $color-stage-bg;
     height: 100%;
     min-height: 100%;
-    -webkit-tap-highlight-color: $color-white;
     font-size: 16px; // aka 1rem!
+    background-color: $color-stage-bg;
+
+    -webkit-tap-highlight-color: $color-white;
 }
 
 body {
     position: relative;
-    background-color: $color-body-bg;
-    color: $color-text;
     font-family: $font-family-primary;
     font-weight: $font-weight-normal;
     line-height: $line-height-base;
+    color: $color-text;
+    background-color: $color-body-bg;
 }
 
 

@@ -20,25 +20,25 @@
 
 @keyframes affordance-in {
     0% {
-        transform: translateY(5%);
         opacity: 0;
+        transform: translateY(5%);
     }
 
     100% {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
 @keyframes affordance-out {
     0% {
-        transform: translateY(0%);
         opacity: 1;
+        transform: translateY(0%);
     }
 
     100% {
-        transform: translateY(5%);
         opacity: 0;
+        transform: translateY(5%);
     }
 }
 
@@ -46,24 +46,24 @@
 
 @keyframes affordance-in-right {
     0% {
-        transform: translateX(100%);
         opacity: 0;
+        transform: translateX(100%);
     }
 
     100% {
-        transform: translateX(0);
         opacity: 1;
+        transform: translateX(0);
     }
 }
 
 @keyframes affordance-out-right {
     0% {
-        transform: translateX(0%);
         opacity: 1;
+        transform: translateX(0%);
     }
 
     100% {
-        transform: translateX(100%);
         opacity: 0;
+        transform: translateX(100%);
     }
 }

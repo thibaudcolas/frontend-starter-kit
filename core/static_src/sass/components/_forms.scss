@@ -82,7 +82,6 @@ textarea {
     padding: .5em .75em;
     background-color: $color-field-background;
     border: 1px solid $color-field-border;
-
     color: $color-field-color;
     font-size: 1rem;
     line-height: inherit;
@@ -96,13 +95,13 @@ textarea {
     &.-error {
         border-color: $color-field-error;
     }
+
     &:disabled,
     &[disabled] {
         background-color: lighten($color-field-background, 10);
         border-color: lighten($color-field-border, 5);
         color: $color-field-disabled;
     }
-
 }
 
 // Specific Fields

@@ -15,20 +15,25 @@
     "space-between-declarations": "\n",
     "space-before-opening-brace": " ",
     "space-after-opening-brace": "\n",
-    "space-after-selector-delimiter": " ",
+    "space-after-selector-delimiter": "\n",
     "space-before-selector-delimiter": "",
     "space-before-closing-brace": "\n",
     "strip-spaces": true,
     "tab-size": true,
     "unitless-zero": true,
+    "vendor-prefix-align": false,
+    "sort-order-fallback": "abc",
     "sort-order": [
+        [ "$variable" ],
+        [ "$include" ],
+        [
+        "display",
         "position",
         "top",
         "right",
         "bottom",
         "left",
         "z-index",
-        "display",
         "float",
         "width",
         "height",
@@ -168,5 +173,6 @@
         "set-link-source",
         "unicode-bidi",
         "speak"
+        ]
     ]
 }

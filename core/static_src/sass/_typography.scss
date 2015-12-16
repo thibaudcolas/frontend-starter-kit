@@ -26,17 +26,14 @@ h4,
 h5,
 h6 {
     line-height: $line-height-headline;
-
     &:first-child {
         margin-top: 0;
     }
-
     > a {
-        text-decoration: none;
         font-weight: inherit;
+        text-decoration: none;
     }
 }
-
 
 %h1,
 h1 {
@@ -47,7 +44,9 @@ h1 {
     font-size: rem(28);
 }
 
-.h1 { @extend %h1; }
+.h1 {
+    @extend %h1;
+}
 
 
 p,
