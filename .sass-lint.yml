@@ -104,7 +104,7 @@ rules:
     - style: exclude_zero
   nesting-depth:
     - 1
-    - max-depth: 4
+    - max-depth: 3
   property-sort-order:
     - 1
     - ignore_unspecified: true
