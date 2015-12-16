@@ -1,6 +1,5 @@
 import Lightbox from './Lightbox';
 
-
 class VideoLightbox extends Lightbox {
     constructor(options) {
         super();
@@ -13,9 +12,9 @@ class VideoLightbox extends Lightbox {
     // Note: These aren't react components yet, we're just using the idiom
     // of mounting/unmounting because it makes sense.
     componentDidMount() {
-        var videoDiv = document.createElement('div');
-        var innerDiv = document.createElement('div');
-        var spinner = document.createElement('img');
+        const videoDiv = document.createElement('div');
+        const innerDiv = document.createElement('div');
+        const spinner = document.createElement('img');
         spinner.setAttribute('src', '/static/images/spinner-black.gif');
 
         videoDiv.className = 'modal__video-wrapper';
@@ -38,12 +37,12 @@ class VideoLightbox extends Lightbox {
             videoId: videoId,
             playerVars: {
                 autoplay: 1,
-                origin: window.location.origin
+                origin: window.location.origin,
             },
             events: {
                 onReady: onPlayerReady,
-                onStateChange: onPlayerStateChange
-            }
+                onStateChange: onPlayerStateChange,
+            },
         });
 
         this.player = player;
@@ -67,11 +66,11 @@ class VideoLightbox extends Lightbox {
         }
     }
 
-    onPlayerReady(e) {
+    onPlayerReady() {
         // e.target.playVideo();
     }
 
-    onPlayerStateChange(e) {
+    onPlayerStateChange() {
     }
 }
 

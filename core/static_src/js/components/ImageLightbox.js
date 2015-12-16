@@ -1,6 +1,5 @@
 import Lightbox from './Lightbox';
 
-
 class ImageLightbox extends Lightbox {
     constructor(options) {
         super();
@@ -10,8 +9,8 @@ class ImageLightbox extends Lightbox {
     }
 
     componentDidMount() {
-        var imageEl = document.createElement('img');
-        var innerDiv = document.createElement('div');
+        const imageEl = document.createElement('img');
+        const innerDiv = document.createElement('div');
 
         imageEl.setAttribute('src', this.src);
 
@@ -33,6 +32,5 @@ class ImageLightbox extends Lightbox {
 
     }
 }
-
 
 export default ImageLightbox;

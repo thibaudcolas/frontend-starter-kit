@@ -10,10 +10,9 @@ export default class {
         this.toggleMenu = this.toggleMenu.bind(this);
         this.handleKeyDown = this.handleKeyDown.bind(this);
 
-        trigger.forEach(function(item) {
+        trigger.forEach((item) => {
             item.addEventListener('click', this.toggleMenu, false);
         }, this);
-
     }
 
     sandbox(e) {
@@ -21,8 +20,7 @@ export default class {
     }
 
     closeMenu() {
-
-        this.trigger.forEach(function(item) {
+        this.trigger.forEach((item) => {
             item.classList.remove('-active');
             item.setAttribute('aria-expanded', 'false');
         });
@@ -33,26 +31,25 @@ export default class {
         document.body.classList.remove('overlay--is-active');
         this.el.classList.add('-closing');
 
-        var onEndTransition = function() {
+        const onEndTransition = () => {
             if (this.event) {
-                this.removeEventListener( this.event, onEndTransition, false );
+                this.removeEventListener(this.event, onEndTransition, false);
             }
+
             this.classList.remove('-closing');
         };
 
         if (this.event) {
-            this.el.addEventListener( this.event, onEndTransition, false );
+            this.el.addEventListener(this.event, onEndTransition, false);
         } else {
             onEndTransition();
         }
 
         window.removeEventListener('keydown', this.handleKeyDown);
-
     }
 
     openMenu() {
-
-        this.trigger.forEach(function(item) {
+        this.trigger.forEach((item) => {
             item.classList.add('-active');
             item.setAttribute('aria-expanded', 'true');
         });
@@ -65,19 +62,17 @@ export default class {
         window.addEventListener('keydown', this.handleKeyDown, false);
 
         // focus on first element
-        var firstEl = this.el.querySelector('a');
-        setTimeout( function() {
+        const firstEl = this.el.querySelector('a');
+        setTimeout(() => {
             firstEl.focus();
         }, 150);
-
     }
 
     handleKeyDown(e) {
-        if (e.keyCode == 27) {
+        if (e.keyCode === 27) {
             this.closeMenu();
         }
     }
-
 
     menuClick(e) {
         const reg = /(INPUT|BUTTON|A|SPAN)/;

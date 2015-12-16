@@ -5,10 +5,10 @@ const KeyCodes = {
     SHIFT: 16,
     CTRL: 17,
     ALT: 18,
-    PAUSE_BREAK 19,
-    CAPS_LOCK   20,
+    PAUSE_BREAK: 19,
+    CAPS_LOCK: 20,
     ESCAPE: 27,
-    SPACE: 32
+    SPACE: 32,
     PAGE_UP: 33,
     PAGE_DOWN: 34,
     END: 35,
@@ -98,7 +98,7 @@ const KeyCodes = {
     SINGLE_QUOTE: 222,
     get(constant) {
         return this[constant] || -1;
-    }
+    },
 };
 
 export default KeyCodes;
