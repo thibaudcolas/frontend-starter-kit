@@ -46,7 +46,7 @@ fi
 npm run test -s
 
 # Link checking
-hyperlink "http://www.springload.co.nz/work"
+hyperlink "http://example.com/"
 
 # Kill the server if relevant.
 kill $SERVER_PID
