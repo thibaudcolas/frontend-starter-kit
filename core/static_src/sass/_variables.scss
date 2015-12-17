@@ -1,42 +1,66 @@
 // ----------------------------------------------------------------------------
 // Variables
 // ----------------------------------------------------------------------------
+//
+// CONTENTS --
+// 1. Colors
+// 2. Fonts
+// 3. Spacing
+// 4. Easing
+//
 
 
-// Colours
+// 1. Colors
+// ----------------------------------------------------------------------------
+//
 
-$color-stage-bg: #fff;
-$color-body-bg: #f5f5f5;
-$color-text: #333;
-$color-text-muted: lighten($color-text, 10%);
-$color-headlines: #3f3f3f;
-$color-links: #1ba1ee;
+$color-stage-bg:    #f5f5f5;
+$color-body-bg:     #f5f5f5;
+
+$color-text:        #333;
+$color-text-muted:  lighten($color-text, 10%);
+
+$color-links:       #1ba1ee;
 $color-links-hover: darken($color-links, 10%);
-$color-hr: rgba(0, 0, 0, .1);
-$color-focus: #6cc6ee;
-$color-select: #e5e5e5;
-$color-white: #fff;
-$color-black: #000;
 
-// Fonts
+$color-focus:       #6cc6ee;
+$color-select:      #e5e5e5;
+$color-error:       #f77;
 
-$font-family-sans-serif: 'Roboto', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-serif: 'Georgia', 'Times New Roman', Times, serif;
-$font-family-primary: $font-family-sans-serif;
-$font-size-base: 16; //px
-$line-height-base: 1.4;
-$line-height-headline: 1.2;
-$font-weight-normal: 400;
-$font-weight-bold: 700;
+$color-white:       #fff;
+$color-black:       #000;
 
+// 2. Fonts
+// ----------------------------------------------------------------------------
+//
 
+$font-family-default-sans-serif: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-default-serif:  'Georgia', 'Times New Roman', Times, serif;
 
-// Spacing
+// Add site specfic fonts below:
+$font-family-sans-serif:  'Roboto', $font-family-default-sans-serif;
+$font-family-serif:       $font-family-default-serif;
 
-$spacing: 1.5rem;
+$font-family-primary:     $font-family-sans-serif;
 
+$font-size-base:          16; //px
+$line-height-base:        1.4;
+$line-height-headline:    1.2;
 
+$font-weight-normal:      400;
+$font-weight-bold:        700;
 
-// Easing
+// 3. Spacing
+// ----------------------------------------------------------------------------
+//
 
+$spacing-s: .75rem;
+$spacing: 	1.5rem;
+$spacing-l: 2rem;
+
+// 4. Easing
+// ----------------------------------------------------------------------------
+//
+
+$ease: cubic-bezier(.43, .11, .41 1);
 $easing-circ: cubic-bezier(.075, .82, .165, 0);

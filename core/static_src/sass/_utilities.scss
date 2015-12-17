@@ -1,14 +1,28 @@
 // ----------------------------------------------------------------------------
 // Utilities
 // ----------------------------------------------------------------------------
+//
+// CONTENTS --
+// 1. Layout Helpers
+// 2. Text Helpers
+// 3. Accessibility Helpers
+// 4. Spacing Helpers
+//
+
+
+// 1. Layout Helpers
+// ----------------------------------------------------------------------------
+//
 
 .u-clearfix,
 %clearfix {
+    &:before,
     &:after {
-        display: block;
+        content: " ";
+        display: table;
+    }
+    &:after {
         clear: both;
-        // height: 0;
-        content: '';
     }
 }
 
@@ -18,52 +32,65 @@
 
     *display: inline;
     *zoom: 1;
+    vertical-align: top;
 }
 
-%spacing {
-    margin-bottom: $spacing;
-}
-
-%no-top-first {
-    &:first-child {
-        margin-top: 0;
-    }
-}
-
-.u-center {
-    text-align: center;
-}
-
-.u-middle > * {
+.u-align-middle {
     vertical-align: middle;
 }
 
-.u-strong {
-    font-weight: 600;
+.u-align-bottom {
+    vertical-align: bottom;
 }
 
-.u-auto {
-    margin-right: auto;
-    margin-left: auto;
+.u-block {
+    display: block;
+    visibility: visible;
 }
 
 .u-hide {
     display: none;
+    visibility: hidden;
 }
 
-.u-right {
-    text-align: right;
+.u-hide-small {
+    display:none;
+    visibility: hidden;
+
+    @include medium {
+        display:block;
+        visibility: visible;
+    }
 }
 
 .u-overflow {
     overflow: hidden;
 }
 
-.u-tight {
-    margin-bottom: .25em;
+.u-auto,
+%margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.u-list,
+%list-reset {
+    margin: 0; padding: 0;
+    list-style: none;
 }
 
 
+// 2. Text Helpers
+// ----------------------------------------------------------------------------
+//
+
+.u-center {
+    text-align: center;
+}
+
+.u-right {
+    text-align: right;
+}
 
 // * 1. Ensures text doesn't wrap and break your layout
 // * 2. Trigger overflow behavior
@@ -74,6 +101,18 @@
     white-space: nowrap;            // [1]
 }
 
+// Prevent all user interaction with the element
+.disabled,
+.u-disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: .5;
+}
+
+
+// 3. Accessibility Helpers
+// ----------------------------------------------------------------------------
+//
 
 // An accessible label that takes up no visual space
 .u-accessible,
@@ -89,10 +128,16 @@
 }
 
 
-// Prevent all user interaction with the element
-.disabled,
-.u-disabled {
-    pointer-events: none;
-    cursor: default;
-    opacity: .5;
+// 4. Spacing Helpers
+// ----------------------------------------------------------------------------
+//
+
+%spacing {
+    margin-bottom: $spacing;
+}
+
+%no-top-first {
+    &:first-child {
+        margin-top: 0;
+    }
 }

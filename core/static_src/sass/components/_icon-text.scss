@@ -11,13 +11,6 @@
 //     </svg>
 // </span>
 
-
-.icon-text {
-    > svg {
-        @extend %icon-text-svg;
-    }
-}
-
 %icon-text-svg {
     width: 1.5em;
     height: 1.5em;
@@ -31,10 +24,15 @@
     }
 }
 
+.icon-text {
+    > svg {
+        @extend %icon-text-svg;
+    }
+}
+
 .icon-text__icon > svg {
     @extend %icon-text-svg;
 }
-
 
 // The margin-top is useful for correcting discrepancies between the baseline
 // and vertical-align: middle;

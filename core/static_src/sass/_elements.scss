@@ -13,6 +13,10 @@
     outline: none;
 }
 
+::-moz-focus-inner {
+    border: 0;
+}
+
 // We have Js that adds outline when
 // keyboard tabbing but add back if no js
 .no-js {
@@ -27,7 +31,7 @@ html {
     font-size: 16px; // aka 1rem!
     background-color: $color-stage-bg;
 
-    -webkit-tap-highlight-color: $color-white;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
