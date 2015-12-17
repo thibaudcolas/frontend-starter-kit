@@ -14,21 +14,21 @@
 // ----------------------------------------------------------------------------
 //
 
-$color-stage-bg:    #f5f5f5;
-$color-body-bg:     #f5f5f5;
+$color-stage-bg: #f5f5f5;
+$color-body-bg: #f5f5f5;
 
-$color-text:        #333;
-$color-text-muted:  lighten($color-text, 10%);
+$color-text: #333;
+$color-text-muted: lighten($color-text, 10%);
 
-$color-links:       #1ba1ee;
+$color-links: #1ba1ee;
 $color-links-hover: darken($color-links, 10%);
 
-$color-focus:       #6cc6ee;
-$color-select:      #e5e5e5;
-$color-error:       #f77;
+$color-focus: #6cc6ee;
+$color-select: #e5e5e5;
+$color-error: #f77;
 
-$color-white:       #fff;
-$color-black:       #000;
+$color-white: #fff;
+$color-black: #000;
 
 // 2. Fonts
 // ----------------------------------------------------------------------------
@@ -38,24 +38,24 @@ $font-family-default-sans-serif: 'HelveticaNeue', 'Helvetica Neue', Helvetica, A
 $font-family-default-serif:  'Georgia', 'Times New Roman', Times, serif;
 
 // Add site specfic fonts below:
-$font-family-sans-serif:  'Roboto', $font-family-default-sans-serif;
-$font-family-serif:       $font-family-default-serif;
+$font-family-sans-serif: 'Roboto', $font-family-default-sans-serif;
+$font-family-serif: $font-family-default-serif;
 
-$font-family-primary:     $font-family-sans-serif;
+$font-family-primary: $font-family-sans-serif;
 
-$font-size-base:          16; //px
-$line-height-base:        1.4;
-$line-height-headline:    1.2;
+$font-size-base: 16; //px
+$line-height-base: 1.4;
+$line-height-headline: 1.2;
 
-$font-weight-normal:      400;
-$font-weight-bold:        700;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
 
 // 3. Spacing
 // ----------------------------------------------------------------------------
 //
 
 $spacing-s: .75rem;
-$spacing: 	1.5rem;
+$spacing: 1.5rem;
 $spacing-l: 2rem;
 
 // 4. Easing
