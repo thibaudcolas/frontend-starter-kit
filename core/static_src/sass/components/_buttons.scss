@@ -18,12 +18,11 @@ $padding: 1em;
 
 %btn {
     @extend %inline-block;                          // [1]
-
     padding-top: 0;                                 // [6]
     padding-right: $padding;                        // [7]
     padding-bottom: 0;                              // [6]
     padding-left: $padding;                         // [7]
-    margin: inherit 0 0;                          // [6]
+    margin: inherit 0 0;                            // [6]
     font-family: inherit;                           // [4]
     line-height: 2.5;                               // [7]
     white-space: nowrap;                            // [3]
