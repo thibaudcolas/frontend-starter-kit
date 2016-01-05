@@ -9,7 +9,7 @@ var path = require('path');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
 var plz = require("gulp-pleeease");
-var scsslint = require('gulp-scss-lint');
+var sassLint = require('gulp-sass-lint');
 var parker = require('gulp-parker');
 var bs = require('browser-sync').get('main');
 
@@ -30,13 +30,14 @@ gulp.task('css', function() {
 
 
 // ----------------------------------------------------------------------------
-// Scss Lint
+// Sass Lint
 // ----------------------------------------------------------------------------
 
 gulp.task('lint:sass', function() {
   gulp.src( path.join(config.paths.sass, '**', '*.scss') )
-    .pipe(scsslint())
-      .pipe(scsslint.failReporter());
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
 });
 
 

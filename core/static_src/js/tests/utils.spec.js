@@ -26,7 +26,7 @@ describe('Utils', () => {
         // Move the sinon clock to 5001ms.
         clock.tick(5001);
 
-        expect(callback.called).to.be.true;
-        expect(callback.calledOnce).to.be.true;
+        expect(callback.called).to.equal(true);
+        expect(callback.calledOnce).to.equal(true);
     });
 });

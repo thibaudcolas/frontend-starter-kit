@@ -1,13 +1,12 @@
 import { whichAnimationEvent } from '../utils';
 
-
 class Lightbox {
-    constructor(options) {
-        var closeButton = document.createElement('div');
-        var contentContainer = document.createElement('div');
-        var modalCenter = document.createElement('div');
-        var contentNode = document.createElement('div');
-        var event = whichAnimationEvent();
+    constructor() {
+        const closeButton = document.createElement('div');
+        const contentContainer = document.createElement('div');
+        const modalCenter = document.createElement('div');
+        const contentNode = document.createElement('div');
+        const event = whichAnimationEvent();
         this.event = event;
 
         // DOM
@@ -32,12 +31,10 @@ class Lightbox {
         this.contentContainer = contentContainer;
         this.contentNode = contentNode;
 
-
         // Bindings
         this.handleClose = this.handleClose.bind(this);
         this.componentDidShow = this.componentDidShow.bind(this);
         this.remove = this.remove.bind(this);
-
 
         // Events
         this.closeButton.addEventListener('click', this.handleClose, false);
@@ -47,13 +44,12 @@ class Lightbox {
 
     show() {
         const { event } = this;
-        const self = this;
         const contentNode = this.contentNode;
 
         contentNode.className = 'modal__content';
 
         if (document.documentElement.className.match(/ie8/)) {
-            var matte = document.createElement('div');
+            const matte = document.createElement('div');
             matte.className = 'matte-opaque';
             this.el.insertBefore(matte, this.el.firstChild);
         }
@@ -71,18 +67,17 @@ class Lightbox {
         } else {
             this.componentDidShow();
         }
-
     }
 
     componentDidShow(e) {
-        var self = this;
-        var event = self.event;
-        var contentNode = self.contentNode;
+        const self = this;
+        const event = self.event;
 
         if (e && event) {
             if (e.target === self.contentNode) {
                 self.renderContent();
             }
+
             return;
         }
 
@@ -96,13 +91,12 @@ class Lightbox {
 
     handleClose(e) {
         e.preventDefault();
-        var event = whichAnimationEvent();
+        const event = whichAnimationEvent();
         document.body.className = document.body.className.replace(' ' + this.bodyActiveClass, '');
 
         if (event) {
             this.el.addEventListener(event, this.remove);
             this.el.className = this.el.className.replace('modal--active', 'modal--exit');
-            var repaint = this.el.offsetWidth;
             return;
         }
 
@@ -120,7 +114,7 @@ class Lightbox {
     }
 
     remove(e) {
-        var event = whichAnimationEvent();
+        const event = whichAnimationEvent();
 
         if (e.target !== this.el) {
             return;

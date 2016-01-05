@@ -1,15 +1,15 @@
 .scrollable {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+    overflow: auto;
+
+    -webkit-overflow-scrolling: touch;
 }
 
 .scrollable-horizontal {
-  overflow-x: auto;
-  overflow-y: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .scrollable-vertical {
-  overflow-x: hidden;
-  overflow-y: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-

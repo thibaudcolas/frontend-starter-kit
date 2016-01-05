@@ -3,15 +3,6 @@
 // -----------------------------------------------------------------------------
 
 
-%serif {
-    font-family: $font-family-serif;
-}
-
-%sans-serif {
-    font-family: $font-family-sans-serif;
-}
-
-
 %font-smoothing {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -23,14 +14,22 @@
 }
 
 
-%body-type-size {
-    font-size: rem($font-size-base - 1);
-
-    @include medium {
-        font-size: rem($font-size-base);
-    }
+%serif {
+    font-family: $font-family-serif;
 }
 
+%sans-serif {
+    font-family: $font-family-sans-serif;
+}
+
+%body-type-size {
+    font-size: rem($font-size-base);
+    @extend %font-smoothing;
+
+    @include medium {
+        font-size: rem($font-size-base + 2);
+    }
+}
 
 h1,
 h2,
@@ -38,19 +37,19 @@ h3,
 h4,
 h5,
 h6 {
+    @extend %font-smoothing;
     line-height: $line-height-headline;
-
     &:first-child {
         margin-top: 0;
     }
-
     > a {
-        text-decoration: none;
         font-weight: inherit;
+        text-decoration: none;
     }
 }
 
-
+%h1,
+.h1,
 h1 {
     font-size: rem(28);
 
@@ -58,35 +57,6 @@ h1 {
         font-size: rem(32);
     }
 }
-
-h2 {
-
-}
-
-h3 {
-
-}
-
-h4 {
-
-}
-
-h5 {
-
-}
-
-h6 {
-
-}
-
-
-.h1 { @extend h1; }
-.h2 { @extend h2; }
-.h3 { @extend h3; }
-.h4 { @extend h4; }
-.h5 { @extend h5; }
-.h6 { @extend h6; }
-
 
 p,
 ul,
@@ -104,6 +74,24 @@ th,
 input,
 textarea,
 button,
-select {
+select,
+blockquote,
+cite, {
     @extend %body-type-size;
+}
+
+p:empty {
+    display: none;
+}
+
+.strong,
+strong,
+b {
+    font-weight: $font-weight-bold;
+}
+
+.italic,
+i,
+em {
+    font-style: italic;
 }

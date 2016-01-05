@@ -2,12 +2,17 @@
 // Breakpoints and simple media query mixins
 // ----------------------------------------------------------------------------
 
+$breakpoint-xsmall: 480;
+$breakpoint-small: 600;
+$breakpoint-medium: $breakpoint-small + 1;
+$breakpoint-large: 1024;
+$breakpoint-extra-large: 1280;
 
-$breakpoint-small: 			600;
-$breakpoint-medium: 		$breakpoint-small + 1;
-$breakpoint-large: 			1024;
-$breakpoint-extra-large: 	1280;
-
+@mixin xsmall {
+    @media only screen and (min-width: em($breakpoint-xsmall)) {
+        @content;
+    }
+}
 
 @mixin small {
     @media only screen and (max-width: rem($breakpoint-small)) {

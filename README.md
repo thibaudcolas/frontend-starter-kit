@@ -21,8 +21,7 @@ To install our dependencies:
 
 ```sh
 nvm install
-npm install --global eslint eslint-plugin-react babel-eslint eslint-config-airbnb
-gem install scss_lint
+npm install --global eslint eslint-plugin-react babel-eslint eslint-config-airbnb sass-lint
 # Then, install all project dependencies.
 npm install
 # Optionally, install the git hooks.
@@ -42,6 +41,17 @@ npm run build
 npm run lint
 # Runs tests.
 npm run test
+```
+
+### Using the git hooks
+
+> Git hooks automatically check your code before every commit.
+
+```sh
+# To enable the hooks, from the project root:
+./.githooks/deploy
+# To disable the hooks for a single commit, use the appropriate flag:
+git commit --no-verify
 ```
 
 ### Tests

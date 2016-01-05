@@ -1,12 +1,9 @@
 .i {
-
     $spacing-icon: .25em;
 
     display: inline-block;
-
     width: 16px;
     height: 16px;
-
 }
 
 svg > use {
@@ -14,9 +11,9 @@ svg > use {
 }
 
 .i-black {
-    fill: #000;
+    fill: $color-black;
 }
 
 .i-white {
-    fill: #fff;
+    fill: $color-white;
 }

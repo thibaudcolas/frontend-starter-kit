@@ -22,10 +22,11 @@
 $z-index-modal: 11;
 $z-index-modal-matte: 1;
 $z-index-modal-content: 2;
-
 $color-modal-close-bg: #333;
 $color-modal-close-text: #fff;
 $color-modal-content-bg: #fff;
+$color-black-opacity-093: rgba(255, 255, 255, .93);
+$color-dark-grey: #222;
 
 .u-body-modal-active {
     height: 100%;
@@ -33,21 +34,21 @@ $color-modal-content-bg: #fff;
 }
 
 .modal {
-    animation: modal-in .15s ease-out 0s backwards;
-    background: rgba(255, 255, 255, .93);
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
     z-index: $z-index-modal;
+    background: $color-black-opacity-093;
+    animation: modal-in .15s ease-out 0s backwards;
 }
 
 // To close the modal, apply the modal--exit class and wait for the
 // animationEnd event to fire
 
 .modal--exit {
-    animation: modal-out .4s ease-out 0.4s forwards;
+    animation: modal-out .4s ease-out .4s forwards;
 
     .modal__content {
         animation: affordance-out .4s ease-in 0s forwards;
@@ -61,59 +62,59 @@ $color-modal-content-bg: #fff;
 
 .modal__table {
     display: table;
+    position: relative;
+    z-index: $z-index-modal-content;
     width: 100%;
     height: 100%;
     vertical-align: middle;
-    position: relative;
-    z-index: $z-index-modal-content;
 }
 
 .modal__center {
     display: table-cell;
-    vertical-align: middle;
     text-align: center;
+    vertical-align: middle;
     animation: modal-in .15s ease-out .25s backwards;
 }
 
 .modal__content {
-    animation: affordance-in .5s $easing-circ .3s backwards;
-    display: inline-block;
-    min-width: 10.5em;
-    max-width: 32em;
-    min-height: 6em;
-    background: $color-modal-content-bg;
-    padding: 1em 2em;
-
     @include large {
         position: relative;
     }
+
+    display: inline-block;
+    max-width: 32em;
+    min-width: 10.5em;
+    min-height: 6em;
+    padding: 1em 2em;
+    background: $color-modal-content-bg;
+    animation: affordance-in .5s $easing-circ .3s backwards;
 }
 
 
 .modal__close {
-    animation: affordance-in-right .5s $easing-circ .25s backwards;
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: $color-modal-close-text;
-    padding: .9rem 1.35rem 1.1rem;
-    line-height: 1;
-    cursor: pointer;
-    background: $color-modal-close-bg;
-    z-index: $z-index-modal-content;
-    font-size: 1em;
-
     @include medium {
         font-size: 2em;
     }
 
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: $z-index-modal-content;
+    padding: .9rem 1.35rem 1.1rem;
+    font-size: 1em;
+    line-height: 1;
+    color: $color-modal-close-text;
+    cursor: pointer;
+    background: $color-modal-close-bg;
+    animation: affordance-in-right .5s $easing-circ .25s backwards;
+
     &:hover {
+        color: $color-white;
         background: darken($color-modal-close-bg, 5%);
-        color: #fff;
     }
 
     &:active {
-        background: #222;
+        background: $color-dark-grey;
     }
 }
 
@@ -124,12 +125,12 @@ $color-modal-content-bg: #fff;
 %ie8-matte {
     display: block;
     position: absolute;
-    z-index: $z-index-modal-matte;
-    background: #fff;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
+    z-index: $z-index-modal-matte;
+    background: $color-white;
     opacity: .93;
     zoom: 1;
 }
@@ -139,13 +140,11 @@ $color-modal-content-bg: #fff;
     .matte-opaque {
         @extend %ie8-matte;
     }
+
     .matte-translucent {
         @extend %ie8-matte;
-        opacity: .5;
+
         z-index: 3;
+        opacity: .5;
     }
 }
-
-
-
-

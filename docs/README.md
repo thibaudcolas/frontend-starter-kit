@@ -67,7 +67,7 @@ Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm).
 - [BrowserSync](http://www.browsersync.io/) – Live-reloads and synchronises browsers, plus other goodies.
 - [ESLint](http://eslint.org/) – The best JavaScript linter.
 - [JSCS](http://jscs.info/) – The second best JS linter. Focuses more on code style.
-- [SCSS-Lint](https://github.com/brigade/scss-lint) – Best SCSS linter.
+- [SASS-Lint](https://github.com/sasstools/sass-lint) – Best SCSS linter.
 - [CSSComb](http://csscomb.com/) – A handy CSS reformater.
 - [Chrome DevTools](https://developer.chrome.com/devtools) – Browser developer tools for Chrome.
 - [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) – React developer tools integrated into Chrome.

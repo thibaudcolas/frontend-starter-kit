@@ -1,5 +1,4 @@
-import { querySelectArray, whichAnimationEvent } from '../utils';
-
+import { whichAnimationEvent } from '../utils';
 
 // This class describes the target of a toggle action
 export class ToggleTarget {
@@ -22,7 +21,7 @@ export class ToggleTarget {
         e.stopPropagation();
     }
 
-    handleBody(e) {
+    handleBody() {
         this.store.toggle(this.name);
         this.removeListeners();
     }
@@ -41,8 +40,7 @@ export class ToggleTarget {
         }
     }
 
-
-    onAnimIn(e) {
+    onAnimIn() {
         this.el.removeEventListener(this.animEvent, this.onAnimIn, false);
         this.el.classList.remove('u-hide');
     }
@@ -60,7 +58,6 @@ export class ToggleTarget {
             this.el.classList.remove('u-hide');
             this.el.classList.remove('-out');
             this.addListeners();
-
         } else {
             if (this.animated && this.animEvent) {
                 this.el.addEventListener(this.animEvent, this.onAnimEnd, false);
