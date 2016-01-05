@@ -71,6 +71,12 @@ npm run test:unit:coverage
 open coverage/lcov-report/index.html
 ```
 
+#### Test twitter metas
+
+Fill the metas and check them using this website:
+
+https://cards-dev.twitter.com/validator
+
 ## Switching between NodeJS versions
 
 ### Use NVM
