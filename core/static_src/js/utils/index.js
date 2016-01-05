@@ -109,7 +109,9 @@ export function uuid() {
             uuidGen += '-';
         }
 
+        /* eslint-disable no-nested-ternary */
         uuidGen += (i === 12 ? 4 : (i === 16 ? (random & 3 | 8) : random)).toString(16);
+        /* eslint-enable no-nested-ternary */
     }
 
     return uuidGen;
