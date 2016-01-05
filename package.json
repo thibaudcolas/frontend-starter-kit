@@ -55,7 +55,7 @@
     "test": "npm run test:unit -s",
     "test:unit": "mocha --compilers js:babel/register core/static_src/js/tests",
     "test:unit:watch": "mocha --watch --compilers js:babel/register core/static_src/js/tests",
-    "test:unit:coverage": "babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -- core/static_src/js/tests",
+    "test:unit:coverage": "babel-node $(npm bin)/isparta cover node_modules/mocha/bin/_mocha -- core/static_src/js/tests",
     "build": "NODE_ENV=development gulp build",
     "dist": "NODE_ENV=production gulp build",
     "css": "gulp css",
