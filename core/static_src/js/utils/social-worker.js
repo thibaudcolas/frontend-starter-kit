@@ -52,4 +52,3 @@ export function buildTwitterLink(message, url) {
     str.push('url=' + encodeURIComponent(url));
     return str.join('&');
 }
-
