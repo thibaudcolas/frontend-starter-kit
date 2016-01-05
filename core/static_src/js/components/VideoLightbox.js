@@ -31,7 +31,7 @@ class VideoLightbox extends Lightbox {
         const { innerDiv, videoDiv, onPlayerReady, onPlayerStateChange, videoId } = this;
         const { offsetWidth, offsetHeight } = innerDiv;
 
-        const player = new YT.Player(videoDiv, {
+        const player = new global.YT.Player(videoDiv, {
             width: offsetWidth,
             height: offsetHeight,
             videoId: videoId,
