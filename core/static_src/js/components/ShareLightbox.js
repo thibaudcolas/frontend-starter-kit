@@ -40,7 +40,7 @@ export class ShareButton {
 
     handleClick(e) {
         e.preventDefault();
-        const lightbox = new SocialShareLightbox({
+        new SocialShareLightbox({
             url: this.el.getAttribute('data-flag-share'),
         });
     }

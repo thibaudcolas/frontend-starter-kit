@@ -3,6 +3,7 @@
 
     "rules": {
         "indent": [2, 4],
+        "no-new": [1],
         "no-warning-comments": [1, { "terms": ["todo", "fixme", "xxx"], "location": "start" }],
         "react/sort-comp": [0],
         "react/jsx-boolean-value": [0],
