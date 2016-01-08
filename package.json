@@ -37,9 +37,12 @@
     "isparta": "^3.0.4",
     "mocha": "^2.3.0",
     "sass-lint": "^1.4.0",
+    "seo-checker": "^0.3.2",
     "sinon": "^1.17.0",
+    "util": "^0.10.3",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "yargs": "^3.31.0"
   },
   "dependencies": {
     "normalize.css": "^3.0.3",
@@ -63,6 +66,7 @@
     "svg": "gulp svg",
     "watch": "gulp watch",
     "docs": "mkdir -p core/static && npm run build -s && NODE_ENV=development node --harmony ./docs/index.js",
-    "deploy": "git push -f origin master:deploy/production"
+    "deploy": "git push -f origin master:deploy/production",
+    "seo-checker": "NODE_ENV=development node --harmony ./bin/seo.js"
   }
 }
