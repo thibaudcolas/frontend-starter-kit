@@ -24,7 +24,7 @@
     "gulp": "^3.9.0",
     "gulp-inject": "^3.0.0",
     "gulp-parker": "^0.1.0",
-    "gulp-pleeease": "^2.0.2",
+    "gulp-pleeease": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "gulp-sass-lint": "^1.1.0",
@@ -42,6 +42,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "gulp-pleeease": "^1.2.0",
     "normalize.css": "^3.0.3",
     "springload-analytics.js": "^2.0.0"
   },
