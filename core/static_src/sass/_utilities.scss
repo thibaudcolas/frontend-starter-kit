@@ -6,7 +6,7 @@
 // 1. Layout Helpers
 // 2. Text Helpers
 // 3. Accessibility Helpers
-// 4. Spacing Helpers
+// 4. Margin & Padding Helpers
 //
 
 
@@ -29,10 +29,19 @@
 .u-inline-block,
 %inline-block {
     display: inline-block;
-
     *display: inline;
     *zoom: 1;
     vertical-align: top;
+}
+
+.u-inline-block-medium,
+%inline-block-medium {
+    @include medium {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        vertical-align: top;
+    }
 }
 
 .u-align-middle {
@@ -48,18 +57,16 @@
     visibility: visible;
 }
 
-.u-hide {
+.u-hidden {
     display: none;
     visibility: hidden;
 }
 
-.u-hide-small {
-    display:none;
-    visibility: hidden;
-
-    @include medium {
-        display:block;
-        visibility: visible;
+.u-hidden-small {
+    // @small (_breakpoints.scss) must use max-width 
+    @include small { 
+        display:none;
+        visibility: hidden;
     }
 }
 
@@ -67,15 +74,16 @@
     overflow: hidden;
 }
 
-.u-auto,
-%margin-auto {
+.u-margin-center,
+%margin-center {
     margin-left: auto;
     margin-right: auto;
 }
 
 .u-list,
 %list-reset {
-    margin: 0; padding: 0;
+    margin: 0; 
+    padding: 0;
     list-style: none;
 }
 
@@ -92,6 +100,18 @@
     text-align: right;
 }
 
+.u-bold {
+    font-weight: $font-weight-bold;
+}
+
+.u-uppercase {
+    text-transform: uppercase;
+}
+
+.u-underline {
+    text-decoration: underline;
+}
+
 // * 1. Ensures text doesn't wrap and break your layout
 // * 2. Trigger overflow behavior
 // * 3. Truncate the text
@@ -103,10 +123,10 @@
 
 // Prevent all user interaction with the element
 .disabled,
-.u-disabled {
+.u-disabled,
+:disabled {
     pointer-events: none;
     cursor: default;
-    opacity: .5;
 }
 
 
@@ -116,24 +136,25 @@
 
 // An accessible label that takes up no visual space
 .u-accessible,
-.visuallyhidden {
+%visuallyhidden {
     position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
     border: 0;
 }
 
 
-// 4. Spacing Helpers
+// 4. Margin & Padding Helpers
 // ----------------------------------------------------------------------------
 //
 
-%spacing {
-    margin-bottom: $spacing;
+.u-mb {
+    // See _mixins.scss for more details
+    @include v-space(margin, 0 $spacing); 
 }
 
 %no-top-first {
