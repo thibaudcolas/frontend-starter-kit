@@ -6,7 +6,7 @@
 // 1. Layout Helpers
 // 2. Text Helpers
 // 3. Accessibility Helpers
-// 4. Spacing Helpers
+// 4. Margin & Padding Helpers
 //
 
 
@@ -29,10 +29,18 @@
 .u-inline-block,
 %inline-block {
     display: inline-block;
-
     *display: inline;
     *zoom: 1;
     vertical-align: top;
+}
+
+%inline-block-medium {
+    @include medium {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        vertical-align: top;
+    }
 }
 
 .u-align-middle {
@@ -54,12 +62,10 @@
 }
 
 .u-hide-small {
-    display:none;
-    visibility: hidden;
-
-    @include medium {
-        display:block;
-        visibility: visible;
+    // @small (_breakpoints.scss) must use max-width 
+    @include small { 
+        display:none;
+        visibility: hidden;
     }
 }
 
@@ -67,15 +73,16 @@
     overflow: hidden;
 }
 
-.u-auto,
-%margin-auto {
+.u-margin-center,
+%margin-center {
     margin-left: auto;
     margin-right: auto;
 }
 
 .u-list,
 %list-reset {
-    margin: 0; padding: 0;
+    margin: 0; 
+    padding: 0;
     list-style: none;
 }
 
@@ -103,10 +110,10 @@
 
 // Prevent all user interaction with the element
 .disabled,
-.u-disabled {
+.u-disabled,
+:disabled {
     pointer-events: none;
     cursor: default;
-    opacity: .5;
 }
 
 
@@ -123,17 +130,19 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
     border: 0;
 }
 
 
-// 4. Spacing Helpers
+// 4. Margin & Padding Helpers
 // ----------------------------------------------------------------------------
 //
 
-%spacing {
-    margin-bottom: $spacing;
+.mb {
+    // Adds a margin-bottom
+    // See _mixins.scss for details
+    @include v-spacer(margin, 0 $spacing);
 }
 
 %no-top-first {

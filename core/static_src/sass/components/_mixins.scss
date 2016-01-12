@@ -1,3 +1,20 @@
 // ----------------------------------------------------------------------------
 // Mixins
 // ----------------------------------------------------------------------------
+
+// Add vertical padding or margin to an element
+@mixin v-spacer($spacer, $size) {
+	// $spacer = margin or padding
+	// $size can either be one or two sizes.
+	// $size must have a measurable unit eg. rem, px  
+    @if length($size) == 1 {
+        $top: $size;
+        $bottom: $size;
+    } @else {
+        $top: nth($size, 1);
+        $bottom: nth($size, 2); 
+    }
+
+    #{$spacer}-top: $top;
+    #{$spacer}-bottom: $bottom;
+}
