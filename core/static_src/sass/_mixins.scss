@@ -3,18 +3,19 @@
 // ----------------------------------------------------------------------------
 
 // Add vertical padding or margin to an element
-@mixin v-space($spacer, $size) {
-	// $spacer = margin or padding
+// Example: @include v-space( $property, $top $bottom );
+
+@mixin v-space($property, $size) {
 	// $size can either be one or two sizes.
 	// $size must have a measurable unit eg. rem, px  
     @if length($size) == 1 {
         $top: $size;
         $bottom: $size;
-    } @else {
+    } @else if length($size) == 2 {
         $top: nth($size, 1);
         $bottom: nth($size, 2); 
     }
 
-    #{$spacer}-top: $top;
-    #{$spacer}-bottom: $bottom;
+    #{$property}-top: $top;
+    #{$property}-bottom: $bottom;
 }

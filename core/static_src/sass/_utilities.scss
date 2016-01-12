@@ -57,12 +57,12 @@
     visibility: visible;
 }
 
-.u-hide {
+.u-hidden {
     display: none;
     visibility: hidden;
 }
 
-.u-hide-small {
+.u-hidden-small {
     // @small (_breakpoints.scss) must use max-width 
     @include small { 
         display:none;
@@ -104,6 +104,14 @@
     font-weight: $font-weight-bold;
 }
 
+.u-uppercase {
+    text-transform: uppercase;
+}
+
+.u-underline {
+    text-decoration: underline;
+}
+
 // * 1. Ensures text doesn't wrap and break your layout
 // * 2. Trigger overflow behavior
 // * 3. Truncate the text
@@ -128,7 +136,7 @@
 
 // An accessible label that takes up no visual space
 .u-accessible,
-.visuallyhidden {
+%visuallyhidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -144,11 +152,9 @@
 // ----------------------------------------------------------------------------
 //
 
-.mb {
-    // Adds a margin-bottom
+.u-mb {
     // See _mixins.scss for more details
-    @include v-space(margin, 0 $spacing); // margins
-    //@include v-spacer(padding, 0 $spacing); // padding
+    @include v-space(margin, 0 $spacing); 
 }
 
 %no-top-first {
