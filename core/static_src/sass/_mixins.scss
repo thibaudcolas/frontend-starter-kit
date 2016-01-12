@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------------------
 
 // Add vertical padding or margin to an element
-@mixin v-spacer($spacer, $size) {
+@mixin v-space($spacer, $size) {
 	// $spacer = margin or padding
 	// $size can either be one or two sizes.
 	// $size must have a measurable unit eg. rem, px  

@@ -34,6 +34,7 @@
     vertical-align: top;
 }
 
+.u-inline-block-medium,
 %inline-block-medium {
     @include medium {
         display: inline-block;
@@ -99,6 +100,10 @@
     text-align: right;
 }
 
+.u-bold {
+    font-weight: $font-weight-bold;
+}
+
 // * 1. Ensures text doesn't wrap and break your layout
 // * 2. Trigger overflow behavior
 // * 3. Truncate the text
@@ -141,8 +146,9 @@
 
 .mb {
     // Adds a margin-bottom
-    // See _mixins.scss for details
-    @include v-spacer(margin, 0 $spacing);
+    // See _mixins.scss for more details
+    @include v-space(margin, 0 $spacing); // margins
+    //@include v-spacer(padding, 0 $spacing); // padding
 }
 
 %no-top-first {
