@@ -13,7 +13,7 @@ $color-tags: #aaa;
 
     position: relative;
     margin-right: .5em;
-    @include v-spacer(margin, 0 .75em);
+    margin-bottom: .75em;
     margin-left: .5em;
     font-size: .75rem;
     line-height: 1.4;
@@ -28,8 +28,6 @@ $color-tags: #aaa;
         position: absolute;
         top: 0;
         right: 100%;
-        // bottom: 0;
-        // margin-right: -1px;
         border: solid transparent 1.2em;
         border-right: solid .6em $color-tags;
         content: '';

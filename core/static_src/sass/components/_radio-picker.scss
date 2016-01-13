@@ -31,7 +31,7 @@ $color-white-opacity-01: rgba(0, 0, 0, .1);
 .radio-picker__item {
     display: block;
     position: relative;
-    @include v-spacer(margin, 0 1.5em);
+    margin-bottom: 1.5em;
     margin-left: 0;
     box-sizing: border-box;
 }
