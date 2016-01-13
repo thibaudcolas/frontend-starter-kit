@@ -70,6 +70,25 @@
     }
 }
 
+.u-hidden-medium {
+    @include medium { 
+        display:none;
+        visibility: hidden;
+    }
+}
+
+// Hidding elements on Touch devices
+.touch .u-hidden-touch {
+    display: none;
+    visibility: hidden;
+}
+
+// Hidding elements on Non Touch screens
+.no-touch .u-hidden-no-touch {
+    display: none;
+    visibility: hidden;
+}
+
 .u-overflow {
     overflow: hidden;
 }
@@ -92,39 +111,37 @@
 // ----------------------------------------------------------------------------
 //
 
-.u-center {
+.u-text-center {
     text-align: center;
 }
 
-.u-right {
+.u-text-right {
     text-align: right;
 }
 
-.u-bold {
+.u-text-bold {
     font-weight: $font-weight-bold;
 }
 
-.u-uppercase {
+.u-text-uppercase {
     text-transform: uppercase;
 }
 
-.u-underline {
+.u-text-underline {
     text-decoration: underline;
 }
 
 // * 1. Ensures text doesn't wrap and break your layout
 // * 2. Trigger overflow behavior
 // * 3. Truncate the text
-.u-truncate {
+.u-text-truncate {
     overflow: hidden;               // [2]
     text-overflow: ellipsis;        // [3]
     white-space: nowrap;            // [1]
 }
 
 // Prevent all user interaction with the element
-.disabled,
-.u-disabled,
-:disabled {
+.u-disabled {
     pointer-events: none;
     cursor: default;
 }
@@ -142,8 +159,10 @@
     height: 1px;
     padding: 0;
     margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    overflow: hidden; 
+    clip: rect(0, 0, 0, 0); /* Deprecated but still needed to support Firefox & IE */
+    -webkit-clip-path: inset(1px); /* Webkit support */
+    clip-path: inset(1px); /* New (experimental) CSS property */
     border: 0;
 }
 
@@ -152,13 +171,14 @@
 // ----------------------------------------------------------------------------
 //
 
-.u-mb {
-    // See _mixins.scss for more details
-    @include v-space(margin, 0 $spacing); 
-}
-
-%no-top-first {
+%no-top-margin-first {
     &:first-child {
         margin-top: 0;
+    }
+}
+
+%no-bottom-margin-last {
+    &:last-child {
+        margin-bottom: 0;
     }
 }
