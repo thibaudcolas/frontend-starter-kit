@@ -103,6 +103,8 @@ textarea {
         background-color: lighten($color-field-background, 10);
         border-color: lighten($color-field-border, 5);
         color: $color-field-disabled;
+        pointer-events: none;
+        cursor: default;
     }
 }
 
