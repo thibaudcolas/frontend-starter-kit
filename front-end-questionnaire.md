@@ -123,37 +123,89 @@ https://github.com/springload/frontend-starter-kit/blob/master/.sass-lint.yml
 
 ### JavaScript Principles
 - **What are some general principles your team should follow when writing JavaScript?** *(See [these](https://github.com/airbnb/javascript) [resources](https://github.com/rwaldron/idiomatic.js) for [inspiration](https://github.com/styleguide/javascript))*
-
+* AirBnB except we use 4 spaces. 
+* Maybe investigate WHY everyone suggests 2 spaces. Coz it looks lame.
 
 ### JavaScript tools
 - **Are you using a JavaScript framework** *(such as [jQuery](http://jquery.com/), [Ember](http://emberjs.com/), [Angular](https://angularjs.org/), etc)*?
+* jQuery on a bunch of projects.
+* React, D3,
+* These days, ES6 modules with utility libraries such as lodash. 
+
 - **Where is the documentation for those frameworks?**
 - **Are you using any polyfills or shims** *(such as [any of these](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills))*?
+
+* RespondJS
+* AddEventLister polyfill
+* Array.prototype.slice
+* requestAnimationFrame
+* Function.prototype.bind
+* ES5 shim + sham
+* document.querySelectorAll
+* ClassList 
+* Mostly for IE8 compatibility. 
+
+
 - **What third-party scripts are dependencies for your project** *(such as scripts for form validation, graphs, animation, etc)*?
+* Look at any local friendly package.json for these. There are many. 
+
 
 ### JavaScript Style 
 *(See [these](https://github.com/airbnb/javascript) [resources](https://github.com/rwaldron/idiomatic.js) for [inspiration](https://github.com/styleguide/javascript))*
 - **Spaces or Tabs?**
+* Spaces x 4. 
 - **What does JS commenting look like?** 
+* DocBlockr style (`/** ... */`) for multi-line comments, `// slash-style` for inline. 
 - [What patterns are you following](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)?
+* ES6 modules. > CommonJS. 
+
 
 ---------------
 
 ## Tooling
 - **Are you using a task runner** *(such as [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/))*?
+* Gulp 
+* Should migrate legacy grunt projects to gulp where possible. 
+
 - **Are you using a dependency manager** *(such as [Bower](http://bower.io/) or [Composer](https://getcomposer.org/))*
+* We use NPM. Bower is pointless when you have NPM. 
+
 - **Are you using any scaffolding tools** *(such as [Yeoman](http://yeoman.io/))*
+* CookieCutter. [Link to cookiecutter repo]
+
 - **Are you using any tools to reinforce frontend style** *(such as [Editor Config](http://editorconfig.org/) or [linters](https://github.com/CSSLint/csslint))*?
+* ESLint, SassLint, EditorConfig. 
+* GitHooks on changed files. 
+* Projects should have linting and tests. 
+
 - **Are any other specific pieces of software that are needed to work on this project?**
 
 ---------------
 
 ## Version control
 - **What version control system are you using for your frontend code** *(such as [Git](https://git-scm.com/) or [Subversion](https://subversion.apache.org/))*?
+* We got all kinds of VCS round here.
+
 - **Where is your version-controlled code hosted** *(such  as [Github](https://github.com/) or [Bitbucket](https://bitbucket.org/))* ?
+
+* Most things on GitHub
+* Kiwibank on GitLab (will be moving to GitHub)
+* Old SVN Projects:
+    - Airport, MySuper, ForBar, ForBar App? 
+    - Get DevOps to migrate the rest of these. ASAP. 
+    - https://help.github.com/articles/importing-from-subversion/
+
 - **Do you use a version control workflow** *(such as [gitflow](http://nvie.com/posts/a-successful-git-branching-model/), [centralized](https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow), [feature-branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow), etc)*?
+
+* TBC with the devs. We branch + PR. 
+* Deployment branches:
+    - deploy/staging
+    - deploy/production
+
 - **Who's responsible for managing and governing the version controlled code?**?
 - **Where are issues tracked**?
+* GitHub issues for everything! 
+* TODO: Set up the Trello + Slack integrations for Github Issues. 
 
 -----------
 
@@ -161,17 +213,29 @@ https://github.com/springload/frontend-starter-kit/blob/master/.sass-lint.yml
 It's important to recognize the difference between ["support" and "optimization"](http://bradfrost.com/blog/mobile/support-vs-optimization/). You should do your best to support as many environments as possible while simultaneously optimizing for the environments that make the most sense for your business and users. 
 
 - **What browsers are you *optimizing* for?** 
-- **What devices are you *optimizing* for?** 
+* We aim to support browsers over 5% of traffic. 
+
+- **What devices are you *optimizinog* for?** 
+* This should be derived from each clients' analytics. 
+* For instance, 35% of all pageviews on Red Cross are on iOS. 57% from mobile devices. 
+
 - **Are you using a [graded browser support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) system?**
+* For government projects, we have to.
+* (RealMe). 
 - **Are there specific components that require [more specific grading](https://www.filamentgroup.com/lab/grade-the-components.html)?**
+* Perhaps useful for KB/redcross/RealMe/Airport?
 
 -----------
 
 ## Documentation
 - **Are you using a [pattern library tool](http://styleguides.io/tools.html) to document your front-end architecture**?
+* Projects should have a single page with all the front-end components detailed. 
+
 - **Where does your documentation live**? What are the links to the documentation?
+* Should be available ether on staging site or local build of the project. Maybe if DEBUG=true in Django, it gets rendered on `http://localhost:8000/pattern-library/`
+
 - **Who's responsible for maintaining and governing the documentation**?
-- **What happens when the guidelines are updated**?
+* The FED. 
 
 -----------
 
