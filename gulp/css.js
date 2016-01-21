@@ -13,6 +13,7 @@ var sassLint = require('gulp-sass-lint');
 var parker = require('gulp-parker');
 var bs = require('browser-sync').get('main');
 
+var critical = require('critical');
 
 gulp.task('css', function() {
 
@@ -38,6 +39,30 @@ gulp.task('lint:sass', function() {
     .pipe(sassLint())
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError());
+});
+
+
+// ----------------------------------------------------------------------------
+// Critical CSS
+// ----------------------------------------------------------------------------
+
+gulp.task('critical:css', function (cb) {
+    critical.generate({
+        inline: true,
+        base: 'core',
+        src: 'templates/index.html',
+        css: 'static/css/screen.css',
+        dest: 'dist/index-critical.html',
+        minify: true,
+        ignore: ['@font-face', /url\(/, /djDebug/],
+        dimensions: [{
+            width: 375,
+            height: 600
+        }, {
+            width: 1400,
+            height: 1200
+        }]
+    });
 });
 
 
