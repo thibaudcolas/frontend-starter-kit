@@ -22,7 +22,6 @@ module.exports = {
 
     PlzOptions: {
         minifier: prod,
-        sourcemaps: !prod,
         mqpacker: false,
         filters: false,
         rem: true,

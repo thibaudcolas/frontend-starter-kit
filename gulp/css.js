@@ -12,18 +12,22 @@ var plz = require("gulp-pleeease");
 var sassLint = require('gulp-sass-lint');
 var parker = require('gulp-parker');
 var bs = require('browser-sync').get('main');
-
+var sourcemaps = require('gulp-sourcemaps');
 var critical = require('critical');
+
+var prod = process.env.NODE_ENV === 'production';
 
 gulp.task('css', function() {
 
     return gulp.src(path.join( config.paths.sass, '**', "*.scss" ))
+        .pipe(prod ? gutil.noop() : sourcemaps.init())
         .pipe(sass())
         .on('error', function handleError(err) {
             gutil.log(err.message);
             bs.notify(err.message, 10000);
             this.emit('end');
         })
+        .pipe(prod ? gutil.noop() : sourcemaps.write())
         .pipe(plz( config.PlzOptions ))
         .pipe(gulp.dest( config.paths.css ))
         .pipe(bs.stream());
