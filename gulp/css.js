@@ -18,10 +18,9 @@ var critical = require('critical');
 var prod = process.env.NODE_ENV === 'production';
 
 gulp.task('css', function() {
-
     return gulp.src(path.join( config.paths.sass, '**', "*.scss" ), {base: config.paths.sass})
         .pipe(prod ? gutil.noop() : sourcemaps.init())
-            .pipe(sass()
+            .pipe(sass())
             .on('error', function handleError(err) {
                 gutil.log(err.message);
                 bs.notify(err.message, 10000);

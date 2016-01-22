@@ -14,10 +14,18 @@ import {
         }               from './utils';
 
 
+if ('ontouchstart' in window) {
+    document.documentElement.className = document.documentElement.className + " touch";
+} else {
+    document.documentElement.className = document.documentElement.className + " no-touch";
+}
+
 
 class Site {
 
     constructor(options) {
+
+        // this is just some example stuff happening in here...
         GA.init();
 
         addYouTubePlayerAPI();
@@ -34,7 +42,6 @@ class Site {
         const videos = querySelectArray('[data-video-id]');
 
         const videoClick = function(e) {
-
             const overlayContainer = document.querySelector('[data-overlay]');
 
             e.preventDefault();
@@ -70,4 +77,4 @@ class Site {
 
 }
 
-var site = window.site = new Site({   });
+var site = window.site = new Site({ });
