@@ -1,4 +1,4 @@
-# Frontend Guidelines Questionnaire
+# [Frontend Guidelines Questionnaire](https://github.com/bradfrost/frontend-guidelines-questionnaire)
 A one-page questionnaire to help your team establish effective frontend guidelines, so that you can write consistent & cohesive code together.
 
 ## HTML
