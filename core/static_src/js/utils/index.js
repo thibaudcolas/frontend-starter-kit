@@ -120,7 +120,7 @@ export function uuid() {
 // Remove CSS outlines in an accessible manner
 // Make sure you have an empty style tag that
 // lives after your main style sheet
-export function tabfocus(selector = '.accessTab') {
+export function tabFocus(selector = '.accessTab') {
     const tabFocus = document.querySelector(selector);
     window.addEventListener('mousedown', () => {
         tabFocus.innerHTML = '';
@@ -132,3 +132,36 @@ export function tabfocus(selector = '.accessTab') {
         }
     }, false);
 }
+
+// Adds the YouTube Player API
+export function addYouTubePlayerAPI() {
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+}
+
+
+// Returns the width of an element.
+export function getWidth(elem) {
+    return elem.offsetWidth || elem.clientWidth;
+};
+
+// Returns the height of an element.
+export function getHeight(elem) {
+    return elem.offsetHeight || elem.clientHeight;
+};
+
+// Well, guess what
+export function stopPropagation(event) {
+    event.stopPropagation();
+}
+
+// Returns event target, supporting IE6-8
+export function getEventTarget(event) {
+    if (event) {
+        return event.target || event.srcElement;
+    }
+    return false;
+}
+

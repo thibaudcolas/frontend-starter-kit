@@ -1,0 +1,77 @@
+//
+// Button groups
+// --------------------------------------------------
+
+$button-margin: .5em;
+
+@mixin justify-table {
+    display: table;
+    min-width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: $button-margin 0;
+    margin-left: -$button-margin;
+    margin-right: -$button-margin;
+    & > * {
+        display: table-cell;
+        float: none;
+        width: 1%;
+    }
+}
+
+.btn-group {
+
+    > * {
+        @extend %inline-block;
+        vertical-align: middle;
+        margin-bottom: 0;
+        margin-right: $button-margin;
+        text-align: center;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &.-block > * {
+        margin-right: 0;
+        width: 100%;
+        &:not(:last-child)  {
+            margin-bottom: $button-margin*2;
+        }
+    }
+
+    &.-justified {
+        @include justify-table;
+        white-space: nowrap;
+    }
+
+    @include small {
+
+        &.-small-justified {
+            @include justify-table;
+        }
+
+        &.-small-block > * {
+            margin-right: 0;
+            width: 100%;
+            margin-bottom: $spacing;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &.-small-reverse {
+            display: flex;
+            flex-direction: column-reverse;
+            & > * {
+                margin-top: $button-margin*2;
+                margin-bottom: 0;
+            }
+            & > *:last-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+}
+

@@ -5,9 +5,7 @@ var distPath = path.join('.', 'core', 'static');
 
 var prod = process.env.NODE_ENV === 'production';
 
-
 module.exports = {
-
     paths: {
         appName: 'site.js',
         sass: path.join(sourcePath, 'sass'),
@@ -28,7 +26,7 @@ module.exports = {
         pseudoElements: true,
         opacity: true,
         autoprefixer: {
-            browsers: ['> 1% in NZ', 'Explorer >= 8'],
-        },
-    },
+            browsers: ['ie 8', 'ie 9', '> 1%']
+        }
+    }
 };

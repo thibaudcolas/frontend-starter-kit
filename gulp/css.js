@@ -19,16 +19,16 @@ var prod = process.env.NODE_ENV === 'production';
 
 gulp.task('css', function() {
 
-    return gulp.src(path.join( config.paths.sass, '**', "*.scss" ))
+    return gulp.src(path.join( config.paths.sass, '**', "*.scss" ), {base: config.paths.sass})
         .pipe(prod ? gutil.noop() : sourcemaps.init())
-        .pipe(sass())
-        .on('error', function handleError(err) {
-            gutil.log(err.message);
-            bs.notify(err.message, 10000);
-            this.emit('end');
-        })
+            .pipe(sass()
+            .on('error', function handleError(err) {
+                gutil.log(err.message);
+                bs.notify(err.message, 10000);
+                this.emit('end');
+            })
+            .pipe(plz( config.PlzOptions ))
         .pipe(prod ? gutil.noop() : sourcemaps.write())
-        .pipe(plz( config.PlzOptions ))
         .pipe(gulp.dest( config.paths.css ))
         .pipe(bs.stream());
 });
