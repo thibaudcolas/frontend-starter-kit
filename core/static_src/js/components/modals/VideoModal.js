@@ -15,17 +15,18 @@ const VideoModal = React.createClass({
     propTypes: {
         isOpen: React.PropTypes.bool,
         videoId: React.PropTypes.string,
-        playlistId: React.PropTypes.string
+        playlistId: React.PropTypes.string,
+        modalContainer: React.PropTypes.object
     },
 
     getDefaultProps () {
         return {
             isOpen: false,
             videoId: "",
-            playlistId: ""
+            playlistId: "",
+            modalContainer: null
         };
     },
-
 
     getInitialState: function() {
         return {
@@ -71,31 +72,18 @@ const VideoModal = React.createClass({
     },
 
     destroyModal() {
-        //this.destroyPlayer();
-        const overlay = document.querySelector('[data-overlay]');
-        ReactDOM.unmountComponentAtNode(overlay);
-    },
-
-    destroyPlayer() {
-        // IE8 Doesn't play very nicely with YouTube's API. You have to
-        // explicitly remove the iframe and destroy the element, otherwise
-        // the whole browser window blacks out.
-
-        // For more information on this fine browser and the associated phenomenon, check out:
-        // http://stackoverflow.com/questions/7452387/black-screen-when-removing-an-embedded-youtube-video-by-javascript-in-ie8
-        const playerEl = this.refs.wrapper.querySelector('iframe');
-        if (playerEl) {
-            playerEl.style.display = 'none';
-            playerEl.parentNode.removeChild(playerEl);
-            this.player.destroy();
+        const { modalContainer } = this.props;
+        if(modalContainer) {
+            ReactDOM.unmountComponentAtNode(modalContainer);
         }
     },
 
     render() {
-
         return (
             <Modal
+                ref="videoModal"
                 isOpen={this.state.modalIsOpen}
+                label="a video modal"
                 onRequestClose={this.closeModal}
                 onAfterClose={this.destroyModal}
                 className={"modal--video"}

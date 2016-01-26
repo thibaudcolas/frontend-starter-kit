@@ -71,7 +71,7 @@ $padding: 1em;
     @extend %btn;
 
     color: $color-white;
-    background-color: lighten($color-black, 10%);
+    background-color: lighten($color-black, 20%);
 
     @include hover {
         &:hover {

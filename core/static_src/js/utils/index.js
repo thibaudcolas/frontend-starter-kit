@@ -152,11 +152,6 @@ export function getHeight(elem) {
     return elem.offsetHeight || elem.clientHeight;
 };
 
-// Well, guess what
-export function stopPropagation(event) {
-    event.stopPropagation();
-}
-
 // Returns event target, supporting IE6-8
 export function getEventTarget(event) {
     if (event) {

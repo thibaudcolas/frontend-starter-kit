@@ -6,6 +6,7 @@ import ReactDOM         from 'react-dom';
 import GA               from 'springload-analytics.js';
 
 import VideoModal       from './components/modals/VideoModal';
+import FormModal        from './components/modals/FormModal';
 
 import {
             querySelectArray,
@@ -30,6 +31,7 @@ class Site {
 
         addYouTubePlayerAPI();
         this.initVideos();
+        this.initForms();
 
         tabFocus();
 
@@ -39,28 +41,28 @@ class Site {
 
 
     initVideos() {
+        const modalContainer = document.querySelector('[data-modal]');
         const videos = querySelectArray('[data-video-id]');
 
         const videoClick = function(e) {
-            const overlayContainer = document.querySelector('[data-overlay]');
-
             e.preventDefault();
             e.stopPropagation();
-            const fullPath = e.currentTarget.getAttribute('data-video-id');
-            let videoId;
+
+            let videoId = e.currentTarget.getAttribute('data-video-id');
 
             // Account for different video formats
-            if (fullPath.match(/watch\?v=/)) {
-                videoId = fullPath.split('v=', 2)[1];
-            } else if (fullPath.match(/\.be\/.+/)) {
-                videoId = fullPath.split('.be/')[1];
+            if (videoId.match(/watch\?v=/)) {
+                videoId = videoId.split('v=', 2)[1];
+            } else if (videoId.match(/\.be\/.+/)) {
+                videoId = videoId.split('.be/')[1];
             }
 
             ReactDOM.render(
                 <VideoModal
                     isOpen={true}
                     videoId={videoId}
-                />, overlayContainer
+                    modalContainer={modalContainer}
+                />, modalContainer
             );
         };
 
@@ -72,7 +74,28 @@ class Site {
             item.addEventListener('click', videoClick, false);
             item.addEventListener('keydown', videoKeyDown, false);
         });
+    }
 
+    initForms() {
+        const modalContainer = document.querySelector('[data-modal]');
+        const formModal = querySelectArray('[data-form-modal]');
+
+
+        const formModalClick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            ReactDOM.render(
+                <FormModal
+                    isOpen={true}
+                    modalContainer={modalContainer}
+                />, modalContainer
+            );
+        };
+
+        formModal.forEach(function(item) {
+            item.addEventListener('click', formModalClick, false);
+        });
     }
 
 }

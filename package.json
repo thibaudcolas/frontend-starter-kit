@@ -44,10 +44,12 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "focus-trap": "^1.0.1",
     "normalize.css": "^3.0.3",
-    "springload-analytics.js": "^2.0.0",
     "react": "0.14.6",
-    "react-dom": "0.14.6"
+    "react-dom": "0.14.6",
+    "springload-analytics.js": "^2.0.0",
+    "tabbable": "^1.0.0"
   },
   "scripts": {
     "start": "npm run watch -s",

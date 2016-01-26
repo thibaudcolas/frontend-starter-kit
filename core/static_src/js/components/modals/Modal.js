@@ -1,16 +1,19 @@
 import React                    from 'react';
 
-import focusManager             from './utils/focusManager';
-import scopeTab                 from './utils/scopeTab';
+import focusTrap                from 'focus-trap';
+import tabbable                 from 'tabbable';
+
 import {
-            whichAnimationEvent,
-            stopPropagation,
-            getEventTarget
-        }                       from '../../utils';
+            whichAnimationEvent
+        }                       from './utils';
 
 
-const bodyActiveClass = 'u-body-modal-active';
+const bodyActiveClass = 'body-modal-active';
 const animationEvent = whichAnimationEvent();
+
+function stopPropagation(event) {
+    event.stopPropagation();
+}
 
 const Modal = React.createClass({
 
@@ -19,6 +22,7 @@ const Modal = React.createClass({
         onRequestClose: React.PropTypes.func,
         onAfterClose: React.PropTypes.func,
         overlayClick: React.PropTypes.bool,
+        label: React.PropTypes.string,
         className: React.PropTypes.string,
         controls: React.PropTypes.object,
         ariaHideApp: React.PropTypes.bool
@@ -28,10 +32,11 @@ const Modal = React.createClass({
         return {
             isOpen: false,
             ariaHideApp: true,
-            onRequestClose: function() {},
+            onRequestClose: null,
             onAfterClose: function() {},
             overlayClick: true,
             className: "",
+            label: "",
             controls: null
         };
     },
@@ -46,7 +51,6 @@ const Modal = React.createClass({
     componentDidMount() {
         // Focus needs to be set when mounting and already open
         if (this.props.isOpen) {
-            this.setFocusAfterRender(true);
             this.open();
             window.addEventListener('keydown', this.handleKeyDown);
         }
@@ -59,40 +63,34 @@ const Modal = React.createClass({
     componentWillReceiveProps(newProps) {
         // Focus only needs to be set once when the modal is being opened
         if (!this.props.isOpen && newProps.isOpen) {
-            this.setFocusAfterRender(true);
             this.open();
         } else if (this.props.isOpen && !newProps.isOpen) {
             this.handleClose();
         }
     },
 
-    componentDidUpdate: function () {
-        if (this.focusAfterRender) {
-            this.focusContent();
-            this.setFocusAfterRender(false);
+    open() {
+        document.body.classList.add(bodyActiveClass);
+        this.setAriaHidden(false);
+        this.setFocusTrap();
+
+        this.setState({afterOpen: true});
+    },
+
+    requestClose() {
+        const { onRequestClose } = this.props;
+
+        if (onRequestClose) {
+            onRequestClose();
         }
     },
 
-    setFocusAfterRender: function (focus) {
-        this.focusAfterRender = focus;
-    },
-
-    focusContent() {
-        this.refs.content.focus();
-    },
-
-    open() {
-        document.body.classList.add(bodyActiveClass);
-        focusManager.setupScopedFocus(this.refs.modal);
-        focusManager.markForFocusLater();
-        this.setState({isOpen: true}, function() {
-            this.setState({afterOpen: true});
-        }.bind(this));
-    },
-
     handleClose() {
+        const { onRequestClose } = this.props;
+
         document.body.classList.remove(bodyActiveClass);
-        if (!this.ownerHandlesClose())
+
+        if (!onRequestClose)
             return;
 
         if (animationEvent) {
@@ -100,27 +98,30 @@ const Modal = React.createClass({
             modal.addEventListener(animationEvent, this.close );
             modal.classList.remove('modal--active');
             modal.classList.add('modal--exit');
-            // var repaint = this.el.offsetWidth; // TODO. do we need this?
-            this.setState({beforeClose: true});
+            this.setState({
+                beforeClose: true
+            });
             return;
         }
 
         this.close();
-
     },
 
     close(e) {
         const { modal } = this.refs;
 
         // make sure we're listening to the modals animationEvent
-        const target = getEventTarget(e);
+        const target = e.target || e.srcElement;
         if (e && target !== modal) {
             return;
         }
 
+        this.setAriaHidden(true);
+
         if (animationEvent) {
             modal.removeEventListener(animationEvent, this.close);
         }
+
         this.setState({
             afterOpen: false,
             beforeClose: false
@@ -128,76 +129,90 @@ const Modal = React.createClass({
     },
 
     afterClose() {
-        focusManager.returnFocus();
-        focusManager.teardownScopedFocus();
+        focusTrap.deactivate(this.refs.modal);
         this.props.onAfterClose();
     },
 
     handleKeyDown(e) {
-        if (e.keyCode == 9 /*tab*/) scopeTab(this.refs.content, e);
         if (e.keyCode == 27 /*esc*/) this.requestClose();
     },
 
     handleOverlayClick() {
-        if(!this.props.overlayClick)
+        const { overlayClick, onRequestClose } = this.props;
+        if(!overlayClick)
             return;
 
-        if (this.ownerHandlesClose())
-            this.requestClose();
-        else
-            this.focusContent();
-    },
-
-    requestClose() {
-        if (this.ownerHandlesClose())
-            this.props.onRequestClose();
-    },
-
-    ownerHandlesClose() {
-        return this.props.onRequestClose;
+        this.requestClose();
     },
 
     shouldBeClosed() {
         return !this.props.isOpen && !this.state.beforeClose;
     },
 
+    setAriaHidden(isHidden) {
+        const { ariaHideApp } = this.props;
+        const { content } = this.refs;
+
+        if(!ariaHideApp)
+            return;
+
+        content.setAttribute("aria-hidden", isHidden);
+
+        const mainContent = document.querySelector('[data-main-content]');
+        if(mainContent) {
+            mainContent.setAttribute("aria-hidden", !isHidden);
+        }
+    },
+
+    setFocusTrap() {
+        const { modal, content } = this.refs;
+        const tabbableItems = tabbable(content);
+        if(tabbableItems.length > 0) {
+            focusTrap.activate(modal);
+        }
+    },
+
     render() {
+        const { className, children, controls, label } = this.props;
 
         let classList = ['modal', 'modal--active'];
 
-        if (this.props.className) {
-            classList.push(this.props.className);
+        if (className) {
+            classList.push(className);
         }
+
         return this.shouldBeClosed() ? null : (
             <div
                 className={classList.join(' ')}
                 ref="modal"
-                onClick={this.handleOverlayClick}
             >
-
                 <div className="modal__table">
                     <div className="modal__center">
                         <div
                             className="modal__content"
                             ref="content"
                             onClick={stopPropagation}
-                            tabIndex="-1"
+                            aria-label={label}
+                            aria-hidden="true"
+                            role="dialog"
                         >
-                            {this.props.children}
+                            {children}
                         </div>
                     </div>
                 </div>
-
-                {this.props.controls ? this.props.controls : (
+                {controls ? controls : (
                     <div className="modal__control">
                         <div className="modal__control-item modal__close" onClick={this.requestClose}>×</div>
                     </div>
                 )}
-
+                <div
+                    className="modal__overlay"
+                    tabIndex="-1"
+                    onClick={this.handleOverlayClick}
+                ></div>
             </div>
         );
     }
-
 });
 
 export default Modal;
