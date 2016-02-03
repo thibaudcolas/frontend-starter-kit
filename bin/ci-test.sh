@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Test script for the project. To be ran on each build within a CI environment.
-# Here is are the Setup commands for CodeShip:
+# Here are the setup commands:
 # nvm install
 # npm install
 # npm install -g david depcheck
