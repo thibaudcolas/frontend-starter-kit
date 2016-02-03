@@ -66,4 +66,5 @@ hyperlink "http://example.com/"
 david || echo ok
 depcheck || echo ok
 
+before_exit()
 exit 0
