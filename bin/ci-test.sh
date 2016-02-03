@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 #
 # Test script for the project. To be ran on each build within a CI environment.
-# Here are the setup commands:
-# nvm install
-# npm install
-# npm install -g david depcheck
-# gem install scss_lint
-# Here is the Test pipeline commands:
-# ./bin/ci-test.sh
-
 
 # Fail on first line that fails.
 set -e

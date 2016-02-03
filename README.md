@@ -121,3 +121,16 @@ pushing to the deploy branch. That way you know that both are up to date.
 ### To staging
 
 TODO
+
+### Setting up tests on continuous integration
+
+The CI tests require the following setup. Some of those might already be done within the CD build.
+
+```sh
+nvm install
+npm install
+npm install -g david depcheck hyperlink
+gem install sass-lint
+```
+
+Use `npm run test:ci` as part of the test pipeline.
