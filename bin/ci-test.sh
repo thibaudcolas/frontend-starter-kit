@@ -44,7 +44,10 @@ SASS_FILES=$(echo "$NEW_FILES" | { grep core/static_src/sass || true; })
 
 if [ -n "$JS_FILES" ];
 then
-    npm run linter:js -s -- $JS_FILES
+    # Standard stylistic linting cannot break the build.
+    npm run linter:js -- $JS_FILES || echo ok
+    # CI-specific "error catcher" linting breaks the build.
+    npm run linter:js:ci -- $JS_FILES
 fi
 
 if [ -n "$SASS_FILES" ];
