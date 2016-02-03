@@ -39,8 +39,8 @@ trap before_exit EXIT
 # Only lint files updated in the last commit.
 # A bit counterintuitive but our linting is not there yet.
 NEW_FILES=$(git --no-pager diff --name-only HEAD..HEAD~1)
-JS_FILES=$(echo "$NEW_FILES" | { grep client/js || true; })
-SASS_FILES=$(echo "$NEW_FILES" | { grep client/sass || true; })
+JS_FILES=$(echo "$NEW_FILES" | { grep core/static_src/js || true; })
+SASS_FILES=$(echo "$NEW_FILES" | { grep core/static_src/sass || true; })
 
 if [ -n "$JS_FILES" ];
 then
