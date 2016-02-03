@@ -130,7 +130,6 @@ The CI tests require the following setup. Some of those might already be done wi
 nvm install
 npm install
 npm install -g david depcheck hyperlink
-gem install sass-lint
 ```
 
 Use `npm run test:ci` as part of the test pipeline.
