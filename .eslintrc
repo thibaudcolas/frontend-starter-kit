@@ -14,7 +14,7 @@
         "react/jsx-no-bind": [0],
         "react/prefer-es6-class": [2, 'never'],
         "react/jsx-indent-props": [2, 4],
-        "jsx-quotes": [2, "prefer-single"]
+        "jsx-quotes": [1, "prefer-double"]
     },
 
     "env": {
