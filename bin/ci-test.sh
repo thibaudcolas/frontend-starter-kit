@@ -25,6 +25,17 @@ npm run dist
 npm run start -s &
 SERVER_PID=$!
 
+# Run cleanup before exiting.
+function before_exit {
+    set +e
+    echo "Cleaning up before test exits"
+
+    # Kill the server if relevant.
+    kill $SERVER_PID
+}
+
+trap before_exit EXIT
+
 # Only lint files updated in the last commit.
 # A bit counterintuitive but our linting is not there yet.
 NEW_FILES=$(git --no-pager diff --name-only HEAD..HEAD~1)
@@ -47,9 +58,6 @@ npm run test -s
 
 # Link checking
 hyperlink "http://example.com/"
-
-# Kill the server if relevant.
-kill $SERVER_PID
 
 ## Dependencies checking.
 david || echo ok
