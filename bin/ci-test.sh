@@ -22,7 +22,7 @@ set -e
 npm run dist
 
 # Start the server if relevant.
-npm run start -s &
+npm run start &
 SERVER_PID=$!
 
 # Run cleanup before exiting.
@@ -53,11 +53,11 @@ fi
 if [ -n "$SASS_FILES" ];
 then
     # Sass file linting errors cannot break the build
-    npm run linter:sass -s -- $SASS_FILES || echo ok
+    npm run linter:sass -- $SASS_FILES || echo ok
 fi
 
 # Project tests.
-npm run test -s
+npm run test
 
 # Link checking
 hyperlink "http://example.com/"
@@ -66,5 +66,4 @@ hyperlink "http://example.com/"
 david || echo ok
 depcheck || echo ok
 
-before_exit()
 exit 0
