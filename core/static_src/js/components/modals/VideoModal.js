@@ -4,7 +4,6 @@ import ReactDOM             from 'react-dom';
 import Modal                from './Modal';
 
 import {
-            querySelectArray,
             getWidth,
             getHeight
         }                   from '../../utils';
@@ -47,10 +46,10 @@ const VideoModal = React.createClass({
     },
 
     componentDidMount() {
-        const { videoId, playlistId } = this.props;
+        const { videoId } = this.props;
         const { inner, wrapper } = this.refs;
 
-        const player = new YT.Player(wrapper, {
+        new YT.Player(wrapper, {
             width: getWidth(inner),
             height: getHeight(inner),
             videoId: videoId,

@@ -3,8 +3,6 @@ import ReactDOM             from 'react-dom';
 
 import Modal                from './Modal';
 import FormField            from '../FormField';
-import { querySelectArray } from '../../utils';
-
 
 const LoginModal = React.createClass({
 

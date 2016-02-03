@@ -23,8 +23,7 @@ if ('ontouchstart' in window) {
 
 
 class Site {
-
-    constructor(options) {
+    constructor() {
 
         // this is just some example stuff happening in here...
         GA.init();
@@ -100,4 +99,4 @@ class Site {
 
 }
 
-var site = window.site = new Site({ });
+window.site = new Site({ });

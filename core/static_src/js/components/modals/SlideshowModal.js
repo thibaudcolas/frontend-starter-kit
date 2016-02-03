@@ -2,9 +2,6 @@ import React                from 'react';
 import ReactDOM             from 'react-dom';
 
 import Modal                from './Modal';
-import Icon                 from './Icon';
-import { querySelectArray } from '../utils';
-
 
 const SlideshowModal = React.createClass({
 
@@ -42,7 +39,6 @@ const SlideshowModal = React.createClass({
     },
 
     componentDidMount() {
-        const { slideshowId } = this.props;
         const { wrapper } = this.refs;
 
         const elem = wrapper.querySelector('.main-gallery');

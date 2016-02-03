@@ -138,7 +138,7 @@ const Modal = React.createClass({
     },
 
     handleOverlayClick() {
-        const { overlayClick, onRequestClose } = this.props;
+        const { overlayClick } = this.props;
         if(!overlayClick)
             return;
 
