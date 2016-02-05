@@ -8,7 +8,7 @@ import FormModal from './components/modals/FormModal';
 
 import {
     querySelectArray,
-    addYouTubePlayerAPI,
+    // addYouTubePlayerAPI,
     tabFocus,
 } from './utils';
 
@@ -25,7 +25,7 @@ class Site {
         // this is just some example stuff happening in here...
         GA.init();
 
-        addYouTubePlayerAPI();
+        // addYouTubePlayerAPI();
         this.initVideos();
         this.initForms();
 

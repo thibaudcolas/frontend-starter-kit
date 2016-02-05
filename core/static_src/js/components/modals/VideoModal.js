@@ -1,7 +1,9 @@
+/* eslint-disable new-cap */
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Modal from './Modal';
+import YouTubePlayer from 'youtube-player';
 
 import {
     getWidth,
@@ -49,7 +51,7 @@ const VideoModal = React.createClass({
         const { videoId } = this.props;
         const { inner, wrapper } = this.refs;
 
-        new YT.Player(wrapper, {
+        YouTubePlayer(wrapper, {
             width: getWidth(inner),
             height: getHeight(inner),
             videoId: videoId,

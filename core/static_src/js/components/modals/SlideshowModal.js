@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Modal from './Modal';
+import Flickity from 'flickity';
 
 const SlideshowModal = React.createClass({
 
