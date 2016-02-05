@@ -7,11 +7,11 @@ $button-margin: .5em;
 @mixin justify-table {
     display: table;
     min-width: 100%;
-    table-layout: fixed;
+    margin-right: -$button-margin;
+    margin-left: -$button-margin;
     border-collapse: separate;
     border-spacing: $button-margin 0;
-    margin-left: -$button-margin;
-    margin-right: -$button-margin;
+    table-layout: fixed;
     & > * {
         display: table-cell;
         float: none;
@@ -20,40 +20,14 @@ $button-margin: .5em;
 }
 
 .btn-group {
-
-    > * {
-        @extend %inline-block;
-        vertical-align: middle;
-        margin-bottom: 0;
-        margin-right: $button-margin;
-        text-align: center;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
-    &.-block > * {
-        margin-right: 0;
-        width: 100%;
-        &:not(:last-child)  {
-            margin-bottom: $button-margin*2;
-        }
-    }
-
-    &.-justified {
-        @include justify-table;
-        white-space: nowrap;
-    }
-
     @include small {
-
         &.-small-justified {
             @include justify-table;
         }
 
         &.-small-block > * {
-            margin-right: 0;
             width: 100%;
+            margin-right: 0;
             margin-bottom: $spacing;
             &:last-child {
                 margin-bottom: 0;
@@ -62,6 +36,7 @@ $button-margin: .5em;
 
         &.-small-reverse {
             display: flex;
+
             flex-direction: column-reverse;
             & > * {
                 margin-top: $button-margin*2;
@@ -72,6 +47,29 @@ $button-margin: .5em;
             }
         }
     }
+    > * {
+        @extend %inline-block;
 
+        margin-right: $button-margin;
+        margin-bottom: 0;
+        text-align: center;
+        vertical-align: middle;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &.-block > * {
+        width: 100%;
+        margin-right: 0;
+        &:not(:last-child) {
+            margin-bottom: $button-margin*2;
+        }
+    }
+
+    &.-justified {
+        @include justify-table;
+
+        white-space: nowrap;
+    }
 }
-

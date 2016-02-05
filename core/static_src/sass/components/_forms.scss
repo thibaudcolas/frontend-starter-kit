@@ -43,20 +43,20 @@ $color-white-opacity-0075: rgba(0, 0, 0, .075);
 
 // Resetting input styling.
 %reset {
-    appearance: textfield;
-    -moz-appearance: textfield;
-    -webkit-appearance: none;
-
-    outline: none;
-
     border-radius: 0;
-    -moz-border-radius: 0;
+    outline: none;
+    appearance: textfield;
+
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
     -webkit-border-radius: 0;
+    -moz-border-radius: 0;
 
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
-        -webkit-appearance: none;
         margin: 0;
+
+        -webkit-appearance: none;
     }
 }
 
@@ -68,26 +68,25 @@ fieldset,
 }
 
 .field,
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-input[type="tel"],
-input[type="url"],
-input[type="date"],
-input[type="datetime-local"],
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'],
+input[type='tel'],
+input[type='url'],
+input[type='date'],
+input[type='datetime-local'],
 textarea {
     @extend %reset;
 
     display: block;
-    width:100%;
+    width: 100%;
     padding: .5em .75em;
-    background-color: $color-field-background;
-    border: 1px solid $color-field-border;
-    color: $color-field-color;
     font-size: 1rem;
     line-height: inherit;
-
+    color: $color-field-color;
+    background-color: $color-field-background;
+    border: 1px solid $color-field-border;
     transition: border-color ease-in-out .15s;
 
     &:focus {
@@ -100,27 +99,27 @@ textarea {
 
     &:disabled,
     &[disabled] {
-        background-color: lighten($color-field-background, 10);
-        border-color: lighten($color-field-border, 5);
         color: $color-field-disabled;
         pointer-events: none;
         cursor: default;
+        background-color: lighten($color-field-background, 10);
+        border-color: lighten($color-field-border, 5);
     }
 }
 
 // Specific Fields
 
-input[type="text"] {
+input[type='text'] {
     text-transform: capitalize;
 }
 
-input[type="submit"] {
+input[type='submit'] {
     @extend %btn;
 }
 
-.touchevents input[type="date"],
-.touchevents input[type="datetime-local"],
-.touch input[type="date"],
-.touch input[type="datetime-local"], {
+.touchevents input[type='date'],
+.touchevents input[type='datetime-local'],
+.touch input[type='date'],
+.touch input[type='datetime-local'], {
     height: 43px; // Input height
 }

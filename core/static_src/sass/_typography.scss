@@ -23,12 +23,12 @@
 }
 
 %body-type-size {
-    font-size: rem($font-size-base);
     @extend %font-smoothing;
-
     @include medium {
         font-size: rem($font-size-base + 2);
     }
+
+    font-size: rem($font-size-base);
 }
 
 h1,
@@ -38,6 +38,7 @@ h4,
 h5,
 h6 {
     @extend %font-smoothing;
+
     line-height: $line-height-headline;
     &:first-child {
         margin-top: 0;
@@ -51,11 +52,11 @@ h6 {
 %h1,
 .h1,
 h1 {
-    font-size: rem(28);
-
     @include medium {
         font-size: rem(32);
     }
+
+    font-size: rem(28);
 }
 
 p,
