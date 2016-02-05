@@ -2,7 +2,7 @@
 // CSS
 // ----------------------------------------------------------------------------
 
-var config = require("./config");
+var config = require("../config");
 var gulp = require('gulp');
 var path = require('path');
 
