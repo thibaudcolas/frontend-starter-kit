@@ -18,9 +18,18 @@ export class SocialShareLightbox extends Lightbox {
         const html = ['<h3>Share this</h3>'];
         const facebookLink = utils.buildFacebookLink(this.url);
         const twitterLink = utils.buildTwitterLink('Check this out', this.url);
-
-        html.push('<p><a href="' + facebookLink + '" class="icon-text btn-primary btn-icon"><svg><use xlink:href="#twitter"></svg><span>Share on Twitter</span></a></p>');
-        html.push('<p><a href="' + twitterLink + '" class="icon-text btn-primary btn-icon"><svg><use xlink:href="#social-facebook"></svg><span>Share on Facebook</span></a></p>');
+        const facebookHtml = `<p>
+        <a href="${facebookLink}" class="icon-text btn-primary btn-icon">
+            <svg><use xlink:href="#twitter"></svg>
+            <span>Share on Twitter</span>
+        </a></p>`;
+        html.push(facebookHtml);
+        const twitterHtml = `<p>
+        <a href="${twitterLink}" class="icon-text btn-primary btn-icon">
+            <svg><use xlink:href="#social-facebook"></svg>
+            <span>Share on Facebook</span>
+        </a></p>`;
+        html.push(twitterHtml);
         innerDiv.innerHTML = html.join('\n');
 
         this.contentNode.appendChild(innerDiv);

@@ -1,11 +1,9 @@
-import React                    from 'react';
+import React from 'react';
 
-import focusTrap                from 'focus-trap';
-import tabbable                 from 'tabbable';
+import focusTrap from 'focus-trap';
+import tabbable from 'tabbable';
 
-import {
-            whichAnimationEvent
-        }                       from './utils';
+import { whichAnimationEvent } from './utils';
 
 
 const bodyActiveClass = 'body-modal-active';
@@ -25,26 +23,27 @@ const Modal = React.createClass({
         label: React.PropTypes.string,
         className: React.PropTypes.string,
         controls: React.PropTypes.object,
-        ariaHideApp: React.PropTypes.bool
+        children: React.PropTypes.object,
+        ariaHideApp: React.PropTypes.bool,
     },
 
-    getDefaultProps () {
+    getDefaultProps() {
         return {
             isOpen: false,
             ariaHideApp: true,
             onRequestClose: null,
-            onAfterClose: function() {},
+            onAfterClose: () => {},
             overlayClick: true,
-            className: "",
-            label: "",
-            controls: null
+            className: '',
+            label: '',
+            controls: null,
         };
     },
 
-    getInitialState: function() {
+    getInitialState: () => {
         return {
             afterOpen: false,
-            beforeClose: false
+            beforeClose: false,
         };
     },
 
@@ -90,8 +89,9 @@ const Modal = React.createClass({
 
         document.body.classList.remove(bodyActiveClass);
 
-        if (!onRequestClose)
+        if (!onRequestClose) {
             return;
+        }
 
         if (animationEvent) {
             const modal = this.refs.modal;
@@ -99,7 +99,7 @@ const Modal = React.createClass({
             modal.classList.remove('modal--active');
             modal.classList.add('modal--exit');
             this.setState({
-                beforeClose: true
+                beforeClose: true,
             });
             return;
         }
@@ -124,7 +124,7 @@ const Modal = React.createClass({
 
         this.setState({
             afterOpen: false,
-            beforeClose: false
+            beforeClose: false,
         }, this.afterClose);
     },
 
@@ -134,13 +134,17 @@ const Modal = React.createClass({
     },
 
     handleKeyDown(e) {
-        if (e.keyCode == 27 /*esc*/) this.requestClose();
+        // ESC key
+        if (e.keyCode === 27) {
+            this.requestClose();
+        }
     },
 
     handleOverlayClick() {
         const { overlayClick } = this.props;
-        if(!overlayClick)
+        if (!overlayClick) {
             return;
+        }
 
         this.requestClose();
     },
@@ -153,21 +157,22 @@ const Modal = React.createClass({
         const { ariaHideApp } = this.props;
         const { content } = this.refs;
 
-        if(!ariaHideApp)
+        if (!ariaHideApp) {
             return;
+        }
 
-        content.setAttribute("aria-hidden", isHidden);
+        content.setAttribute('aria-hidden', isHidden);
 
         const mainContent = document.querySelector('[data-main-content]');
-        if(mainContent) {
-            mainContent.setAttribute("aria-hidden", !isHidden);
+        if (mainContent) {
+            mainContent.setAttribute('aria-hidden', !isHidden);
         }
     },
 
     setFocusTrap() {
         const { modal, content } = this.refs;
         const tabbableItems = tabbable(content);
-        if(tabbableItems.length > 0) {
+        if (tabbableItems.length > 0) {
             focusTrap.activate(modal);
         }
     },
@@ -175,7 +180,7 @@ const Modal = React.createClass({
     render() {
         const { className, children, controls, label } = this.props;
 
-        let classList = ['modal', 'modal--active'];
+        const classList = ['modal', 'modal--active'];
 
         if (className) {
             classList.push(className);
@@ -212,7 +217,7 @@ const Modal = React.createClass({
                 ></div>
             </div>
         );
-    }
+    },
 });
 
 export default Modal;

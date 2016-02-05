@@ -1,40 +1,40 @@
-import React                from 'react';
-import ReactDOM             from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import Modal                from './Modal';
+import Modal from './Modal';
 
 const SlideshowModal = React.createClass({
 
     propTypes: {
         isOpen: React.PropTypes.bool,
         slideshowId: React.PropTypes.string,
-        slideshowContent: React.PropTypes.object
+        slideshowContent: React.PropTypes.object,
     },
 
-    getDefaultProps () {
+    getDefaultProps() {
         return {
             isOpen: false,
-            slideshowId: "",
-            slideshowContent: ""
+            slideshowId: '',
+            slideshowContent: '',
         };
     },
 
 
-    getInitialState: function() {
+    getInitialState: () => {
         return {
-            modalIsOpen: this.props.isOpen
-        }
+            modalIsOpen: this.props.isOpen,
+        };
     },
 
-    openModal: function() {
+    openModal: () => {
         this.setState({
-            modalIsOpen: true
+            modalIsOpen: true,
         });
     },
 
-    closeModal: function() {
+    closeModal: () => {
         this.setState({
-            modalIsOpen: false
+            modalIsOpen: false,
         });
     },
 
@@ -42,24 +42,23 @@ const SlideshowModal = React.createClass({
         const { wrapper } = this.refs;
 
         const elem = wrapper.querySelector('.main-gallery');
-        if (elem && typeof Flickity != "undefined") {
-            var flkty = new Flickity( elem, {
+        if (elem && typeof Flickity !== 'undefined') {
+            const flkty = new Flickity( elem, {
                 prevNextButtons: false,
                 setGallerySize: false,
                 wrapAround: true,
                 accessibility: true,
-                pageDots: false
+                pageDots: false,
             });
 
             this.flkty = flkty;
 
             // focus on flkty
-            setTimeout( function() {
-                const flktyEl = wrapper.querySelector(".main-gallery");
-                flktyEl.tabIndex=0;
+            setTimeout(() => {
+                const flktyEl = wrapper.querySelector('.main-gallery');
+                flktyEl.tabIndex = 0;
                 flktyEl.focus();
-            }.bind(this), 250);
-
+            }, 250);
         }
     },
 
@@ -95,7 +94,6 @@ const SlideshowModal = React.createClass({
     },
 
     render() {
-
         return (
             <Modal
                 isOpen={this.state.modalIsOpen}
@@ -106,14 +104,14 @@ const SlideshowModal = React.createClass({
                 overlayClick={false}
             >
                 <div className="modal__slideshow-inner" ref="inner">
-                    <div className="modal__slideshow-wrapper" ref="wrapper" dangerouslySetInnerHTML={this.createMarkup()} />
+                    <div className="modal__slideshow-wrapper"
+                        ref="wrapper"
+                        dangerouslySetInnerHTML={this.createMarkup()}
+                    />
                 </div>
             </Modal>
         );
-    }
+    },
 });
 
 export default SlideshowModal;
-
-
-

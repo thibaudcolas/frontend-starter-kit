@@ -1,30 +1,27 @@
-'use strict';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import React            from 'react';
-import ReactDOM         from 'react-dom';
+import GA from 'springload-analytics.js';
 
-import GA               from 'springload-analytics.js';
-
-import VideoModal       from './components/modals/VideoModal';
-import FormModal        from './components/modals/FormModal';
+import VideoModal from './components/modals/VideoModal';
+import FormModal from './components/modals/FormModal';
 
 import {
-            querySelectArray,
-            addYouTubePlayerAPI,
-            tabFocus
-        }               from './utils';
+    querySelectArray,
+    addYouTubePlayerAPI,
+    tabFocus,
+} from './utils';
 
 
 if ('ontouchstart' in window) {
-    document.documentElement.className = document.documentElement.className + " touch";
+    document.documentElement.className = document.documentElement.className + ' touch';
 } else {
-    document.documentElement.className = document.documentElement.className + " no-touch";
+    document.documentElement.className = document.documentElement.className + ' no-touch';
 }
 
 
 class Site {
     constructor() {
-
         // this is just some example stuff happening in here...
         GA.init();
 
@@ -43,7 +40,7 @@ class Site {
         const modalContainer = document.querySelector('[data-modal]');
         const videos = querySelectArray('[data-video-id]');
 
-        const videoClick = function(e) {
+        const videoClick = (e) => {
             e.preventDefault();
             e.stopPropagation();
 
@@ -65,11 +62,14 @@ class Site {
             );
         };
 
-        const videoKeyDown = function(e) {
-            if (e.keyCode == 13 /*enter*/) videoClick(e);
+        const videoKeyDown = (e) => {
+            // Enter key
+            if (e.keyCode === 13) {
+                videoClick(e);
+            }
         };
 
-        videos.forEach(function(item) {
+        videos.forEach((item) => {
             item.addEventListener('click', videoClick, false);
             item.addEventListener('keydown', videoKeyDown, false);
         });
@@ -80,7 +80,7 @@ class Site {
         const formModal = querySelectArray('[data-form-modal]');
 
 
-        const formModalClick = function(e) {
+        const formModalClick = (e) => {
             e.preventDefault();
             e.stopPropagation();
 
@@ -92,7 +92,7 @@ class Site {
             );
         };
 
-        formModal.forEach(function(item) {
+        formModal.forEach((item) => {
             item.addEventListener('click', formModalClick, false);
         });
     }

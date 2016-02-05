@@ -9,45 +9,45 @@ const LoginModal = React.createClass({
     propTypes: {
         isOpen: React.PropTypes.bool,
         onRequestClose: React.PropTypes.func,
-        modalContainer: React.PropTypes.object
+        modalContainer: React.PropTypes.object,
     },
 
-    getDefaultProps () {
+    getDefaultProps() {
         return {
             isOpen: false,
-            onRequestClose: function() { }
+            onRequestClose: () => { },
         };
     },
 
-    getInitialState: function() {
+    getInitialState: () => {
         return {
-            modalIsOpen: this.props.isOpen
-        }
+            modalIsOpen: this.props.isOpen,
+        };
     },
 
-    openModal: function() {
+    openModal: () => {
         this.setState({
-            modalIsOpen: true
+            modalIsOpen: true,
         });
     },
 
-    closeModal: function() {
+    closeModal: () => {
         this.setState({
-            modalIsOpen: false
+            modalIsOpen: false,
         });
     },
 
-    updateField: function(name, newValue, error=null) {
-        console.log("updating field value: " + newValue);
+    updateField: (name, newValue) => {
+        console.log('updating field value: ' + newValue);
     },
 
-    sendForm: function() {
-        console.log("sending form");
+    sendForm: () => {
+        console.log('sending form');
     },
 
     destroyModal() {
         const { modalContainer } = this.props;
-        if(modalContainer) {
+        if (modalContainer) {
             ReactDOM.unmountComponentAtNode(modalContainer);
         }
     },
@@ -80,10 +80,7 @@ const LoginModal = React.createClass({
                 />
             </Modal>
         );
-    }
+    },
 });
 
 export default LoginModal;
-
-
-

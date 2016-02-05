@@ -1,12 +1,12 @@
-import React                from 'react';
-import ReactDOM             from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import Modal                from './Modal';
+import Modal from './Modal';
 
 import {
-            getWidth,
-            getHeight
-        }                   from '../../utils';
+    getWidth,
+    getHeight,
+} from '../../utils';
 
 
 const VideoModal = React.createClass({
@@ -15,33 +15,33 @@ const VideoModal = React.createClass({
         isOpen: React.PropTypes.bool,
         videoId: React.PropTypes.string,
         playlistId: React.PropTypes.string,
-        modalContainer: React.PropTypes.object
+        modalContainer: React.PropTypes.object,
     },
 
-    getDefaultProps () {
+    getDefaultProps() {
         return {
             isOpen: false,
-            videoId: "",
-            playlistId: "",
-            modalContainer: null
+            videoId: '',
+            playlistId: '',
+            modalContainer: null,
         };
     },
 
-    getInitialState: function() {
+    getInitialState: () => {
         return {
-            modalIsOpen: this.props.isOpen
-        }
+            modalIsOpen: this.props.isOpen,
+        };
     },
 
-    openModal: function() {
+    openModal: () => {
         this.setState({
-            modalIsOpen: true
+            modalIsOpen: true,
         });
     },
 
-    closeModal: function() {
+    closeModal: () => {
         this.setState({
-            modalIsOpen: false
+            modalIsOpen: false,
         });
     },
 
@@ -55,24 +55,24 @@ const VideoModal = React.createClass({
             videoId: videoId,
             playerVars: {
                 autoplay: 1,
-                origin: window.location.origin
+                origin: window.location.origin,
             },
             events: {
                 onReady: this.onPlayerReady,
-                onStateChange: this.onPlayerStateChange
-            }
+                onStateChange: this.onPlayerStateChange,
+            },
         });
     },
 
-    onPlayerReady(e) {
+    onPlayerReady() {
     },
 
-    onPlayerStateChange(e) {
+    onPlayerStateChange() {
     },
 
     destroyModal() {
         const { modalContainer } = this.props;
-        if(modalContainer) {
+        if (modalContainer) {
             ReactDOM.unmountComponentAtNode(modalContainer);
         }
     },
@@ -92,10 +92,7 @@ const VideoModal = React.createClass({
                 </div>
             </Modal>
         );
-    }
+    },
 });
 
 export default VideoModal;
-
-
-
