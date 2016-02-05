@@ -1,2 +1,4 @@
-var requireDir = require('require-dir');
-requireDir('./tasks', { recurse: true });
+require('./tasks/watch');
+require('./tasks/css');
+require('./tasks/js');
+require('./tasks/svg');
