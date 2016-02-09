@@ -23,7 +23,7 @@ Learn more about JavaScript (ES6/ES2015):
 
 ### Libraries
 
-> We use __React__, , lodash, jQuery and Google Analytics.
+> We use __React__, lodash, jQuery and Google Analytics.
 
 To learn more about those libraries:
 

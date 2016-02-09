@@ -81,6 +81,17 @@ sitespeed.io -u <URL>
 # You can now open the report that has been generated in sitespeed-result/.
 ```
 
+### [CSS stats](http://cssstats.com)
+
+> Get some statistics about the CSS used on your project.
+
+- Number of rules
+- Number of selectors
+- Specificity graph
+- File size
+- ...
+
+
 Example report for the `react-d3-integration` repository: [Sitespeed.io report](https://springload.github.io/react-d3-integration/sitespeed-result/springload.github.io/2015-07-27-12-38-44/).
 
 ### [minigun](https://artillery.io/minigun/)
