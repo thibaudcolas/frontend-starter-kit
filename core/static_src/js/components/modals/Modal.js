@@ -1,10 +1,9 @@
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
 
 import focusTrap from 'focus-trap';
 import tabbable from 'tabbable';
 
 import { whichAnimationEvent } from './utils';
-
 
 const bodyActiveClass = 'body-modal-active';
 const animationEvent = whichAnimationEvent();
@@ -13,39 +12,34 @@ function stopPropagation(event) {
     event.stopPropagation();
 }
 
-const Modal = React.createClass({
+export default class Modal extends Component {
+    static propTypes = {
+        isOpen: PropTypes.bool.isRequired,
+        onRequestClose: PropTypes.func,
+        onAfterClose: PropTypes.func,
+        overlayClick: PropTypes.bool,
+        label: PropTypes.string,
+        className: PropTypes.string,
+        controls: PropTypes.object,
+        children: PropTypes.node,
+        ariaHideApp: PropTypes.bool,
+    };
 
-    propTypes: {
-        isOpen: React.PropTypes.bool.isRequired,
-        onRequestClose: React.PropTypes.func,
-        onAfterClose: React.PropTypes.func,
-        overlayClick: React.PropTypes.bool,
-        label: React.PropTypes.string,
-        className: React.PropTypes.string,
-        controls: React.PropTypes.object,
-        children: React.PropTypes.object,
-        ariaHideApp: React.PropTypes.bool,
-    },
+    static defaultProps = {
+        isOpen: false,
+        ariaHideApp: true,
+        onRequestClose: null,
+        onAfterClose: () => {},
+        overlayClick: true,
+        className: '',
+        label: '',
+        controls: null,
+    };
 
-    getDefaultProps() {
-        return {
-            isOpen: false,
-            ariaHideApp: true,
-            onRequestClose: null,
-            onAfterClose: () => {},
-            overlayClick: true,
-            className: '',
-            label: '',
-            controls: null,
-        };
-    },
-
-    getInitialState: () => {
-        return {
-            afterOpen: false,
-            beforeClose: false,
-        };
-    },
+    state = {
+        afterOpen: false,
+        beforeClose: false,
+    };
 
     componentDidMount() {
         // Focus needs to be set when mounting and already open
@@ -53,11 +47,11 @@ const Modal = React.createClass({
             this.open();
             window.addEventListener('keydown', this.handleKeyDown);
         }
-    },
+    }
 
     componentWillUnmount() {
         window.removeEventListener('keydown', this.handleKeyDown);
-    },
+    }
 
     componentWillReceiveProps(newProps) {
         // Focus only needs to be set once when the modal is being opened
@@ -66,25 +60,25 @@ const Modal = React.createClass({
         } else if (this.props.isOpen && !newProps.isOpen) {
             this.handleClose();
         }
-    },
+    }
 
-    open() {
+    open = () => {
         document.body.classList.add(bodyActiveClass);
         this.setAriaHidden(false);
         this.setFocusTrap();
 
         this.setState({afterOpen: true});
-    },
+    };
 
-    requestClose() {
+    requestClose = () => {
         const { onRequestClose } = this.props;
 
         if (onRequestClose) {
             onRequestClose();
         }
-    },
+    };
 
-    handleClose() {
+    handleClose = () => {
         const { onRequestClose } = this.props;
 
         document.body.classList.remove(bodyActiveClass);
@@ -105,9 +99,9 @@ const Modal = React.createClass({
         }
 
         this.close();
-    },
+    };
 
-    close(e) {
+    close = (e) => {
         const { modal } = this.refs;
 
         // make sure we're listening to the modals animationEvent
@@ -126,34 +120,34 @@ const Modal = React.createClass({
             afterOpen: false,
             beforeClose: false,
         }, this.afterClose);
-    },
+    };
 
-    afterClose() {
+    afterClose = () => {
         focusTrap.deactivate(this.refs.modal);
         this.props.onAfterClose();
-    },
+    };
 
-    handleKeyDown(e) {
+    handleKeyDown = (e) => {
         // ESC key
         if (e.keyCode === 27) {
             this.requestClose();
         }
-    },
+    };
 
-    handleOverlayClick() {
+    handleOverlayClick = () => {
         const { overlayClick } = this.props;
         if (!overlayClick) {
             return;
         }
 
         this.requestClose();
-    },
+    };
 
-    shouldBeClosed() {
+    shouldBeClosed = () => {
         return !this.props.isOpen && !this.state.beforeClose;
-    },
+    };
 
-    setAriaHidden(isHidden) {
+    setAriaHidden = (isHidden) => {
         const { ariaHideApp } = this.props;
         const { content } = this.refs;
 
@@ -167,15 +161,15 @@ const Modal = React.createClass({
         if (mainContent) {
             mainContent.setAttribute('aria-hidden', !isHidden);
         }
-    },
+    };
 
-    setFocusTrap() {
+    setFocusTrap = () => {
         const { modal, content } = this.refs;
         const tabbableItems = tabbable(content);
         if (tabbableItems.length > 0) {
             focusTrap.activate(modal);
         }
-    },
+    };
 
     render() {
         const { className, children, controls, label } = this.props;
@@ -217,7 +211,5 @@ const Modal = React.createClass({
                 ></div>
             </div>
         );
-    },
-});
-
-export default Modal;
+    }
+}

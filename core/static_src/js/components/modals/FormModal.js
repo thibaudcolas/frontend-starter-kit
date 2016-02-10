@@ -1,56 +1,51 @@
-import React                from 'react';
-import ReactDOM             from 'react-dom';
+import React, {PropTypes, Component} from 'react';
+import ReactDOM from 'react-dom';
 
-import Modal                from './Modal';
-import FormField            from '../FormField';
+import Modal from './Modal';
+import FormField from '../FormField';
 
-const LoginModal = React.createClass({
+export default class LoginModal extends Component {
+    static propTypes = {
+        isOpen: PropTypes.bool,
+        onRequestClose: PropTypes.func,
+        modalContainer: PropTypes.object,
+    };
 
-    propTypes: {
-        isOpen: React.PropTypes.bool,
-        onRequestClose: React.PropTypes.func,
-        modalContainer: React.PropTypes.object,
-    },
+    static defaultProps = {
+        isOpen: false,
+        onRequestClose: () => { },
+    };
 
-    getDefaultProps() {
-        return {
-            isOpen: false,
-            onRequestClose: () => { },
-        };
-    },
+    state = {
+        modalIsOpen: this.props.isOpen,
+    };
 
-    getInitialState: () => {
-        return {
-            modalIsOpen: this.props.isOpen,
-        };
-    },
-
-    openModal: () => {
+    openModal = () => {
         this.setState({
             modalIsOpen: true,
         });
-    },
+    };
 
-    closeModal: () => {
+    closeModal = () => {
         this.setState({
             modalIsOpen: false,
         });
-    },
+    };
 
-    updateField: (name, newValue) => {
+    updateField = (name, newValue) => {
         console.log('updating field value: ' + newValue);
-    },
+    };
 
-    sendForm: () => {
+    sendForm = () => {
         console.log('sending form');
-    },
+    };
 
-    destroyModal() {
+    destroyModal = () => {
         const { modalContainer } = this.props;
         if (modalContainer) {
             ReactDOM.unmountComponentAtNode(modalContainer);
         }
-    },
+    };
 
     render() {
         return (
@@ -80,7 +75,5 @@ const LoginModal = React.createClass({
                 />
             </Modal>
         );
-    },
-});
-
-export default LoginModal;
+    }
+}

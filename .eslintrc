@@ -8,6 +8,7 @@
         "object-shorthand": [2, "methods"],
         "no-new": [1],
         "no-multi-spaces": [0],
+        "no-extra-semi": [2],
         "no-warning-comments": [1, { "terms": ["todo", "fixme", "xxx"], "location": "start" }],
         "react/sort-comp": [0],
         "react/jsx-boolean-value": [0],

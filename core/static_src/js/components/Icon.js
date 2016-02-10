@@ -1,20 +1,19 @@
-import React, { PropTypes } from 'react';
-
-const propTypes = {
-    name: PropTypes.string.isRequired,
-    title: PropTypes.string,
-    cssClass: PropTypes.string,
-};
-
-const defaultProps = {
-    title: '',
-    cssClass: '',
-};
+import React, { PropTypes, Component } from 'react';
 
 /**
  * An icon that's rendered using inline SVG.
  */
-class Icon extends React.Component {
+export default class Icon extends Component {
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        title: PropTypes.string,
+        cssClass: PropTypes.string,
+    };
+
+    static defaultProps = {
+        title: '',
+        cssClass: '',
+    };
 
     render() {
         const { name, title, cssClass } = this.props;
@@ -31,8 +30,3 @@ class Icon extends React.Component {
         );
     }
 }
-
-Icon.propTypes = propTypes;
-Icon.defaultProps = defaultProps;
-
-export default Icon;

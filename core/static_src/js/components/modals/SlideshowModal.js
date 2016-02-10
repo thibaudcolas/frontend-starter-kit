@@ -1,43 +1,37 @@
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 
 import Modal from './Modal';
 import Flickity from 'flickity';
 
-const SlideshowModal = React.createClass({
+export default class SlideshowModal extends Component {
+    static propTypes = {
+        isOpen: PropTypes.bool,
+        slideshowId: PropTypes.string,
+        slideshowContent: PropTypes.object,
+    };
 
-    propTypes: {
-        isOpen: React.PropTypes.bool,
-        slideshowId: React.PropTypes.string,
-        slideshowContent: React.PropTypes.object,
-    },
+    static defaultProps = {
+        isOpen: false,
+        slideshowId: '',
+        slideshowContent: '',
+    };
 
-    getDefaultProps() {
-        return {
-            isOpen: false,
-            slideshowId: '',
-            slideshowContent: '',
-        };
-    },
+    state = {
+        modalIsOpen: this.props.isOpen,
+    };
 
-
-    getInitialState: () => {
-        return {
-            modalIsOpen: this.props.isOpen,
-        };
-    },
-
-    openModal: () => {
+    openModal = () => {
         this.setState({
             modalIsOpen: true,
         });
-    },
+    };
 
-    closeModal: () => {
+    closeModal = () => {
         this.setState({
             modalIsOpen: false,
         });
-    },
+    };
 
     componentDidMount() {
         const { wrapper } = this.refs;
@@ -61,20 +55,19 @@ const SlideshowModal = React.createClass({
                 flktyEl.focus();
             }, 250);
         }
-    },
+    }
 
-    prevSlide(e) {
+    prevSlide = (e) => {
         e.preventDefault();
         this.flkty.previous();
-    },
+    };
 
-    nextSlide(e) {
+    nextSlide = (e) => {
         e.preventDefault();
         this.flkty.next();
-    },
+    };
 
-
-    buildControls() {
+    buildControls = () => {
         return (
             <div className="modal__control">
                 <div className="modal__control-item modal__prev" onClick={this.prevSlide}>&nbsp;</div>
@@ -82,17 +75,17 @@ const SlideshowModal = React.createClass({
                 <div className="modal__control-item modal__next" onClick={this.nextSlide}>&nbsp;</div>
             </div>
         );
-    },
+    };
 
 
-    destroyModal() {
+    destroyModal = () => {
         const overlay = document.querySelector('[data-overlay]');
         ReactDOM.unmountComponentAtNode(overlay);
-    },
+    };
 
-    createMarkup() {
+    createMarkup = () => {
         return {__html: this.props.slideshowContent.innerHTML};
-    },
+    };
 
     render() {
         return (
@@ -112,7 +105,5 @@ const SlideshowModal = React.createClass({
                 </div>
             </Modal>
         );
-    },
-});
-
-export default SlideshowModal;
+    }
+}

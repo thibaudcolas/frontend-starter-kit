@@ -1,6 +1,6 @@
 import { whichTransitionEvent } from '../utils';
 
-export default class {
+export default class Menu {
     constructor(options) {
         const { trigger, el } = options;
 
@@ -93,5 +93,4 @@ export default class {
             this.openMenu();
         }
     }
-
 }

@@ -1,51 +1,50 @@
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
 
-const FormField = React.createClass({
-
-    propTypes: {
-        id: React.PropTypes.string.isRequired,
-        name: React.PropTypes.string,
-        value: React.PropTypes.oneOfType([
-            React.PropTypes.string,
-            React.PropTypes.number,
+export default class FormField extends Component {
+    static propTypes = {
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string,
+        value: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number,
         ]),
-        label: React.PropTypes.string,
-        type: React.PropTypes.string,
-        error: React.PropTypes.string,
-        onChange: React.PropTypes.func,
-        onEnterKey: React.PropTypes.func,
-        autoCorrect: React.PropTypes.string,
-        autoCapitalize: React.PropTypes.string,
-        spellCheck: React.PropTypes.string,
-        errorClass: React.PropTypes.string,
-        defaultValue: React.PropTypes.string,
-    },
+        label: PropTypes.string,
+        type: PropTypes.string,
+        error: PropTypes.string,
+        onChange: PropTypes.func,
+        onEnterKey: PropTypes.func,
+        autoCorrect: PropTypes.string,
+        autoCapitalize: PropTypes.string,
+        spellCheck: PropTypes.string,
+        errorClass: PropTypes.string,
+        defaultValue: PropTypes.string,
+    };
 
-    getDefaultProps() {
-        return {
-            onEnter: null,
-            name: null,
-            type: 'text',
-            autoCorrect: 'off',
-            autoCapitalize: 'off',
-            spellCheck: 'off',
-            errorClass: 'theme__text-invert',
-        };
-    },
+    static defaultProps = {
+        onEnter: null,
+        name: null,
+        type: 'text',
+        autoCorrect: 'off',
+        autoCapitalize: 'off',
+        spellCheck: 'off',
+        errorClass: 'theme__text-invert',
+    };
 
-    handleChange(e) {
+    state = {};
+
+    handleChange = (e) => {
         if (this.props.onChange) {
             this.props.onChange(this.props.id, e.target.value);
         }
-    },
+    };
 
-    handleKeyDown(e) {
+    handleKeyDown = (e) => {
         if (this.props.onEnterKey) {
             if (e.keyCode === 13) {
                 this.props.onEnterKey(e);
             }
         }
-    },
+    };
 
     render() {
         const className = ['theme__color', 'theme__border'];
@@ -82,8 +81,5 @@ const FormField = React.createClass({
                 {this.props.error ? (<div className={classError}>{this.props.error}</div>) : null}
             </div>
         );
-    },
-
-});
-
-module.exports = FormField;
+    }
+}

@@ -1,6 +1,5 @@
 import KeyCodes from '../constants/keycodes';
 
-
 export default class KeyboardControl {
     constructor(options) {
         this.el = options.el;

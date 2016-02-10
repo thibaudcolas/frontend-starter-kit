@@ -1,83 +1,59 @@
 /* eslint-disable new-cap */
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 
 import Modal from './Modal';
-import YouTubePlayer from 'youtube-player';
+import YouTubePlayer from 'react-youtube-player';
 
 import {
     getWidth,
     getHeight,
 } from '../../utils';
 
+export default class VideoModal extends Component {
+    static propTypes = {
+        isOpen: PropTypes.bool,
+        videoId: PropTypes.string,
+        playlistId: PropTypes.string,
+        modalContainer: PropTypes.object,
+    };
 
-const VideoModal = React.createClass({
+    static defaultProps = {
+        isOpen: false,
+        videoId: '',
+        playlistId: '',
+        modalContainer: null,
+    };
 
-    propTypes: {
-        isOpen: React.PropTypes.bool,
-        videoId: React.PropTypes.string,
-        playlistId: React.PropTypes.string,
-        modalContainer: React.PropTypes.object,
-    },
+    state = {
+        modalIsOpen: this.props.isOpen,
+        playbackState: 'unstarted',
+        videoId: this.props.videoId,
+    };
 
-    getDefaultProps() {
-        return {
-            isOpen: false,
-            videoId: '',
-            playlistId: '',
-            modalContainer: null,
-        };
-    },
-
-    getInitialState: () => {
-        return {
-            modalIsOpen: this.props.isOpen,
-        };
-    },
-
-    openModal: () => {
+    openModal = () => {
         this.setState({
             modalIsOpen: true,
         });
-    },
+    };
 
-    closeModal: () => {
+    closeModal = () => {
         this.setState({
             modalIsOpen: false,
         });
-    },
+    };
 
-    componentDidMount() {
-        const { videoId } = this.props;
-        const { inner, wrapper } = this.refs;
-
-        YouTubePlayer(wrapper, {
-            width: getWidth(inner),
-            height: getHeight(inner),
-            videoId: videoId,
-            playerVars: {
-                autoplay: 1,
-                origin: window.location.origin,
-            },
-            events: {
-                onReady: this.onPlayerReady,
-                onStateChange: this.onPlayerStateChange,
-            },
-        });
-    },
-
-    onPlayerReady() {
-    },
-
-    onPlayerStateChange() {
-    },
-
-    destroyModal() {
+    destroyModal = () => {
         const { modalContainer } = this.props;
         if (modalContainer) {
             ReactDOM.unmountComponentAtNode(modalContainer);
         }
-    },
+    };
+
+    componentDidMount() {
+        this.state.width = getWidth(this.refs.inner);
+        this.state.height = getHeight(this.refs.inner);
+    }
 
     render() {
         return (
@@ -90,11 +66,22 @@ const VideoModal = React.createClass({
                 className={"modal--video"}
             >
                 <div className="modal__video-inner" ref="inner">
-                    <div className="modal__video-wrapper" ref="wrapper"></div>
+                    <div className="modal__video-wrapper" ref="wrapper">
+                        <YouTubePlayer
+                            videoId={this.state.videoId}
+                            width={ this.state.width }
+                            height={ this.state.height }
+                            playbackState={this.state.playbackState}
+                            configuration={
+                                {
+                                    autoplay: 1,
+                                    origin: window.location.origin,
+                                }
+                            }
+                        />
+                    </div>
                 </div>
             </Modal>
         );
-    },
-});
-
-export default VideoModal;
+    }
+}
