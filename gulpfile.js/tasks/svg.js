@@ -1,4 +1,4 @@
-var config = require('./config');
+var config = require('../config');
 var gulp = require('gulp');
 var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
@@ -37,4 +37,3 @@ gulp.task('svg:inline', function () {
         .pipe(gulp.dest( config.paths.views ));
 
 });
-

@@ -5,9 +5,7 @@ var distPath = path.join('.', 'core', 'static');
 
 var prod = process.env.NODE_ENV === 'production';
 
-
 module.exports = {
-
     paths: {
         appName: 'site.js',
         sass: path.join(sourcePath, 'sass'),
@@ -17,19 +15,18 @@ module.exports = {
         svg: path.join(sourcePath, 'svg'),
         images: path.join(distPath, 'images'),
         slug: 'my-site',
-        views: path.join('.', 'templates'),
+        views: path.join('.', 'core'),
     },
 
     PlzOptions: {
         minifier: prod,
-        sourcemaps: !prod,
         mqpacker: false,
         filters: false,
         rem: true,
         pseudoElements: true,
         opacity: true,
         autoprefixer: {
-            browsers: ['> 1% in NZ', 'Explorer >= 8'],
-        },
-    },
+            browsers: ['ie 8', 'ie 9', '> 1%']
+        }
+    }
 };

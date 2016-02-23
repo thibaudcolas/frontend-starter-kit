@@ -18,6 +18,7 @@ $padding: 1em;
 
 %btn {
     @extend %inline-block;                          // [1]
+
     padding-top: 0;                                 // [6]
     padding-right: $padding;                        // [7]
     padding-bottom: 0;                              // [6]
@@ -32,23 +33,50 @@ $padding: 1em;
     border-style: solid;
     border-width: 1px;
     border-radius: $padding / 4;
+
     &,
     &:hover {
         text-decoration: none;   // [9]
     }
+
     &:active,
     &:focus {
         outline: none;
+    }
+
+    &.-small {
+        padding-right: $padding/1.5;
+        padding-left: $padding/1.5;
+        line-height: 2;
+    }
+
+    &.-wide {
+        padding-right: $padding * 2;
+        padding-left: $padding * 2;
+    }
+
+    &.-block {
+        width: 100%;
+    }
+
+    &[disabled],
+    &.-disabled {
+        pointer-events: none;
+        cursor: default;
+        background-color: #d9d9d9 !important;
     }
 }
 
 .btn {
     @extend %btn;
-}
+    @include hover {
+        &:hover {
+            background-color: $color-black;
+        }
+    }
 
-.btn--disabled {
-    pointer-events: none;
-    cursor: default;
+    color: $color-white;
+    background-color: lighten($color-black, 20%);
 }
 
 

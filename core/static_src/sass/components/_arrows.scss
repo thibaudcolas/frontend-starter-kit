@@ -18,14 +18,15 @@ $color-arrow: red;
 $size-arrow: 1rem;
 
 %arrow {
-    display:block;
-    position:absolute;
-    top:0; left:0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
     border-color: transparent;
     border-style: solid;
     border-width: $size-arrow;
-    height: 0;
-    width: 0;
 }
 
 .arrow {
@@ -33,53 +34,53 @@ $size-arrow: 1rem;
 
     &.arrow--top {
         top: -$size-arrow + .0625; // .0625 = 1px
-        border-top-width: 0;
         border-bottom: $size-arrow solid $color-arrow;
+        border-top-width: 0;
     }
     &.arrow--bottom {
-        top:auto;
+        top: auto;
         bottom: -$size-arrow + .0625;
-        border-bottom-width: 0;
         border-top: $size-arrow solid $color-arrow;
+        border-bottom-width: 0;
     }
     &.arrow--left {
         left: -$size-arrow + .0625;
-        border-left-width: 0;
         border-right: $size-arrow solid $color-arrow;
+        border-left-width: 0;
     }
     &.arrow--right {
-        left:auto;
         right: -$size-arrow + .0625;
-        border-right-width: 0;
+        left: auto;
         border-left: $size-arrow solid $color-arrow;
+        border-right-width: 0;
     }
 }
 
 // Arrows are positioned `left:0` by default,
 // these classes need to be applied to reposition them.
 
-    // Center
-    .arrow--top.arrow--center,
-    .arrow--bottom.arrow--center {
-        left:50%;
-        transform: translateX(-50%);
-    }
+// Center
+.arrow--top.arrow--center,
+.arrow--bottom.arrow--center {
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-    .arrow--left.arrow--center,
-    .arrow--right.arrow--center {
-        top:50%;
-        transform: translateY(-50%);
-    }
+.arrow--left.arrow--center,
+.arrow--right.arrow--center {
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-    // Right / Bottom
-    .arrow--top.arrow--rightside,
-    .arrow--bottom.arrow--rightside {
-        right:0;
-        left:auto;
-    }
+// Right / Bottom
+.arrow--top.arrow--rightside,
+.arrow--bottom.arrow--rightside {
+    right: 0;
+    left: auto;
+}
 
-    .arrow--left.arrow--bottom,
-    .arrow--right.arrow--bottom {
-        top:auto;
-        bottom:0;
-    }
+.arrow--left.arrow--bottom,
+.arrow--right.arrow--bottom {
+    top: auto;
+    bottom: 0;
+}

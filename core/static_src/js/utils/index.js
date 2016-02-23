@@ -120,15 +120,43 @@ export function uuid() {
 // Remove CSS outlines in an accessible manner
 // Make sure you have an empty style tag that
 // lives after your main style sheet
-export function tabfocus(selector = '.accessTab') {
-    const tabFocus = document.querySelector(selector);
+export function tabFocus(selector = '.accessTab') {
+    const tabFocusElmt = document.querySelector(selector);
     window.addEventListener('mousedown', () => {
-        tabFocus.innerHTML = '';
+        tabFocusElmt.innerHTML = '';
     }, false);
 
     window.addEventListener('keydown', (e) => {
         if (e.keyCode === 9) {
-            tabFocus.innerHTML = 'a:focus { outline: solid 3px #6cc6ee; }';
+            tabFocusElmt.innerHTML = 'a:focus { outline: solid 3px #6cc6ee; }';
         }
     }, false);
 }
+
+// Adds the YouTube Player API
+export function addYouTubePlayerAPI() {
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+}
+
+
+// Returns the width of an element.
+export function getWidth(elem) {
+    return elem.offsetWidth || elem.clientWidth;
+}
+
+// Returns the height of an element.
+export function getHeight(elem) {
+    return elem.offsetHeight || elem.clientHeight;
+}
+
+// Returns event target, supporting IE6-8
+export function getEventTarget(event) {
+    if (event) {
+        return event.target || event.srcElement;
+    }
+    return false;
+}
+

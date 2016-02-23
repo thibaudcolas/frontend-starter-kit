@@ -1,13 +1,13 @@
 var gulp = require("gulp");
-var config = require("./config");
+var config = require("../config");
 var path = require("path");
 var bs = require('browser-sync').create('main');
 
 gulp.task('watch', ['js', 'css'], function() {
     bs.init({
-        notify: false,
         open: false,
-        proxy: 'example.com:1337'
+        server: config.paths.views
+        //proxy: 'example.com:1337'
     });
 
     var justReload = [

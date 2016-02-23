@@ -19,17 +19,17 @@
 // Requires '_animations.scss';
 
 
-$z-index-modal: 11;
-$z-index-modal-matte: 1;
-$z-index-modal-content: 2;
+$z-index-modal: 1;
+$z-index-modal-matte: 2;
+$z-index-modal-content: 3;
 $color-modal-close-bg: #333;
 $color-modal-close-text: #fff;
 $color-modal-content-bg: #fff;
 $color-black-opacity-093: rgba(255, 255, 255, .93);
 $color-dark-grey: #222;
 
-.u-body-modal-active {
-    height: 100%;
+// class attached to body, when modal is active
+.body-modal-active {
     overflow: hidden;
 }
 
@@ -40,7 +40,6 @@ $color-dark-grey: #222;
     bottom: 0;
     left: 0;
     z-index: $z-index-modal;
-    background: $color-black-opacity-093;
     animation: modal-in .15s ease-out 0s backwards;
 }
 
@@ -59,11 +58,21 @@ $color-dark-grey: #222;
     }
 }
 
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $z-index-modal-matte;
+    background: $color-black-opacity-093;
+}
+
+
 
 .modal__table {
     display: table;
     position: relative;
-    z-index: $z-index-modal-content;
     width: 100%;
     height: 100%;
     vertical-align: middle;
@@ -77,11 +86,9 @@ $color-dark-grey: #222;
 }
 
 .modal__content {
-    @include large {
-        position: relative;
-    }
-
     display: inline-block;
+    position: relative;
+    z-index: $z-index-modal-content;
     max-width: 32em;
     min-width: 10.5em;
     min-height: 6em;
@@ -120,31 +127,48 @@ $color-dark-grey: #222;
 
 
 
-// Unfortunte hack for IE8. When will this blasted browser die?
 
-%ie8-matte {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: $z-index-modal-matte;
-    background: $color-white;
-    opacity: .93;
-    zoom: 1;
-}
+// video modals
 
-
-.ie8 {
-    .matte-opaque {
-        @extend %ie8-matte;
+.modal--video {
+    & .modal__overlay {
+        background: rgba(0, 0, 0, .9);
     }
 
-    .matte-translucent {
-        @extend %ie8-matte;
+    & .modal__content {
+        @include large {
+            min-width: 53rem;
+        }
 
-        z-index: 3;
-        opacity: .5;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.modal__video-inner {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+    background: #000;
+    box-shadow: 0 .1em .2em rgba(0, 0, 0, .15);
+}
+
+.modal__video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    // Spinner is 40x40px
+    > .spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+        margin-top: -1.25rem;
+        margin-left: -1.25rem;
     }
 }

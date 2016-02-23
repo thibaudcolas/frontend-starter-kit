@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var config = require('./config');
+var config = require('../config');
 var path = require('path');
 var browserify = require('browserify');
 var browserifyInc = require('browserify-incremental');
@@ -36,4 +36,3 @@ gulp.task('js', function() {
         .pipe(gulp.dest(config.paths.js))
         .pipe(bs.stream());
 });
-
