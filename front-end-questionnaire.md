@@ -74,8 +74,7 @@ A one-page questionnaire to help your team establish effective frontend guidelin
 ### CSS Methodology
 - **Is your team using a CSS methodology** *(such as [SMACSS](https://smacss.com/), [BEM](https://en.bem.info/method/), or [OOCSS](http://oocss.org/)*? If yes, where is the documentation for that methodology?
 
-* Thibaud has some thoughts:
-* https://github.com/springload/wiki/blob/master/blog-posts/thibaud/fed-stack-2016.md
+* Thibaud has some thoughts: http://www.springload.co.nz/blog/a-stable-front-end-stack-for-2016/
 
 - **Are you deviating from the methodology in any way?** If so, can you highlight these conventions?
 * See above. 
