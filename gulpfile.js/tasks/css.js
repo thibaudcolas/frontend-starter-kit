@@ -15,11 +15,9 @@ var bs = require('browser-sync').get('main');
 var sourcemaps = require('gulp-sourcemaps');
 var critical = require('critical');
 
-var prod = process.env.NODE_ENV === 'production';
-
 gulp.task('css', function() {
     return gulp.src(path.join( config.paths.sass, '**', "*.scss" ), {base: config.paths.sass})
-        .pipe(prod ? gutil.noop() : sourcemaps.init())
+        .pipe(config.prod ? gutil.noop() : sourcemaps.init())
             .pipe(sass())
             .on('error', function handleError(err) {
                 gutil.log(err.message);
@@ -27,7 +25,7 @@ gulp.task('css', function() {
                 this.emit('end');
             })
             .pipe(plz( config.PlzOptions ))
-        .pipe(prod ? gutil.noop() : sourcemaps.write())
+        .pipe(config.prod ? gutil.noop() : sourcemaps.write())
         .pipe(gulp.dest( config.paths.css ))
         .pipe(bs.stream());
 });

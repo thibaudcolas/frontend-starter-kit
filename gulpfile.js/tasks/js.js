@@ -10,15 +10,14 @@ var gutil = require('gulp-util');
 var source = require('vinyl-source-stream');
 var bs = require('browser-sync').get('main');
 
-var prod = process.env.NODE_ENV === 'production';
-var browserifyInstance = prod ? browserify : browserifyInc;
+var browserifyInstance = config.prod ? browserify : browserifyInc;
 
 var bundler = browserifyInstance({
     cache: {},
     transform: [babelify],
     packageCache: {},
-    debug: !prod,
-    fullPaths: !prod
+    debug: !config.prod,
+    fullPaths: !config.prod
 });
 
 bundler.add(path.resolve(config.paths.jsSrc, config.paths.appName));
@@ -32,7 +31,7 @@ gulp.task('js', function() {
         })
         .pipe(source(config.paths.appName))
         .pipe(buffer())
-        .pipe(prod ? uglify() : gutil.noop())
+        .pipe(config.prod ? uglify() : gutil.noop())
         .pipe(gulp.dest(config.paths.js))
         .pipe(bs.stream());
 });

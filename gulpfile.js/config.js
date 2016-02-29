@@ -6,6 +6,8 @@ var distPath = path.join('.', 'core', 'static');
 var prod = process.env.NODE_ENV === 'production';
 
 module.exports = {
+    prod: prod,
+
     paths: {
         appName: 'site.js',
         sass: path.join(sourcePath, 'sass'),
