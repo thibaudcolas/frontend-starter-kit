@@ -126,3 +126,9 @@ Complete report @ 2015-07-29T22:51:09.558Z
   Codes:
     200: 148
 ```
+
+### [weinre](https://people.apache.org/~pmuellr/weinre/docs/latest/)
+
+> weinre is a remote web inspector. Like the Chrome Devtools but built in HTML and can be used to debug any browser.
+
+It needs to be activated from Browsersync's UI (that would usually be `http://localhost:3001/remote-debug`), and can be launched from there too.
