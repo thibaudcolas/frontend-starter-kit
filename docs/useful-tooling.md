@@ -131,4 +131,4 @@ Complete report @ 2015-07-29T22:51:09.558Z
 
 > weinre is a remote web inspector. Like the Chrome Devtools but built in HTML and can be used to debug any browser.
 
-It needs to be activated from Browsersync's UI (that would usually be `http://localhost:3001/remote-debug`), and can be launched from there too.
+weinre is integrated into most of our projects via Browsersync. It needs to be activated from Browsersync's UI (that would usually be `http://localhost:3001/remote-debug`), and can be launched from there too.
