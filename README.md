@@ -3,11 +3,15 @@ Front-end starter kit [![Dependency Status](https://david-dm.org/springload/fron
 
 > A reference  for our latest code standards and examples of gulp tasks, CSS components, etc.
 
-> The front-end documentation lives in the [`docs` subfolder](https://github.com/springload/frontend-starter-kit/tree/master/docs).
+| Documentation in [`docs/`](https://github.com/springload/frontend-starter-kit/tree/master/docs) :book:|
+|---------------------|
+|[Front-end tech stack](docs/README.md)|
+|[Useful tooling](docs/useful-tooling.md)|
+|[Frontend Guidelines Questionnaire](docs/front-end-questionnaire.md)|
 
 ## Installation
 
-> You first need to clone the project on your computer, and to install [Node](https://nodejs.org). This project also uses [nvm](https://github.com/creationix/nvm).
+> Clone the project on your computer, and install [Node](https://nodejs.org). This project also uses [nvm](https://github.com/creationix/nvm).
 
 From the command-line:
 
@@ -56,7 +60,7 @@ git commit --no-verify
 
 ### Tests
 
-We use `mocha`, `chai`, `sinon` and `isparata` for unit tests.
+We use `mocha`, `chai` and `sinon` and for unit tests.
 
 ```sh
 # Run all the tests.
