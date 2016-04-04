@@ -73,6 +73,10 @@ Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm).
 - [Chrome DevTools](https://developer.chrome.com/devtools) – Browser developer tools for Chrome.
 - [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) – React developer tools integrated into Chrome.
 
+#### Continuous Integration & Deployment
+
+> Our client projects are tested and shipped with [CodeShip](https://codeship.com). Our open-source / public work uses [Travis](https://travis-ci.org/springload/). Because it's free, public, and doesn't interfere with our client project builds.
+
 ## Other documentation
 
 - [Useful tooling](https://github.com/springload/frontend-starter-kit/blob/master/docs/useful-tooling.md)
