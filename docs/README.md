@@ -77,6 +77,35 @@ Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm).
 
 > Our client projects are tested and shipped with [CodeShip](https://codeship.com). Our open-source / public work uses [Travis](https://travis-ci.org/springload/). Because it's free, public, and doesn't interfere with our client project builds.
 
+## Browser & device support
+
+> Browser & device support is informed by Web Analytics (GA) on the existing site and on competitors' sites.
+
+**Supported browser / device versions:**
+
+| Browser | Device/OS | Version |
+|---------|-----------|---------|
+| Mobile Safari | iOS Phone | latest |
+| Mobile Safari | iOS Tablet | latest |
+| Chrome | Android | latest |
+| IE | Desktop | 11 |
+| Chrome | Desktop | latest |
+| MS Edge | Desktop | latest |
+| Firefox | Desktop | latest |
+| Safari | OSX | latest |
+
+> Those browser / device / version combinations are the ones the site *is tested* on. We use progressive enhancement and front-end development standards so that 
+
+**Unsupported:**
+
+| Browser | Device/OS | Version |
+|---------|-----------|---------|
+| Stock browser | Android | All |
+| IE | Desktop | 10 |
+| IE | Desktop | 9 |
+| IE | Desktop | 8 |
+| Safari | Windows | All |
+
 ## Other documentation
 
 - [Useful tooling](https://github.com/springload/frontend-starter-kit/blob/master/docs/useful-tooling.md)
