@@ -138,3 +138,9 @@ npm install -g david depcheck hyperlink
 ```
 
 Use `npm run test:ci` as part of the test pipeline.
+
+## Documentation
+
+### Browser support
+
+> Copy/paste & adapt [Browser & device support template](https://github.com/springload/frontend-starter-kit/blob/master/docs/README.md#browser--device-support)
