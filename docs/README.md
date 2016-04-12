@@ -94,7 +94,7 @@ Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm).
 | Firefox | Desktop | latest |
 | Safari | OSX | latest |
 
-> Those browser / device / version combinations are the ones the site *is tested* on. We use progressive enhancement and front-end development standards so that 
+> Those browser / device / version combinations are the ones the site *is tested* on. Our development standards ensure that the site is usable on other browsers and will work on future browsers.
 
 **Unsupported:**
 
