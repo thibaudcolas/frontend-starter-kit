@@ -1,0 +1,5 @@
+.page-footer {
+    @include font-size(12px);
+
+    padding: 2*$base-padding $base-padding;
+}

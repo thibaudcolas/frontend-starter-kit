@@ -1,0 +1,23 @@
+// Lazyloading images
+// ----------------------------------------------------------------------------
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+    & ~ div {
+        opacity: 0;
+    }
+    .no-js &,
+    .no-js & ~ div {
+        opacity: 1;
+    }
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: opacity .45s;
+    & ~ div {
+        transition: opacity .45s;
+        opacity: 1;
+    }
+}

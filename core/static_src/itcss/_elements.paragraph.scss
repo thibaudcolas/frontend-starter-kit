@@ -1,0 +1,15 @@
+@mixin p {
+    @include font-size(16px, 1.4);
+
+    @include medium {
+        @include font-size(18px, 1.4);
+    }
+
+    @include large {
+        @include font-size(20px, 1.4);
+    }
+}
+
+.rich-text p {
+    @include p;
+}

@@ -1,0 +1,54 @@
+.link-social {
+    display: inline-block;
+    line-height: 1;
+
+    //&,
+    & > .i {
+        width: 20px;
+        height: 20px;
+    }
+
+    &.-invert {
+        color: #fff;
+        padding: .25em .25em .125em;
+        //width
+    }
+}
+
+.link {
+    transition: $base-transition;
+    @include hocus() {
+        color: $color-page-text;
+    }
+}
+
+.link--tag {
+    @include font-weight(black);
+
+    @include font-size(18px, 1.2);
+
+    @include medium {
+        @include font-size(21px, 1.1);
+    }
+
+    @include large {
+        @include font-size(23px, 1.05);
+    }
+}
+
+
+.link--underline {
+    box-shadow: inset 0 -.062em 0 #fff;
+    @include hocus() {
+        box-shadow: inset 0 -.062em 0 $color-page-text;
+    }
+}
+
+.faux-link--underline {
+    transition: $base-transition;
+    box-shadow: inset 0 -.062em 0 #fff;
+    //.no-touch a:hover & {
+    //    color: $color-page-text;
+    //    box-shadow: inset 0 -.062em 0 $color-page-text;
+    //}
+}

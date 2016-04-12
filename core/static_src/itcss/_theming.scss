@@ -1,0 +1,44 @@
+// The default theme goes first
+// Follwing themes will override the default
+
+$themes: (
+    'orange': (#F38231),
+    'green': (#1C650C),
+    'blue': (#095576)
+);
+
+
+@each $alias, $colors in $themes {
+
+    $color: save-nth-list-value($colors, 1);
+
+    .t-#{$alias} {
+        & .u-color-current {
+            color: $color;
+        }
+
+        & .u-color-current\:hover {
+            @include hover() {
+                color: $color;
+            }
+        }
+
+        & .u-background-color-current {
+            background-color: $color;
+        }
+    }
+
+    .u-color-#{$alias} {
+        color: $color;
+    }
+
+    .u-color-#{$alias}\:hover {
+        @include hover() {
+            color: $color;
+        }
+    }
+
+    & .u-background-color-#{$alias} {
+        background-color: $color;
+    }
+}

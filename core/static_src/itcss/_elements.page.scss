@@ -1,0 +1,15 @@
+html {
+    font-size: ($base-font-size / 16px) * 1em;
+    line-height: $base-line-height / $base-font-size;
+    @include font-family(sans-serif);
+    background-color: $color-page-background;
+    color: $color-page-text;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+    height: 100%;
+}

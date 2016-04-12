@@ -1,0 +1,17 @@
+.rich-text,
+.s-prose {
+
+    a {
+        text-decoration: underline;
+    }
+
+    ul,
+    ol {
+        margin-left: $base-spacing-unit * 2;
+    }
+
+    br + br {
+        display: none;
+    }
+
+}
