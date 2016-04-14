@@ -1,6 +1,6 @@
-$height-logo: 36px;
+$height-logo: 2.25rem;
 
-$height-header: $height-logo + 2 * $spacing-grid;
+$height-header: $height-logo + (2 * $spacing-grid);
 
 .page-header {
     @include clearfix();

@@ -1,8 +1,8 @@
-$logo-height:  36px;
+$height-logo:  36px;
 
 .logo {
     display: inline-block;
     > .i {
-        height: $logo-height;
+        height: $height-logo;
     }
 }
