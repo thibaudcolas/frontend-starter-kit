@@ -7,7 +7,6 @@ $themes: (
     'blue': (#095576)
 );
 
-
 @each $alias, $colors in $themes {
 
     $color: save-nth-list-value($colors, 1);

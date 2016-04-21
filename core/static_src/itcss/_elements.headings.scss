@@ -1,69 +1,40 @@
 
 h1, h2, h3, h4, h5, h6 {
-    //@include font-weight(black);
+    font-weight: $font-weight-bold;
     line-height: $line-height-headline;
 }
 
-@mixin h1 {
-    @include font-weight(bold);
-
-    @include font-size(34px, 1.2);
+h1 {
+    font-size: rem(34);
 
     @include medium {
-        @include font-size(64px, 1.1);
+        font-size: rem(64);
+        line-height: 1.1;
     }
 
     @include large {
-        @include font-size(74px, 1.05);
+        font-size: rem(74);
+        line-height: 1.05;
     }
 }
 
-h1 {
-    @include h1;
-}
-
-@mixin h2 {
-    @include font-weight(bold);
-
-    @include font-size(22px, 1.2);
-}
-
 h2 {
-    @include h2;
-}
-
-@mixin h3 {
-    @include font-weight(bold);
-    @include font-size(20px, 1.2);
+    font-size: rem(22);
 }
 
 h3 {
-    @include h3;
-}
-
-@mixin h4 {
-    @include font-weight(bold);
-    @include font-size(18px, 1.2);
+    font-size: rem(20);
 }
 
 h4 {
-    @include h4;
-}
-
-@mixin h5 {
-    @include font-weight(bold);
-    @include font-size(16px, 1.2);
+    font-size: rem(18);
 }
 
 h5 {
-    @include h5;
-}
-
-@mixin h6 {
-    @include font-weight(normal);
-    @include font-size(16px, 1.2);
+    font-size: rem(16);
 }
 
 h6 {
-    @include h6;
+    font-weight: $font-weight-normal;
+    font-size: rem(16);
 }

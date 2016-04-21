@@ -2,6 +2,9 @@
     #ALIGNMENTS
 \*------------------------------------*/
 
+
+// vertical aligns
+
 .u-align-middle {
     vertical-align: middle !important;
 }
@@ -10,23 +13,40 @@
     vertical-align: bottom !important;
 }
 
-.u-text-left,
-.u-left {
+
+// text aligns
+
+.u-text-left {
     text-align: left !important;
 }
 
-.u-text-right,
-.u-right {
+.u-text-right {
     text-align: right !important;
 }
 
-.u-text-center,
-.u-center {
+.u-text-center {
     text-align: center !important;
 }
+
+
+// margin center
 
 .u-margin-center,
 .u-auto {
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+
+// floats
+.u-left {
+    float: left !important;
+}
+
+.u-right {
+    float: right !important;
+}
+
+.u-clear {
+    clear: both !important;
 }

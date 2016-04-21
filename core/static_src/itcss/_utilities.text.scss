@@ -1,5 +1,5 @@
 .u-text-bold {
-    @include font-weight(bold);
+    font-weight: $font-weight-bold;
 }
 
 .u-text-uppercase {
@@ -24,16 +24,17 @@
 
 
 .u-big {
-    @include font-weight(medium);
-
-    @include font-size(18px, 1.2);
+    font-weight: $font-weight-medium;
+    font-size: rem(18);
 
     @include medium {
-        @include font-size(21px, 1.1);
+        font-size: rem(21);
+        line-height: 1.1;
     }
 
     @include large {
-        @include font-size(23px, 1.05);
+        font-size: rem(23);
+        line-height: 1.05;
     }
 }
 

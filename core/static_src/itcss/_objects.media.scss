@@ -19,7 +19,7 @@ $spacing-media: 1em;
 .media,
 .media--rev,
 .media--middle-align {
-    @extend %clearfix;
+    @include clearfix;
 }
 
 .media__image {
@@ -28,7 +28,7 @@ $spacing-media: 1em;
 }
 
 .media__body {
-    @extend %clearfix;
+    @include clearfix;
 }
 
 
@@ -40,7 +40,7 @@ $spacing-media: 1em;
 }
 
 .media--rev > .media__body {
-    @extend %clearfix;
+    @include clearfix;
 }
 
 

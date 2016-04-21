@@ -12,5 +12,5 @@ li > {
  * Visually offset definition titles from their definitions.
  */
 dt {
-    @include font-weight(medium);
+    font-weight: $font-weight-medium;
 }

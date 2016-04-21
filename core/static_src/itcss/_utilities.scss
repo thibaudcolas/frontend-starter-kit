@@ -1,11 +1,8 @@
-
-
 // Prevent all user interaction with the element
 .u-disabled {
     pointer-events: none !important;
     cursor: default !important;
 }
-
 
 // An accessible label that takes up no visual space
 .u-accessible {
@@ -21,7 +18,6 @@
     -webkit-clip-path: inset(1px); /* Webkit support */
     clip-path: inset(1px); /* New (experimental) CSS property */
 }
-
 
 .u-transition {
     transition: $base-transition !important;

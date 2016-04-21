@@ -23,16 +23,18 @@
 }
 
 .link--tag {
-    @include font-weight(black);
-
-    @include font-size(18px, 1.2);
+    font-weight: $font-weight-bold;
+    font-size: rem(18);
+    line-height: 1.2;
 
     @include medium {
-        @include font-size(21px, 1.1);
+        font-size: rem(21);
+        line-height: 1.1;
     }
 
     @include large {
-        @include font-size(23px, 1.05);
+        font-size: rem(23);
+        line-height: 1.05;
     }
 }
 

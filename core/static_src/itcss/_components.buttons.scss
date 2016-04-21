@@ -15,7 +15,6 @@
  */
 
 
-
 $color-btn:                             $color-page-text;
 $color-border:                          $color-page-text;
 $color-btn-background:                  #fff;
@@ -48,8 +47,8 @@ $padding-btn: $base-spacing-unit;
     border-width: 3px;
     border-radius: 0;
 
-    @include font-size(24px, 2);
-    @include font-weight(bold);
+    font-size: rem(24);
+    font-weight: $font-weight-bold;
 
     &,
     &:hover {
