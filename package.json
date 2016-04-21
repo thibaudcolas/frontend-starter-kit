@@ -49,7 +49,7 @@
   "dependencies": {
     "flickity": "^1.1.2",
     "focus-trap": "^1.0.1",
-    "normalize.css": "^3.0.3",
+    "normalize.css": "^4.1.1",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "springload-analytics.js": "^2.0.0",
