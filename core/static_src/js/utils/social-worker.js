@@ -40,15 +40,19 @@ export function createYoutubePlayer(videoId, options) {
 
 // Very basic facebook link sharing
 export function buildFacebookLink(url) {
-    const str = '//www.facebook.com/sharer/sharer.php?u=';
-    str.push(encodeURIComponent(url));
-    return str.join('');
+    const facebook = 'https://www.facebook.com/sharer/sharer.php?u=';
+    return `${facebook}${encodeURIComponent(url)}`;
 }
 
 // Extremely simple twitter sharing
-export function buildTwitterLink(message, url) {
+export function buildTwitterLink(message, url, via = '') {
     const str = ['https://twitter.com/intent/tweet/?'];
-    str.push('text=' + encodeURIComponent(message));
-    str.push('url=' + encodeURIComponent(url));
+    str.push(`text=${encodeURIComponent(message)}`);
+    str.push(`url=${encodeURIComponent(url)}`);
+
+    if (via) {
+        str.push(`via=${encodeURIComponent(via)}`);
+    }
+
     return str.join('&');
 }
