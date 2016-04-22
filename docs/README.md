@@ -106,6 +106,15 @@ Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm).
 | IE | Desktop | 8 |
 | Safari | Windows | All |
 
+## Accessibility
+
+### Icons and icon links
+
+We use inline SVG for our icons. They are made accessible by including text that describes what the icon represents, in a `<title>` tag. Here are implementations:
+
+- React: https://github.com/springload/react-svg-icon
+- Django templates / Jinja: https://github.com/springload/frontend-starter-kit/blob/master/core/templates/core/snippets/icon.html
+
 ## Other documentation
 
 - [Useful tooling](https://github.com/springload/frontend-starter-kit/blob/master/docs/useful-tooling.md)
