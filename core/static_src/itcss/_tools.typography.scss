@@ -1,15 +1,15 @@
 @mixin font-family($family) {
 
-    @if ($family == "sans-serif") {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    @if ($family == 'sans-serif') {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
-    @elseif ($family == "serif") {
-        font-family: "Times New Roman", serif;
+    @elseif ($family == 'serif') {
+        font-family: 'Times New Roman', serif;
     }
 
     @else {
-        @warn "#{$family} is not a valid font-family."
+        @warn '#{$family} is not a valid font-family.'
     }
 
 }
@@ -28,7 +28,7 @@
 // }
 @mixin truncate($width: 100%) {
   max-width: $width;
-  white-space:nowrap;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }

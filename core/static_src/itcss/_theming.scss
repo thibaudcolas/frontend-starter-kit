@@ -2,8 +2,8 @@
 // Follwing themes will override the default
 
 $themes: (
-    'orange': (#F38231),
-    'green': (#1C650C),
+    'orange': (#f38231),
+    'green': (#1c650c),
     'blue': (#095576)
 );
 
@@ -17,7 +17,7 @@ $themes: (
         }
 
         & .u-color-current\:hover {
-            @include hover() {
+            @include hover {
                 color: $color;
             }
         }
@@ -32,7 +32,7 @@ $themes: (
     }
 
     .u-color-#{$alias}\:hover {
-        @include hover() {
+        @include hover {
             color: $color;
         }
     }

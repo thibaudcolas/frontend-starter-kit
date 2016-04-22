@@ -6,6 +6,7 @@
 
     .list-inline__item {
         display: inline-block;
+
         & + & {
             margin-left: $spacing-half;
         }

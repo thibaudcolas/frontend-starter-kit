@@ -1,4 +1,4 @@
-//
+// --------------------------------------------------
 // Button groups
 // --------------------------------------------------
 
@@ -39,7 +39,7 @@ $button-margin: .5em;
 
             flex-direction: column-reverse;
             & > * {
-                margin-top: $button-margin*2;
+                margin-top: $button-margin * 2;
                 margin-bottom: 0;
             }
             & > *:last-child {
@@ -63,7 +63,7 @@ $button-margin: .5em;
         width: 100%;
         margin-right: 0;
         &:not(:last-child) {
-            margin-bottom: $button-margin*2;
+            margin-bottom: $button-margin * 2;
         }
     }
 

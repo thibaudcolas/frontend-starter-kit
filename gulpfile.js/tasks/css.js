@@ -9,7 +9,6 @@ var path = require('path');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
 var plz = require("gulp-pleeease");
-var sassLint = require('gulp-sass-lint');
 var parker = require('gulp-parker');
 var bs = require('browser-sync').get('main');
 var sourcemaps = require('gulp-sourcemaps');
@@ -30,17 +29,6 @@ gulp.task('css', function() {
         .pipe(bs.stream());
 });
 
-
-// ----------------------------------------------------------------------------
-// Sass Lint
-// ----------------------------------------------------------------------------
-
-gulp.task('lint:sass', function() {
-  gulp.src( path.join(config.paths.sass, '**', '*.scss') )
-    .pipe(sassLint())
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError());
-});
 
 
 // ----------------------------------------------------------------------------

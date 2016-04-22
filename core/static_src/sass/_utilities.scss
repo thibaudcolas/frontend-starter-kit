@@ -21,6 +21,7 @@
         display: table;
         content: ' ';
     }
+
     &:after {
         clear: both;
     }
@@ -65,7 +66,7 @@
 }
 
 .u-hidden-small {
-    // @small (_breakpoints.scss) must use max-width 
+    // @small (_breakpoints.scss) must use max-width
     @include small {
         display: none;
         visibility: hidden;
@@ -162,11 +163,11 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0); /* Deprecated but still needed to support Firefox & IE */
+    clip: rect(0, 0, 0, 0); // Deprecated but still needed to support Firefox & IE
     border: 0;
 
-    -webkit-clip-path: inset(1px); /* Webkit support */
-    clip-path: inset(1px); /* New (experimental) CSS property */
+    -webkit-clip-path: inset(1px); // Webkit support
+    clip-path: inset(1px); // New (experimental) CSS property
 }
 
 

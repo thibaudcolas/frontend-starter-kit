@@ -1,3 +1,4 @@
+// sass-lint:disable single-line-per-selector
 h1, h2, h3, h4, h5, h6,
 ul, ol, dl,
 blockquote, p, address,
@@ -7,6 +8,7 @@ table,
 fieldset, figure,
 pre {
     margin-bottom: $base-spacing-unit;
+
     &:last-child {
         margin-bottom: 0;
     }

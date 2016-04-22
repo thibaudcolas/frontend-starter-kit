@@ -1,6 +1,4 @@
-/**
- * Remove trailing margins from nested lists.
- */
+// Remove trailing margins from nested lists.
 li > {
     ul,
     ol {
@@ -8,9 +6,7 @@ li > {
     }
 }
 
-/**
- * Visually offset definition titles from their definitions.
- */
+// Visually offset definition titles from their definitions.
 dt {
     font-weight: $font-weight-medium;
 }

@@ -42,7 +42,7 @@
 // * 2. Trigger overflow behavior
 // * 3. Truncate the text
 .u-text-truncate {
-    @include truncate();
+    @include truncate;
 }
 
 

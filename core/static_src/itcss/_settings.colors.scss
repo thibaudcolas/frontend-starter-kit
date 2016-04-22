@@ -14,21 +14,21 @@ $color-black:                       #000;
 $color-white:                       #fff;
 
 // Accessibilty Colors
-$color-focus:                           #6cc6ee;
-$color-select:                          #e5e5e5;
-$color-error:                           #f77;
+$color-focus:                       #6cc6ee;
+$color-select:                      #e5e5e5;
+$color-error:                       #f77;
 
 
 // Reassign literal variables to meaningful ones.
-$color-page-text:                       $color-grey-dark;
-$color-page-background:                 #ffffff;
+$color-page-text:                   $color-grey-dark;
+$color-page-background:             #fff;
 
-$color-logo:                            $color-brand-primary;
+$color-logo:                        $color-brand-primary;
 
-$color-links:                           inherit;
+$color-links:                       inherit;
 
-$color-page-header:                     $color-page-text;
-$color-page-header-background:          #fff;
+$color-page-header:                 $color-page-text;
+$color-page-header-background:      #fff;
 
-$color-page-footer:                     $color-page-text;
-$color-page-footer-background:          #f3f3f3;
+$color-page-footer:                 $color-page-text;
+$color-page-footer-background:      #f3f3f3;

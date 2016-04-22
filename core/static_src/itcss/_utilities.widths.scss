@@ -1,6 +1,6 @@
-/*------------------------------------*\
-    #WIDTHS
-\*------------------------------------*/
+// -----------------------------------------------------------------------------
+// WIDTHS
+// -----------------------------------------------------------------------------
 
 // A mixin to spit out our width classes. Pass in the columns we want the widths
 // to have, and an optional suffix for responsive widths. E.g. to create thirds
@@ -27,13 +27,12 @@
     }
 }
 
-/**
- * A series of width helper classes that you can use to size things like grid
- * systems. Classes can take a fraction-like format (e.g. `.width-2/3`).
- * Use these in your markup:
- *
- * <div class="width-1/4">
- */
+// A series of width helper classes that you can use to size things like grid
+// systems. Classes can take a fraction-like format (e.g. `.width-2/3`).
+// Use these in your markup:
+//
+// <div class="width-1/4">
+//
 
 @include widths(2 3 4 10);
 

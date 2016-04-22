@@ -1,5 +1,19 @@
 .rich-text,
 .s-prose {
+
+
+    p {
+        font-size: rem(16);
+
+        @include medium {
+            font-size: rem(18);
+        }
+
+        @include large {
+            font-size: rem(20);
+        }
+    }
+
     a {
         text-decoration: underline;
     }

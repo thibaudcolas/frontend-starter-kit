@@ -1,125 +1,121 @@
-/*------------------------------------*\
-    #MAIN
-\*------------------------------------*/
+// -----------------------------------------------------------------------------
+// MAIN
+// -----------------------------------------------------------------------------
 
 
-/**
- * CONTENTS
- *
- * SETTINGS
- * Config...............Configuration and environment settings.
- * Global...............Gl  obally-available variables and settings/config.
- * Colors...............Manage our color palette in isolation.
- *
- * TOOLS
- * Functions............Some simple helper functions.
- * Mixins...............Globally available mixins.
- * Breakpoints..........Breakpoint definitions.
- * Typography...........Some type helpers.
- *
- * GENERIC
- * Normalize.css........A level playing field.
- * Box-sizing...........Better default `box-sizing`.
- * Reset................A pared back reset to remove margins.
- * Shared...............Sensibly and tersely share global commonalities.
- * Keyframes............Animation keyframes.
- *
- * ELEMENTS
- * Headings.............Focus style resets.
- * Headings.............Heading styles.
- * Images...............Base image styles.
- * Links................Hyperlink styles.
- * Lists................Default list styles.
- * Page.................Page-level styles (HTML element).
- * Para.................Paragraph styles.
- *
- * OBJECTS
- * Wrappers.............Wrappers and page constraints.
- * Grid.................Float and inline grid setup.
- * Media................Media block.
- * List-inline..........Simple abstraction for setting lists out in a line.
- *
- * COMPONENTS
- * Buttons..............Button styles.
- * Icon Text............SVG icon and text combos.
- * Icons................SVG icon styles.
- * Images...............Image styles.
- * Links................Various link styles.
- * Logo.................Make our logo a reusable component.
- * Modals...............Modal skinning.
- * Nav primary..........The site’s main nav.
- * Page-content.........Page content styles.
- * Page-head............Page header styles.
- * Page-foot............Page footer styles.
- * Video................Video styles.
- * Tiles................Homepage tiles styling.
- *
- * UTILITIES
- * Align................Various alignment patterns.
- * Headings.............Assigning our heading styles to helper classes.
- * Margins..............Some custom margins.
- * Margins..............Typographic utilities.
- * Visibility...........Show/hide stuff.
- * Widths...............Simple width helper classes.
- * / ...................All the other helper stuff.
- *
- * OTHERS
- * Prose................Set up a new styling context for long-format text.
- * Theming..............Theming styles.
- * Shame................Temporary hacks.
- *
- */
+// CONTENTS
+//
+// SETTINGS
+// Config...............Configuration and environment settings.
+// Global...............Gl  obally-available variables and settings/config.
+// Colors...............Manage our color palette in isolation.
+//
+// TOOLS
+// Functions............Some simple helper functions.
+// Mixins...............Globally available mixins.
+// Breakpoints..........Breakpoint definitions.
+// Typography...........Some type helpers.
+//
+// GENERIC
+// Normalize.css........A level playing field.
+// Box-sizing...........Better default `box-sizing`.
+// Reset................A pared back reset to remove margins.
+// Shared...............Sensibly and tersely share global commonalities.
+// Keyframes............Animation keyframes.
+//
+// ELEMENTS
+// Headings.............Focus style resets.
+// Headings.............Heading styles.
+// Images...............Base image styles.
+// Links................Hyperlink styles.
+// Lists................Default list styles.
+// Page.................Page-level styles (HTML element).
+// Para.................Paragraph styles.
+//
+// OBJECTS
+// Wrappers.............Wrappers and page constraints.
+// Grid.................Float and inline grid setup.
+// Media................Media block.
+// List-inline..........Simple abstraction for setting lists out in a line.
+//
+// COMPONENTS
+// Buttons..............Button styles.
+// Icon Text............SVG icon and text combos.
+// Icons................SVG icon styles.
+// Images...............Image styles.
+// Links................Various link styles.
+// Logo.................Make our logo a reusable component.
+// Modals...............Modal skinning.
+// Nav primary..........The site’s main nav.
+// Page-content.........Page content styles.
+// Page-head............Page header styles.
+// Page-foot............Page footer styles.
+// Video................Video styles.
+// Tiles................Homepage tiles styling.
+//
+// UTILITIES
+// Align................Various alignment patterns.
+// Headings.............Assigning our heading styles to helper classes.
+// Margins..............Some custom margins.
+// Margins..............Typographic utilities.
+// Visibility...........Show/hide stuff.
+// Widths...............Simple width helper classes.
+// / ...................All the other helper stuff.
+//
+// OTHERS
+// Prose................Set up a new styling context for long-format text.
+// Theming..............Theming styles.
+// Shame................Temporary hacks.
 
 
-@import "settings.global";
-@import "settings.colors";
+@import 'settings.global';
+@import 'settings.colors';
 
-@import "tools.functions";
-@import "tools.mixins";
-@import "tools.breakpoints";
-@import "tools.typography";
+@import 'tools.functions';
+@import 'tools.mixins';
+@import 'tools.breakpoints';
+@import 'tools.typography';
 
-@import "generic.normalize";
-@import "generic.box-sizing";
-@import "generic.reset";
-@import "generic.shared";
-@import "generic.keyframes";
+@import 'generic.normalize';
+@import 'generic.box-sizing';
+@import 'generic.reset';
+@import 'generic.shared';
+@import 'generic.keyframes';
 
-@import "elements.focus";
-@import "elements.headings";
-@import "elements.images";
-@import "elements.links";
-@import "elements.lists";
-@import "elements.page";
-@import "elements.paragraph";
+@import 'elements.focus';
+@import 'elements.headings';
+@import 'elements.images';
+@import 'elements.links';
+@import 'elements.lists';
+@import 'elements.page';
 
-@import "objects.grid";
-@import "objects.list-inline";
-@import "objects.media";
-@import "objects.wrappers";
+@import 'objects.grid';
+@import 'objects.list-inline';
+@import 'objects.media';
+@import 'objects.wrappers';
 
-@import "components.buttons";
-@import "components.icon-text";
-@import "components.icons";
-@import "components.images";
-@import "components.links";
-@import "components.logo";
-@import "components.modals";
-@import "components.nav-primary";
-@import "components.page-content";
-@import "components.page-header";
-@import "components.page-footer";
-@import "components.radio-picker";
+@import 'components.buttons';
+@import 'components.icon-text';
+@import 'components.icons';
+@import 'components.images';
+@import 'components.links';
+@import 'components.logo';
+@import 'components.modals';
+@import 'components.nav-primary';
+@import 'components.page-content';
+@import 'components.page-header';
+@import 'components.page-footer';
+@import 'components.radio-picker';
 
-@import "utilities.align";
-@import "utilities.margins";
-@import "utilities.text";
-@import "utilities.visibility";
-@import "utilities.widths";
-@import "utilities";
+@import 'utilities.align';
+@import 'utilities.margins';
+@import 'utilities.text';
+@import 'utilities.visibility';
+@import 'utilities.widths';
+@import 'utilities';
 
-@import "scope.prose";
+@import 'scope.prose';
 
-@import "theming";
+@import 'theming';
 
-@import "shame";
+@import 'shame';

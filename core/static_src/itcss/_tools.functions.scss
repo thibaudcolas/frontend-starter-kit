@@ -20,7 +20,7 @@
 }
 
 // Check if an item is contained in a list
-@function contains($list,$var) {
+@function contains($list, $var) {
     $_out: false;
     @each $item in $list { @if $item == $var { $_out: true; } }
     @return $_out;

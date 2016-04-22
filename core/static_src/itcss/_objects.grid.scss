@@ -17,7 +17,6 @@
 
 
 .grid {
-
     // Push items apart from each other
     &.-justified,
     &.-polar {
@@ -26,6 +25,7 @@
 
     &.-row-spacing {
         margin-bottom: $spacing-grid;
+
         & > * {
             margin-bottom: $spacing-grid;
         }
@@ -33,6 +33,7 @@
 
     &.-col-spacing {
         margin-left: -$spacing-grid;
+
         > * {
             padding-left: $spacing-grid;
         }
@@ -45,7 +46,6 @@
     &.-bottom > * {
         vertical-align: bottom;
     }
-
 }
 
 
@@ -60,6 +60,7 @@
 
     &.-row-spacing {
         margin-bottom: $spacing-grid;
+
         & > * {
             margin-bottom: $spacing-grid;
         }
@@ -67,6 +68,7 @@
 
     &.-col-spacing {
         margin-left: -$spacing-grid;
+
         > * {
             padding-left: $spacing-grid;
         }

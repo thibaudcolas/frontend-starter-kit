@@ -11,6 +11,7 @@ $button-margin: .5em;
     border-collapse: separate;
     border-spacing: $button-margin 0;
     table-layout: fixed;
+
     & > * {
         display: table-cell;
         float: none;
@@ -28,6 +29,7 @@ $button-margin: .5em;
             width: 100%;
             margin-right: 0;
             margin-bottom: $spacing;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -37,15 +39,18 @@ $button-margin: .5em;
             display: flex;
 
             flex-direction: column-reverse;
+
             & > * {
-                margin-top: $button-margin*2;
+                margin-top: $button-margin * 2;
                 margin-bottom: 0;
             }
+
             & > *:last-child {
                 margin-top: 0;
             }
         }
     }
+
     > * {
         display: inline-block;
 
@@ -53,6 +58,7 @@ $button-margin: .5em;
         margin-bottom: 0;
         text-align: center;
         vertical-align: middle;
+
         &:last-child {
             margin-right: 0;
         }
@@ -61,8 +67,9 @@ $button-margin: .5em;
     &.-block > * {
         width: 100%;
         margin-right: 0;
+
         &:not(:last-child) {
-            margin-bottom: $button-margin*2;
+            margin-bottom: $button-margin * 2;
         }
     }
 
