@@ -108,6 +108,8 @@ Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm).
 
 ## Accessibility
 
+> [Link to Sam's accessibility blog post](#)
+
 ### Icons and icon links
 
 We use inline SVG for our icons. They are made accessible by including text that describes what the icon represents, in a `<title>` tag. Here are implementations:
