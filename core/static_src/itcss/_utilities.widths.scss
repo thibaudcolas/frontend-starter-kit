@@ -10,6 +10,10 @@
 
 @mixin widths($widths-columns, $widths-breakpoint: null) {
 
+    .width-full#{$widths-breakpoint} {
+        width: 100% !important;
+    }
+
     // Loop through the number of columns for each denominator of our fractions.
     @each $widths-denominator in $widths-columns {
 
@@ -18,8 +22,10 @@
         @for $widths-numerator from 1 through $widths-denominator {
 
             // Build a class in the format `.width-3/4`.
-            .width-#{$widths-numerator}\/#{$widths-denominator}#{$widths-breakpoint} {
-                width: ($widths-numerator / $widths-denominator) * 100% !important;
+            @if $widths-numerator != $widths-denominator {
+                .width-#{$widths-numerator}\/#{$widths-denominator}#{$widths-breakpoint} {
+                    width: ($widths-numerator / $widths-denominator) * 100% !important;
+                }
             }
 
         }
