@@ -7,6 +7,7 @@ var babelify = require('babelify');
 var uglify = require('gulp-uglify');
 var buffer = require('vinyl-buffer');
 var gutil = require('gulp-util');
+var size = require('gulp-size');
 var source = require('vinyl-source-stream');
 var bs = require('browser-sync').get('main');
 
@@ -32,6 +33,7 @@ gulp.task('js', function() {
         .pipe(source(config.paths.appName))
         .pipe(buffer())
         .pipe(config.prod ? uglify() : gutil.noop())
+        .pipe(size({ title: config.prod ? 'JS' : 'JS (unminified)', showFiles: true, gzip: config.prod }))
         .pipe(gulp.dest(config.paths.js))
         .pipe(bs.stream());
 });
