@@ -56,3 +56,12 @@ export function buildTwitterLink(message, url, via = '') {
 
     return str.join('&');
 }
+
+export function buildMailtoLink(email = '', subject = '', body = '') {
+    const fields = [
+        `subject=${encodeURIComponent(subject)}`,
+        `body=${encodeURIComponent(body)}`,
+    ];
+
+    return `mailto:${encodeURIComponent(email)}?${fields.join('&')}`;
+}
