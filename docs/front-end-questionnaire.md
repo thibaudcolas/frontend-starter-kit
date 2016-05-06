@@ -1,6 +1,10 @@
 # [Frontend Guidelines Questionnaire](https://github.com/bradfrost/frontend-guidelines-questionnaire)
 A one-page questionnaire to help your team establish effective frontend guidelines, so that you can write consistent & cohesive code together.
 
+
+This document has been merged into the [Frontend Coding Standards document](https://github.com/springload/wiki/tree/master/coding-standards/front-end-development)
+
+
 ## HTML
 ### HTML Principles
 - **What are some general principles your team should follow when writing HTML? ***(for example, authoring semantic HTML5 markup, accessibility, etc. See [these](http://www.yellowshoe.com.au/standards/#html) [resources](http://codeguide.co/#html) for [inspiration](http://manuals.gravitydept.com/code/html))*
