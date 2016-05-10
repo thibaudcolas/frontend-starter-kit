@@ -88,13 +88,9 @@ Please check that the favicons meet all the standard requirements:
 
 https://realfavicongenerator.net/favicon_checker
 
-## Switching between NodeJS versions
+## Switching between NodeJS versions with [NVM](https://github.com/creationix/nvm)
 
-### Use NVM
-
-Recommended way to install nvm and use it: (on MAC)
-
-`brew install nvm`
+Recommended way to install nvm and use it: `brew install nvm`
 
 Then add the following to your .bash_profile
 ```
@@ -109,8 +105,14 @@ Few useful commands:
 `nvm install v5.1.1` (will download and install v5.1.1 and automatically use it)
 `nvm use v4.2.3` (will use node v4.2.3 if you have already installed it)
 
-For more info about NVM please ref to official nvm repo: https://github.com/creationix/nvm
+### Adding and upgrading dependencies
 
+This project uses [`npm shrinkwrap`](https://docs.npmjs.com/cli/shrinkwrap) in order to pin all of the dependency tree for installation. The file that is used when installing the project is **`npm-shrinkwrap.json`**. To update it,
+
+- First make sure you are using the right Node and npm versions with `node --version` and `npm --version` (should match the versions in the project's) `package.json`.
+- Then install or upgrade dependencies by using `npm install --save <package>` or `npm install --save-dev <package>`. Manual installs will not be picked up by `shrinkwrap`.
+- When you've confirmed the project still works with the new dependencies, run `npm run shrinkwrap` in order to regenerate the `npm-shrinkwrap.json` file
+- Commit this file, and push.
 
 ## Deploying a new version
 
