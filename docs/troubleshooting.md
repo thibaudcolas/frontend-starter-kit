@@ -9,3 +9,11 @@ npm install --save-dev gulp-sass
 # or
 npm install --save-dev grunt-sass
 ```
+
+Do not install `node-sass` directly unless you plan on using it directly.
+
+### npm ERR! addLocal Could not install <project>/build
+
+This happens because of shrinkwrapped projects where some dependencies were resolved to a local cache of packages that were built on the computer before publishing.
+
+Use `cat npm-shrinkwrap.json | grep "file:build" --context=4` to find out which packages are impacted, then remove them from the local cache with `npm cache clean <package>` and `npm install --save` them again.
