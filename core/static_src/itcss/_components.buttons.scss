@@ -60,26 +60,26 @@ $padding-btn: $base-spacing-unit;
         background-color: $color-btn-background-hover;
     }
 
-    &.-small {
-        padding-right: $padding-btn / 1.5;
-        padding-left: $padding-btn / 1.5;
-        line-height: 2;
-    }
-
-    &.-wide {
-        padding-right: $padding-btn * 2;
-        padding-left: $padding-btn * 2;
-    }
-
-    &.-block {
-        width: 100%;
-    }
-
     &[disabled],
-    &.-disabled {
+    &.is-disabled {
         pointer-events: none;
         cursor: default;
         opacity: .5 !important;
     }
 
+}
+
+.btn--small {
+    padding-right: $padding-btn / 1.5;
+    padding-left: $padding-btn / 1.5;
+    line-height: 2;
+}
+
+.btn--wide {
+    padding-right: $padding-btn * 2;
+    padding-left: $padding-btn * 2;
+}
+
+.btn--block {
+    width: 100%;
 }

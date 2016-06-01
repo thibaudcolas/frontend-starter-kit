@@ -4,7 +4,6 @@
     max-width: 1280px;
     margin-right: auto;
     margin-left:  auto;
-
 }
 
 .page-width {
@@ -12,18 +11,12 @@
     max-width: 1280px;
     margin-right: auto;
     margin-left:  auto;
+}
 
-    &.-no-max-width {
-        max-width: none;
-    }
-
-    &.-wide {
-        padding: 0;
+    .page-width--wide {
         max-width: 1400px;
     }
 
-    &.-narrow {
+    .page-width--narrow {
         max-width: 960px;
     }
-
-}

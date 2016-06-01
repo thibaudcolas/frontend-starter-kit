@@ -15,14 +15,13 @@
     }
 
 
-.grid {
     // Push items apart from each other
-    &.-justified,
-    &.-polar {
+    .grid--justified,
+    .grid--polar {
         text-align: justify;
     }
 
-    &.-row-spacing {
+    .grid--row-spacing {
         margin-bottom: $spacing-grid;
 
         & > * {
@@ -30,7 +29,7 @@
         }
     }
 
-    &.-col-spacing {
+    .grid--col-spacing {
         margin-left: -$spacing-grid;
 
         > * {
@@ -38,14 +37,13 @@
         }
     }
 
-    &.-middle > * {
+    .grid--middle > * {
         vertical-align: middle;
     }
 
-    &.-bottom > * {
+    .grid--bottom > * {
         vertical-align: bottom;
     }
-}
 
 
 .grid-float {
@@ -56,8 +54,9 @@
         float: left;
         width: 100%;
     }
+}
 
-    &.-row-spacing {
+    .grid-float--row-spacing {
         margin-bottom: $spacing-grid;
 
         & > * {
@@ -65,12 +64,10 @@
         }
     }
 
-    &.-col-spacing {
+    .grid-float--col-spacing {
         margin-left: -$spacing-grid;
 
         > * {
             padding-left: $spacing-grid;
         }
     }
-
-}

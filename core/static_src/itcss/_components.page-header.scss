@@ -7,8 +7,9 @@ $height-header: $height-logo + (2 * $spacing-grid);
     background-color: $color-page-header-background;
     color: $color-page-header;
     padding: $spacing-grid;
+}
 
-    &.-fixed {
+    .page-header--fixed {
         position: fixed;
         z-index: 10;
 
@@ -23,4 +24,3 @@ $height-header: $height-logo + (2 * $spacing-grid);
             margin-top: $height-header;
         }
     }
-}

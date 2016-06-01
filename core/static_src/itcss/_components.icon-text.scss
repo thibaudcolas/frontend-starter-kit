@@ -12,7 +12,6 @@
 // </span>
 
 
-.icon-text__icon,
 .icon-text {
     > svg {
         width: 1.25em;
@@ -26,10 +25,10 @@
             margin-left: .25em;
         }
     }
+}
 
-    &.-small > svg {
+    .icon-text--small > svg {
         width: 1em;
         height: 1em;
         margin-top: -.125em;
     }
-}
