@@ -79,11 +79,10 @@
 
 </head>
 <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    {#<!-- To use if the website or part of it does not support "old IE" users. -->#}
+    {#{% include "core/snippets/outdated-browser" %}#}
 
-    {#<!-- To use if the website does not support JS-less users. -->#}
+    {#<!-- To use if the website or part of it does not support JS-less users. -->#}
     {#{% include "core/snippets/enable-javascript.html" %}#}
 
     <a href="/#content" class="u-accessible">Jump to content</a>
