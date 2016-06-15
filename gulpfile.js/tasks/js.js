@@ -4,6 +4,8 @@ var path = require('path');
 var browserify = require('browserify');
 var browserifyInc = require('browserify-incremental');
 var babelify = require('babelify');
+var envify = require('loose-envify/custom');
+var uglifyify = require('uglifyify');
 var uglify = require('gulp-uglify');
 var buffer = require('vinyl-buffer');
 var gutil = require('gulp-util');
@@ -13,16 +15,28 @@ var source = require('vinyl-source-stream');
 var bs = require('browser-sync').get('main');
 
 var browserifyInstance = config.prod ? browserify : browserifyInc;
-
+var browserifyTransforms = [
+    babelify,
+    [
+        envify({ NODE_ENV: config.prod ? 'production' : 'development' }),
+        { global: true },
+    ],
+];
 var browserifyPlugins = [];
 
 if (config.prod) {
+    browserifyTransforms.push([
+        uglifyify,
+        // See https://github.com/hughsk/uglifyify#global-transforms
+        { global: true },
+    ]);
+
     browserifyPlugins.push(bundleCollapser);
 }
 
 var bundler = browserifyInstance({
     cache: {},
-    transform: [babelify],
+    transform: browserifyTransforms,
     plugin: browserifyPlugins,
     packageCache: {},
     debug: !config.prod,

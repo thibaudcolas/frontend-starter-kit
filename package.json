@@ -42,9 +42,11 @@
     "hyperlink": "^2.3.0",
     "iconv": "^2.1.11",
     "isparta": "^4.0.0",
+    "loose-envify": "^1.2.0",
     "mocha": "^2.3.0",
     "sass-lint": "1.5.0",
     "sinon": "^1.17.0",
+    "uglifyify": "^3.0.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
