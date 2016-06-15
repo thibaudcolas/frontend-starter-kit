@@ -8,17 +8,25 @@ var uglify = require('gulp-uglify');
 var buffer = require('vinyl-buffer');
 var gutil = require('gulp-util');
 var size = require('gulp-size');
+var bundleCollapser = require('bundle-collapser/plugin');
 var source = require('vinyl-source-stream');
 var bs = require('browser-sync').get('main');
 
 var browserifyInstance = config.prod ? browserify : browserifyInc;
 
+var browserifyPlugins = [];
+
+if (config.prod) {
+    browserifyPlugins.push(bundleCollapser);
+}
+
 var bundler = browserifyInstance({
     cache: {},
     transform: [babelify],
+    plugin: browserifyPlugins,
     packageCache: {},
     debug: !config.prod,
-    fullPaths: !config.prod
+    fullPaths: !config.prod,
 });
 
 bundler.add(path.resolve(config.paths.jsSrc, config.paths.appName));
