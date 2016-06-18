@@ -12,11 +12,10 @@ import {
     tabFocus,
 } from './utils';
 
-
 if ('ontouchstart' in window) {
-    document.documentElement.className = document.documentElement.className + ' touch';
+    document.documentElement.className += ' touch';
 } else {
-    document.documentElement.className = document.documentElement.className + ' no-touch';
+    document.documentElement.className += ' no-touch';
 }
 
 
