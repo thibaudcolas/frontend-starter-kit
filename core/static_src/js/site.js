@@ -11,16 +11,11 @@ import {
     querySelectArray,
     // addYouTubePlayerAPI,
     tabFocus,
+    initFeatureDetection,
 } from './utils';
 
 initErrorTracking();
-
-if ('ontouchstart' in window) {
-    document.documentElement.className += ' touch';
-} else {
-    document.documentElement.className += ' no-touch';
-}
-
+initFeatureDetection();
 
 class Site {
     constructor() {
