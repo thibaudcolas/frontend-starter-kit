@@ -6,11 +6,14 @@ import GA from 'springload-analytics.js';
 import VideoModal from './components/modals/VideoModal';
 import FormModal from './components/modals/FormModal';
 
+import { initErrorTracking } from './api/analytics';
 import {
     querySelectArray,
     // addYouTubePlayerAPI,
     tabFocus,
 } from './utils';
+
+initErrorTracking();
 
 if ('ontouchstart' in window) {
     document.documentElement.className += ' touch';
