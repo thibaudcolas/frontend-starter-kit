@@ -17,7 +17,7 @@ describe('format', () => {
             expect(buildTwitterLink).to.be.a('function');
         });
 
-        it('number formatting makes the numbers look nicer', () => {
+        it('Twitter sharing link is created', () => {
             expect(buildTwitterLink('Check this out!', 'https://www.springload.co.nz/')).to.equal('https://twitter.com/intent/tweet/?&text=Check%20this%20out!&url=https%3A%2F%2Fwww.springload.co.nz%2F');
             expect(buildTwitterLink('Check this out!', 'https://www.springload.co.nz/', 'springloadnz')).to.equal('https://twitter.com/intent/tweet/?&text=Check%20this%20out!&url=https%3A%2F%2Fwww.springload.co.nz%2F&via=springloadnz');
         });
