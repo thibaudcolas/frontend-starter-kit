@@ -14,6 +14,14 @@ import {
     initFeatureDetection,
 } from './utils';
 
+const TRACK_PERFORMANCE = true;
+
+if (process.env.NODE_ENV !== 'production') {
+    if (TRACK_PERFORMANCE) {
+        console.time('INIT');
+    }
+}
+
 initErrorTracking();
 initFeatureDetection();
 
@@ -97,3 +105,9 @@ class Site {
 }
 
 window.site = new Site({ });
+
+if (process.env.NODE_ENV !== 'production') {
+    if (TRACK_PERFORMANCE) {
+        console.timeEnd('INIT');
+    }
+}
