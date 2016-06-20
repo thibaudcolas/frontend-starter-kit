@@ -146,3 +146,9 @@ Use `npm run test:ci` as part of the test pipeline.
 ### Browser support
 
 > Copy/paste & adapt [Browser & device support template](https://github.com/springload/frontend-starter-kit/blob/master/docs/README.md#browser--device-support)
+
+### Analytics
+
+Analytics are set up with Google Analytics.
+
+[JavaScript errors](https://github.com/springload/frontend-starter-kit/search?utf8=%E2%9C%93&q=analyticsException) are tracked in Google Analytics as ["Exceptions"](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions). A custom report needs to be created for this data to be visible inside the GA interface.
