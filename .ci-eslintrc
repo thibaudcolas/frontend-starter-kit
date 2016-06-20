@@ -7,28 +7,31 @@
         "react"
     ],
 
-    "ecmaFeatures": {
-        "arrowFunctions": true,
-        "blockBindings": true,
-        "classes": true,
-        "defaultParams": true,
-        "destructuring": true,
-        "forOf": true,
-        "generators": false,
-        "modules": true,
-        "objectLiteralComputedProperties": true,
-        "objectLiteralDuplicateProperties": false,
-        "objectLiteralShorthandMethods": true,
-        "objectLiteralShorthandProperties": true,
-        "restParams": true,
-        "spread": true,
-        "superInFunctions": true,
-        "templateStrings": true,
-        "jsx": true
+    "parserOptions": {,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "arrowFunctions": true,
+            "blockBindings": true,
+            "classes": true,
+            "defaultParams": true,
+            "destructuring": true,
+            "forOf": true,
+            "generators": false,
+            "modules": true,
+            "objectLiteralComputedProperties": true,
+            "objectLiteralDuplicateProperties": false,
+            "objectLiteralShorthandMethods": true,
+            "objectLiteralShorthandProperties": true,
+            "restParams": true,
+            "spread": true,
+            "superInFunctions": true,
+            "templateStrings": true,
+            "jsx": true
+        }
     },
 
     "rules": {
-        "no-unused-vars": [2, {"varsIgnorePattern": "React", argsIgnorePattern: "e"}],
+        "no-unused-vars": [2, {"argsIgnorePattern": "e"}],
         "comma-dangle": [0],
         "no-cond-assign": [2],
         "no-console": [0],
@@ -56,6 +59,9 @@
         "no-unreachable": [2],
         "use-isnan": [2],
         "valid-jsdoc": [0],
-        "valid-typeof": [2]
+        "valid-typeof": [2],
+        "react/jsx-no-undef": [2],
+        "react/jsx-uses-react": [2, { pragma: "React" }],
+        "react/jsx-uses-vars": [2]
     },
 }
