@@ -14,7 +14,7 @@ import {
     initFeatureDetection,
 } from './utils';
 
-const TRACK_PERFORMANCE = true;
+const TRACK_PERFORMANCE = true && !!console.time;
 
 if (process.env.NODE_ENV !== 'production') {
     if (TRACK_PERFORMANCE) {
