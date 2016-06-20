@@ -72,6 +72,7 @@ Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm).
 - [CSSComb](http://csscomb.com/) – A handy CSS reformater.
 - [Chrome DevTools](https://developer.chrome.com/devtools) – Browser developer tools for Chrome.
 - [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) – React developer tools integrated into Chrome.
+- [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) – Redux developer tools integrated into Chrome.
 
 #### Continuous Integration & Deployment
 
@@ -94,7 +95,7 @@ Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm).
 | Firefox | Desktop | latest |
 | Safari | OSX | latest |
 
-> Those browser / device / version combinations are the ones the site *is tested* on. Our development standards ensure that the site is usable on other browsers and will work on future browsers.
+> Those browser / device / version combinations are the ones the site *is tested* on. Our development standards ensure that the site is usable on other browsers **and will work on future browsers**.
 
 **Unsupported:**
 
