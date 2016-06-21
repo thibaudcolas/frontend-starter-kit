@@ -136,3 +136,20 @@ weinre is integrated into most of our projects via Browsersync. It needs to be a
 ### [IE VMs](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/mac/)
 
 Made available freely by Microsoft, for all platforms.
+
+### [NVM](https://github.com/creationix/nvm)
+
+Recommended way to install nvm and use it: `brew install nvm`
+
+Then add the following to your .bash_profile
+```
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+```
+
+then `nvm` should be accessible in any terminal
+
+Few useful commands:
+`nvm ls-remote` (list all the available versions)
+`nvm install v5.1.1` (will download and install v5.1.1 and automatically use it)
+`nvm use v4.2.3` (will use node v4.2.3 if you have already installed it)

@@ -32,11 +32,12 @@ To learn more about those libraries:
 - http://jquery.com/
 - https://github.com/springload/Analytics.js
 
-To learn React:
+To learn React, in that order:
 
 - http://firstdoit.com/react-1/
 - http://www.banderson.me/2014/11/01/react-series-intro/
 - http://blog.andrewray.me/reactjs-for-stupid-people/
+- https://github.com/petehunt/react-howto
 - https://facebook.github.io/react/docs/thinking-in-react.html
 - https://www.youtube.com/watch?v=x7cQ3mrcKaY
 
@@ -44,7 +45,7 @@ To understand Flux:
 
 - http://jonathancreamer.com/what-the-flux/
 - http://blog.andrewray.me/flux-for-stupid-people/
-- http://fluxxor.com/
+- https://egghead.io/courses/getting-started-with-redux
 
 ### Tooling
 
@@ -67,7 +68,6 @@ Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm).
 
 - [BrowserSync](http://www.browsersync.io/) – Live-reloads and synchronises browsers, plus other goodies.
 - [ESLint](http://eslint.org/) – The best JavaScript linter.
-- [JSCS](http://jscs.info/) – The second best JS linter. Focuses more on code style.
 - [SASS-Lint](https://github.com/sasstools/sass-lint) – Best SCSS linter.
 - [CSSComb](http://csscomb.com/) – A handy CSS reformater.
 - [Chrome DevTools](https://developer.chrome.com/devtools) – Browser developer tools for Chrome.
@@ -106,6 +106,12 @@ Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm).
 | IE | Desktop | 9 |
 | IE | Desktop | 8 |
 | Safari | Windows | All |
+
+### No-JavaScript users
+
+Features should only be built in JavaScript where relevant. JavaScript should be applied as a [progressive enhancement (PE)](https://en.wikipedia.org/wiki/Progressive_enhancement) where possible.
+
+If JavaScript is the only way for a feature to work (double check with a teammate!), a ["please enable JavaScript"](https://github.com/springload/frontend-starter-kit/blob/master/core/templates/core/snippets/enable-javascript.html) message should be present in a `<noscript>` tag to address the issue.
 
 ## Accessibility
 

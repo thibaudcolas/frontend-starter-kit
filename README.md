@@ -12,7 +12,7 @@ Front-end starter kit [![Dependency Status](https://david-dm.org/springload/fron
 
 ## Installation
 
-> Clone the project on your computer, and install [Node](https://nodejs.org). This project also uses [nvm](https://github.com/creationix/nvm).
+> Clone the project on your computer, and install [Node](https://nodejs.org). This project also uses [nvm](https://github.com/springload/frontend-starter-kit/blob/master/docs/useful-tooling.md#nvm).
 
 From the command-line:
 
@@ -87,23 +87,6 @@ https://cards-dev.twitter.com/validator
 Please check that the favicons meet all the standard requirements:
 
 https://realfavicongenerator.net/favicon_checker
-
-## Switching between NodeJS versions with [NVM](https://github.com/creationix/nvm)
-
-Recommended way to install nvm and use it: `brew install nvm`
-
-Then add the following to your .bash_profile
-```
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-```
-
-then `nvm` should be accessible in any terminal
-
-Few useful commands:
-`nvm ls-remote` (list all the available versions)
-`nvm install v5.1.1` (will download and install v5.1.1 and automatically use it)
-`nvm use v4.2.3` (will use node v4.2.3 if you have already installed it)
 
 ### Adding and upgrading dependencies
 
