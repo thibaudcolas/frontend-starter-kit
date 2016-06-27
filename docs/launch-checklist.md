@@ -19,7 +19,11 @@
 1. It will take you **around 2hours** to go through this list if you've done it before. Make sure you have the time. Ask for support.
 2. Open the [raw markdown version](https://raw.githubusercontent.com/springload/frontend-starter-kit/master/docs/launch-checklist.md), copy the content of the "FED Launch Checklist" section and paste it into a new GitHub issue on the relevant project.
 3. Move through the whole list and check items as you go.
-4. Items should be checked even if they are irrelevant, but a reason should be provided (in the issue or via documentation).
+  - All of the items should be checked
+  - If an item is irrelevant it should be checked and a reason should be mentioned
+  - If an item cannot be tackled because of other constraints, backlog the problem and potential fix where appropriate
+  - If you've spotted/fixed something, take note of it in the same issue so that we can see the impact of this process on our ratio of bugs per project
+  - If you added new checklist items, consider adding them in the main checklist.
 
 ## FED Launch Checklist
 
