@@ -8,6 +8,7 @@ Front-end starter kit [![Dependency Status](https://david-dm.org/springload/fron
 |[Front-end tech stack](docs/README.md)|
 |[Useful tooling](docs/useful-tooling.md)|
 |[Frontend Guidelines Questionnaire](docs/front-end-questionnaire.md)|
+|[Launch Checklist](docs/launch-checklist.md)|
 |[Demo page](https://rawgit.com/springload/frontend-starter-kit/master/core/templates/demo.html)|
 
 ## Installation
