@@ -2,9 +2,21 @@
 
 > Handy things to remember when launching a project.
 
+> **This checklist is where we want to be**, not necessarily where we always are. Ideally we would want as many of those line items to already be taken care of by our starter kit and other boilerplates. In practice, it is not that simple and we need such a checklist to make sure that we deliver top-notch experiences.
+
+```
+      __...--~~~~~-._   _.-~~~~~--...__
+    //   Vorsprung   `V'    Cogito     \\ 
+   //   durch Technik |     ergo sum    \\ 
+  //__...--~~~~~~-._  |  _.-~~~~~~--...__\\ 
+ //__.....----~~~~._\ | /_.~~~~----.....__\\
+====================\\|//====================
+                    `---`  
+```
+
 ## How to use this
 
-1. It will take you **around 2hours** to go through this list. Make sure you have the time.
+1. It will take you **around 2hours** to go through this list if you've done it before. Make sure you have the time. Ask for support.
 2. Open the [raw markdown version](https://raw.githubusercontent.com/springload/frontend-starter-kit/master/docs/launch-checklist.md), copy the content of the "FED Launch Checklist" section and paste it into a new GitHub issue on the relevant project.
 3. Move through the whole list and check items as you go.
 4. Items should be checked even if they are irrelevant, but a reason should be provided (in the issue or via documentation).
