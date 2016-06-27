@@ -53,7 +53,7 @@
 
 #### HTML
 
-- [ ] Ensure all `a` tags have an href attribute, and a title if relevant
+- [ ] Ensure all `a` tags have an href attribute.
 - [ ] Use absolute paths for all URLS. `/thing/` not `thing/`
 - [ ] Use HTTPS, or exclude protocol from URLs `//foo.com/` not `http://foo.com/`
 - [ ] TODO - HTML validation passes
@@ -157,7 +157,7 @@ header - `role="banner"`, main content - `role="main"`, footer - `role="contenti
 - [ ] All images must have appropriate alt tags - extra great if you include all text that appears eg English and Māori translation text in a lot of company logos in NZ. [empty `alt=""` can be appropriate](http://osric.com/chris/accidental-developer/2012/01/when-should-alt-text-be-blank/)
 - [ ] If relevant, icons include an accessible label with the `<title>` SVG tag
 - [ ] html element has attribute `lang="en-nz"`
-- [ ] Make sure you have called the tab focus function in utils js file
+- [ ] If you have used outline: 0 anywhere make sure you have called the tab focus function in utils js file or any other alternative style for focus state.
 - [ ] Screen reader only text for links with images/icons only
 - [ ] Form fields are inside the label element
 - [ ] Form error messages should be inside label element
