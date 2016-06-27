@@ -103,7 +103,6 @@
 - [ ] Configure the performance monitoring on the site's most important page (homepage?) on [SpeedCurve](https://speedcurve.com)
 - [ ] Font files are available in WOFF, WOFF2, and EOT/OTF if relevant (IE8 / Android Stock Browser)
 - [ ] TODO – Critical CSS is extracted and inlined in the HTML file if relevant
-- [ ] Web fonts are served in WOFF, WOFF2
 - [ ] Web fonts should be kept to a minimum (talk with designers)
 - [ ] Subset webfonts to remove unused characters (http://www.subsetter.com/, https://github.com/miguelsousa/source-sans-pro-subset)
 
