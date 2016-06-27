@@ -1,6 +1,8 @@
 .i {
     $spacing-icon: .25em;
 
+    // Prevent clicks made on icons from breaking in IE8-11.
+    pointer-events: none;
     display: inline-block;
     width: 16px;
     height: 16px;
