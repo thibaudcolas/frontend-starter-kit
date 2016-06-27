@@ -120,6 +120,7 @@
 ### SEO
 
 - [ ] Link to sitemap `< link rel=”sitemap” type=”application/xml” title=”Sitemap” href=”/sitemap.xml” />”`
+- [ ] Sitemap content is relevant
 - [ ] Help pagination with rel=”next” and rel=”prev” tag
 - [ ] robots.txt is here
 - [ ] humans.txt is here (forbidden in robots.txt)
