@@ -20,7 +20,7 @@
 ####  CSS
 
 - [ ] CSS code matches the code style guide via `npm run lint`
-- [ ] [CSS validation](http://jigsaw.w3.org/css-validator/validator) passes
+- [ ] [CSS validation](http://jigsaw.w3.org/css-validator/) passes
 - [ ] CSS classes use a consistent naming methodology (BEM)
 - [ ] Flexbox usage has a non-flexbox fallback if appropriate
 - [ ] Sass code is free of vendor prefixes and IE filters
