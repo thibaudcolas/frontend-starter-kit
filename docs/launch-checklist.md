@@ -160,10 +160,9 @@ header - `role="banner"`, main content - `role="main"`, footer - `role="contenti
 - [ ] Project development commands
 - [ ] Test commands
 - [ ] [Browser support definition](https://github.com/springload/frontend-starter-kit#browser-support)
-- Important links
-- [ ] Stage and Live site URL's
+- [ ] Stage and Live site URLs
 - [ ] Analytics and montoring URLs
-- [ ] Trello board, Harvest project, important scope documents
+- [ ] Links to Trello board, Harvest project, important scope documents
 - [ ] The project's useful patterns to reuse
 - [ ] Debugging tricks
 - [ ] Testing data
