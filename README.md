@@ -131,6 +131,14 @@ Use `npm run test:ci` as part of the test pipeline.
 
 > Copy/paste & adapt [Browser & device support template](https://github.com/springload/frontend-starter-kit/blob/master/docs/README.md#browser--device-support)
 
+### Polyfills
+
+- fetch -> watchwg-fetch
+- Promise -> es6-promise
+- classList -> classlist-polyfill
+- Internet Explorer: https://github.com/springload/frontend-starter-kit/blob/master/core/templates/index.html#L32
+- Other? Have a look at https://github.com/springload/mclarenfalls/blob/3c89a968f3486da0574249960d77d3ea65a5cad8/core/static_src/js/polyfills.js
+
 ### Analytics
 
 Analytics are set up with Google Analytics.
