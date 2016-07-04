@@ -117,12 +117,19 @@ If JavaScript is the only way for a feature to work (double check with a teammat
 
 > [Link to Sam's accessibility blog post](#)
 
+
 ### Icons and icon links
 
 We use inline SVG for our icons. They are made accessible by including text that describes what the icon represents, in a `<title>` tag. Here are implementations:
 
 - React: https://github.com/springload/react-svg-icon
 - Django templates / Jinja: https://github.com/springload/frontend-starter-kit/blob/master/core/templates/core/snippets/icon.html
+- 
+
+## Performance
+
+[Performance Review Template](https://github.com/springload/frontend-starter-kit/blob/master/docs/performance-review-template.md)
+[Check performance off on the Launch list](https://github.com/springload/frontend-starter-kit/blob/master/docs/launch-checklist.md#performance)
 
 ## Other documentation
 
