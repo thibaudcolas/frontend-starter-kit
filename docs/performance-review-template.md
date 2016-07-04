@@ -2,7 +2,6 @@
 
 > During the discovery phase of a project we can use this document as a template to review the client's current website and set goals for the performance of their new site. We can use this document to present our findings and suggestions to the client.
 
----
 
 ### Why Performance?
 
