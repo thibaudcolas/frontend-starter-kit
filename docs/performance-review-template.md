@@ -3,17 +3,17 @@
 > During the discovery phase of a project we can use this document as a template to review the client's current website and set goals for the performance of their new site. We can use this document to present our findings and suggestions to the client.
 
 
+
+> Use this section to explain the importantance of performance for both the client, and the clients customers.
 ### Why Performance?
 
-> Use this section to explain the importantance of performance for both the client, and the clients customers. eg.
-
-*Performance is the measure of how quickly you can deliver your site and services to your audience.*
+Performance is the measure of how quickly you can deliver your site and services to your audience.
 
 Fast sites create happy users. Studies show that when a site responds slowly, visitors spend less time there and are less likely visit again. Good performance not only improves user experience but can also improve a website’s search rankings – Google now prioritises both site speed and mobile-friendliness in their search listings.
 
-### Current performance statistics
 
 > Test across varying network speeds, setup [Speedcurve](https://speedcurve.com/) and run tests through [WebPageTest](http://www.webpagetest.org/).
+### Current performance statistics
 
 **Speeds across a variety of networks:**
 
@@ -57,17 +57,14 @@ Statistics taken from website statistics.
 | Firefox | 7% |
 | Internet Explorer 9 | 3.6% |
 
-
-### New performance targets
-
 > Set out what we aim to achieve here eg:
+### New performance targets
 
 We will be building this new website with mobile in mind – from our findings above just under half of [Client Name]’s users are on a mobile device. This is one of the reasons it is especially important to optimise for performance. Users on a mobile device may experience limited coverage or network dropouts; our aim here will be to shorten load times, reduce network requests and have appropriate fallbacks when JavaScript is not available.
 
 **We will aim for a 20% speed increase** and will use the mobile 3G statistics to help us determine our targets for page size and number of requests. We intend to use mobile 3G as it is a common usage scenario in which performance is crucial to the experience.
 
 > The graph below focus's on the page speed we want to achieve:
-
 **Current time: [Site Name] on mobile 3G (1.6 Mbps/768 Kbps 300ms RTT)**
 
 | Start render | Document complete | Fully loaded |
