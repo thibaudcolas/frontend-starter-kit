@@ -2,10 +2,9 @@
 
 > During the discovery phase of a project we can use this document as a template to review the client's current website and set goals for the performance of their new site. We can use this document to present our findings and suggestions to the client.
 
-
-
-> Use this section to explain the importantance of performance for both the client, and the clients customers.
 ### Why Performance?
+
+```Use this section to explain the importantance of performance for both the client, and the clients customers.```
 
 Performance is the measure of how quickly you can deliver your site and services to your audience.
 
