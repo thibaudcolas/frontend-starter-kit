@@ -4,15 +4,15 @@
 
 ### Why Performance?
 
-```Use this section to explain the importantance of performance for both the client, and the clients customers.```
+```// Use this section to explain the importantance of performance for both the client, and the clients customers.```
 
 Performance is the measure of how quickly you can deliver your site and services to your audience.
 
 Fast sites create happy users. Studies show that when a site responds slowly, visitors spend less time there and are less likely visit again. Good performance not only improves user experience but can also improve a website’s search rankings – Google now prioritises both site speed and mobile-friendliness in their search listings.
 
-
-> Test across varying network speeds, setup [Speedcurve](https://speedcurve.com/) and run tests through [WebPageTest](http://www.webpagetest.org/).
 ### Current performance statistics
+
+```// Test across varying network speeds, setup [Speedcurve](https://speedcurve.com/) and run tests through [WebPageTest](http://www.webpagetest.org/).```
 
 **Speeds across a variety of networks:**
 
@@ -24,15 +24,15 @@ Fast sites create happy users. Studies show that when a site responds slowly, vi
 
 **Document complete** is an important performance metric, and we will be using this as part of our ongoing analysis in the new website build. It tells us when the all the content in the HTML has finished loading everything, and then fires an onload event and initiates any JavaScript on the page.
 
-> To visually show the website loading, add links to [WebPageTest's](http://www.webpagetest.org/) videos or include timeline images/graphs.
+```// To visually show the website loading, add links to [WebPageTest's](http://www.webpagetest.org/) videos or include timeline images/graphs.```
 
 **Network requests**
 *Network requests are the number of requests made by the browser to the server to get the pieces of content on the page.*
 
 Currently **site name** makes **[65] network requests**, and **[1.31MB] of data is downloaded** to the homepage. The majority of the requests are made up of JavaScript (22 requests), CSS (8), images (18) and fonts (5).
 
-> Add pie graph or similar here to show visually.
-> Add a summary here of what is largely contributing to the weight and/or number of requests.
+``` // Add pie graph or similar here to show visually.``` 
+```// Add a summary here of what is largely contributing to the weight and/or number of requests.```
 
 Major contributors here are the Add This social sharing plugin, which sends multiple JavaScript requests; and the jQuery carousel (image slideshow).
 
@@ -56,14 +56,15 @@ Statistics taken from website statistics.
 | Firefox | 7% |
 | Internet Explorer 9 | 3.6% |
 
-> Set out what we aim to achieve here eg:
+
 ### New performance targets
+```// Set out what we aim to achieve here eg:```
 
 We will be building this new website with mobile in mind – from our findings above just under half of [Client Name]’s users are on a mobile device. This is one of the reasons it is especially important to optimise for performance. Users on a mobile device may experience limited coverage or network dropouts; our aim here will be to shorten load times, reduce network requests and have appropriate fallbacks when JavaScript is not available.
 
 **We will aim for a 20% speed increase** and will use the mobile 3G statistics to help us determine our targets for page size and number of requests. We intend to use mobile 3G as it is a common usage scenario in which performance is crucial to the experience.
 
-> The graph below focus's on the page speed we want to achieve:
+``` // The graph below focus's on the page speed we want to achieve:```
 **Current time: [Site Name] on mobile 3G (1.6 Mbps/768 Kbps 300ms RTT)**
 
 | Start render | Document complete | Fully loaded |
@@ -78,7 +79,7 @@ Our performance targets on a 3G connection will be:
 - **Page size of 882 KB**, made up of HTML, CSS, JavaScript, Images, Video (Youtube) and fonts
 - No more than **45 page requests**.
 
-> To break this down further, into JS/CSS/image size, here is a handy tool: [Performance Budget](http://www.performancebudget.io/).
+```// To break this down further, into JS/CSS/image size, here is a handy tool: [Performance Budget](http://www.performancebudget.io/). ```
 
 ### Improving performance: Planned actions
 
@@ -91,6 +92,14 @@ We will continue to assess performance throughout the design and build phase, an
 - Provide appropriate fallbacks for interactions where JavaScript is not available.
 - Gracefully degrade support on older browsers.
 - Set up web tools such as webpagetest.org and SpeedCurve to measure and monitor both the current site and the new site.
+
+### Glossary
+
+- **Start render:** The start render time is the moment the page stops being blank and the user can actually see something in their browser, for example some text or a background color.
+- **Document complete:** This is the point in time when all the content referenced in the HTML is fully loaded. This usually happens after the content and all of the images have loaded – but may not include content that is triggered by JavaScript execution.
+- **Requests:** This is the number of requests made by the browser to the server to get the pieces of content (images, JavaScript, CSS, etc).
+- **Bytes in / page size:** This is the amount of data that the browser has to download in order to load the page.
+
 
 ---
 
