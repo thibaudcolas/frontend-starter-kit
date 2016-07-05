@@ -2,11 +2,11 @@
 
 > During the discovery phase of a project we can use this document as a template to review the client's current website and set goals for the performance of their new site. We can use this document to present our findings and suggestions to the client.
 
-### Why Performance?
+### Why performance?
 
-```Use this section to explain the importantance of performance for both the client, and the clients customers.```
+```Use this section to explain the importance of performance for both the client, and the client's customers.```
 
-Performance is the measure of how quickly you can deliver your site and services to your audience.
+Web performance is the measure of how quickly your audience can access your site and services.
 
 Fast sites create happy users. Studies show that when a site responds slowly, visitors spend less time there and are less likely visit again. Good performance not only improves user experience but can also improve a website’s search rankings – Google now prioritises both site speed and mobile-friendliness in their search listings.
 
@@ -22,7 +22,7 @@ Fast sites create happy users. Studies show that when a site responds slowly, vi
 | Medium - 3G | 4 seconds | 10 seconds |
 | Fast - Cable | 0.9 seconds | 4 seconds |
 
-**Document complete** is an important performance metric, and we will be using this as part of our ongoing analysis in the new website build. It tells us when the all the content in the HTML has finished loading everything, and then fires an onload event and initiates any JavaScript on the page.
+**Document complete** is an important performance metric, and we will be using this as part of our ongoing analysis in the new website build. It tells us when a page has finished loading, and its interactive elements start being usable.
 
 ```To visually show the website loading, add links to [WebPageTest's](http://www.webpagetest.org/) videos or include timeline images/graphs.```
 
@@ -37,10 +37,9 @@ Currently **site name** makes **[65] network requests**, and **[1.31MB] of data 
 
 Major contributors here are the Add This social sharing plugin, which sends multiple JavaScript requests; and the jQuery carousel (image slideshow).
 
-
 ### Browser & OS findings
 
-Statistics taken from website statistics.
+Statistics taken from web analytics.
 
 | OS | % of users |
 |---------|-----------|
@@ -104,9 +103,6 @@ We will continue to assess performance throughout the design and build phase, an
 - **Document complete:** This is the point in time when all the content referenced in the HTML is fully loaded. This usually happens after the content and all of the images have loaded – but may not include content that is triggered by JavaScript execution.
 - **Requests:** This is the number of requests made by the browser to the server to get the pieces of content (images, JavaScript, CSS, etc).
 - **Bytes in / page size:** This is the amount of data that the browser has to download in order to load the page.
-
-
-
 
 ---
 
