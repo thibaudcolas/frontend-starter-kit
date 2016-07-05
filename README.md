@@ -142,7 +142,17 @@ Use `npm run test:ci` as part of the test pipeline.
 
 Analytics are set up with Google Analytics.
 
-[JavaScript errors](https://github.com/springload/frontend-starter-kit/search?utf8=%E2%9C%93&q=analyticsException) are tracked in Google Analytics as ["Exceptions"](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions). A custom report needs to be created for this data to be visible inside the GA interface.
+[JavaScript errors](https://github.com/springload/frontend-starter-kit/search?utf8=%E2%9C%93&q=analyticsException) are tracked in Google Analytics as ["Exceptions"](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions). A custom report needs to be created for this data to be visible inside the GA interface. Here is an example of what this is useful for:
+
+| Exception Description   | Page | Browser | Browser Version | Exceptions |
+|-------------------------|------|---------|-----------------|------------|
+| site.js: QuotaExceededError: DOM Exception 22: An attempt [...] (1:7333) | /page/compare/ | Safari | 9.0 | 14 |
+| site.js: TypeError: e.target.blur is not a function (9:27950)  | /page/compare/ | Firefox | 45.0 | 2 |
+| AJAX error: undefined /api/a/example/ | /page/all/2 | Internet Explorer | 11.0 | 1 |
+| AJAX error: undefined /api/a/example/ | /page/all/3 | Internet Explorer | 11.0 | 1 |
+| site.js: QuotaExceededError: DOM Exception 22: An attempt [...] (1:7333) | /page/compare/?filter=1913 | Safari | 9.0 | 1 |
+|  |  |  |  | 19 |
+
 
 ### Debugging
 
