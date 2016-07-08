@@ -54,8 +54,8 @@
     "flickity": "^1.1.2",
     "focus-trap": "^1.0.1",
     "normalize.css": "^4.1.1",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
     "springload-analytics.js": "^2.0.0",
     "tabbable": "^1.0.0",
     "youtube-player": "^3.0.2"
