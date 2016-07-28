@@ -23,13 +23,15 @@ Learn more about JavaScript (ES6/ES2015):
 
 ### Libraries
 
-> We use __React__, lodash, jQuery and Google Analytics.
+> We use __React and Redux__, lodash, jQuery, D3, and Google Analytics.
 
 To learn more about those libraries:
 
 - https://facebook.github.io/react/index.html
+- http://redux.js.org/
 - https://lodash.com/
-- http://jquery.com/
+- https://jquery.com/
+- https://d3js.org/
 - https://github.com/springload/Analytics.js
 
 To learn React, in that order:
