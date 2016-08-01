@@ -16,7 +16,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var critical = require('critical');
 
 gulp.task('css', function() {
-    return gulp.src(path.join( config.paths.sass, '**', "*.scss" ), {base: config.paths.sass})
+    return gulp.src(path.join( config.paths.scss, '**', "*.scss" ), {base: config.paths.scss})
         .pipe(config.prod ? gutil.noop() : sourcemaps.init())
             .pipe(sass())
             .on('error', function handleError(err) {
@@ -62,6 +62,8 @@ gulp.task('critical:css', function (cb) {
 // CSS Reporter
 // ----------------------------------------------------------------------------
 
+// Helpful link to decipher these results:
+// http://csswizardry.com/2016/06/improving-your-css-with-parker/
 gulp.task('report:css', function() {
     return gulp.src( path.join(config.paths.css, '**', '*.css') )
         .pipe(parker({
