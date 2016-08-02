@@ -6,8 +6,8 @@ var bs = require('browser-sync').create('main');
 gulp.task('watch', ['js', 'css'], function() {
     bs.init({
         open: false,
-        server: config.paths.views
-        //proxy: 'example.com:1337'
+        //server: config.paths.views
+        proxy: 'example.com:1337'
     });
 
     var justReload = [
@@ -18,6 +18,6 @@ gulp.task('watch', ['js', 'css'], function() {
     ];
 
     gulp.watch(justReload, bs.reload);
-    gulp.watch(path.join(config.paths.sass, '**', '*.scss'), ['css']);
+    gulp.watch(path.join(config.paths.scss, '**', '*.scss'), ['css']);
     gulp.watch(path.join(config.paths.jsSrc, '**', '*.js'), ['js']);
 });
