@@ -4,6 +4,7 @@ files:
   include: 'core/static_src/**/*.scss'
   ignore:
     - 'core/static_src/**/_generic.normalize.scss'
+    - 'core/static_src/**/vendor/*.scss'
 rules:
   # Extends
   extends-before-mixins: 1
@@ -25,8 +26,8 @@ rules:
   no-debug: 1
   no-duplicate-properties: 1
   no-empty-rulesets: 1
-  no-extends: 1
-  no-ids: 1
+  no-extends: 2
+  no-ids: 2
   no-important: 0
   no-invalid-hex: 1
   no-mergeable-selectors: 0
