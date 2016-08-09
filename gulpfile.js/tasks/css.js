@@ -17,7 +17,7 @@ var critical = require('critical');
 var moduleImporter = require('sass-module-importer');
 
 gulp.task('css', function() {
-    return gulp.src(path.join( config.paths.scss, '**', "*.scss" ), {base: config.paths.scss})
+    return gulp.src(path.join( config.paths.sass, '**', "*.scss" ), {base: config.paths.sass})
         .pipe(config.prod ? gutil.noop() : sourcemaps.init())
             .pipe(sass({ importer: moduleImporter()}))
             .on('error', function handleError(err) {
@@ -31,7 +31,6 @@ gulp.task('css', function() {
         .pipe(gulp.dest( config.paths.css ))
         .pipe(bs.stream());
 });
-
 
 
 // ----------------------------------------------------------------------------
