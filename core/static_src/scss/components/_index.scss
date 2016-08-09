@@ -1,6 +1,21 @@
 // -----------------------------------------------------------------------------
 // COMPONENTS
 // -----------------------------------------------------------------------------
+// Buttons..............Button styles.
+// Button-groups........Button styles.
+// Icons................SVG icon styles.
+// Icon Text............SVG icon and text combos.
+// Images...............Image styles.
+// Links................Various link styles.
+// Logo.................Make our logo a reusable component.
+// Modals...............Modal skinning.
+// Nav primary..........The site’s main nav.
+// Page.content.........Page content styles.
+// Page.gutters.........Page gutters.
+// Page.footer..........Page footer styles.
+// Page.header..........Page header styles.
+// Form.radio-picker....Radio picker form.
+// Rich text............Set up a new styling context for long-format text.
 
 @import 'components.buttons';
 @import 'components.button-groups';
@@ -16,3 +31,4 @@
 @import 'components.page.footer';
 @import 'components.page.header';
 @import 'components.form.radio-picker';
+@import 'components.rich-text';

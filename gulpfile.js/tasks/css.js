@@ -14,11 +14,12 @@ var size = require('gulp-size');
 var bs = require('browser-sync').get('main');
 var sourcemaps = require('gulp-sourcemaps');
 var critical = require('critical');
+var moduleImporter = require('sass-module-importer');
 
 gulp.task('css', function() {
     return gulp.src(path.join( config.paths.scss, '**', "*.scss" ), {base: config.paths.scss})
         .pipe(config.prod ? gutil.noop() : sourcemaps.init())
-            .pipe(sass())
+            .pipe(sass({ importer: moduleImporter()}))
             .on('error', function handleError(err) {
                 gutil.log(err.message);
                 bs.notify(err.message, 10000);

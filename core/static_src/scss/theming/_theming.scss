@@ -17,12 +17,10 @@ $themes: (
 );
 
 @each $alias, $colors in $themes {
-
     $theme-color: map-get($colors, theme-color);
     $text-color: map-get($colors, text-color);
 
     .t-#{$alias} {
-
         .u-current-color {
             color: $theme-color;
         }
@@ -63,5 +61,4 @@ $themes: (
     .u-text-color-#{$alias} {
         color: $text-color;
     }
-
 }

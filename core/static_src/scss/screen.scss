@@ -2,82 +2,13 @@
 // MAIN
 // -----------------------------------------------------------------------------
 
-
-// CONTENTS
-//
-// SETTINGS
-// Config...............Configuration and environment settings.
-// Global...............Globally-available variables and settings/config.
-// Colors...............Manage our color palette in isolation.
-//
-// TOOLS
-// Functions............Some simple helper functions.
-// Mixins...............Globally available mixins.
-// Breakpoints..........Breakpoint definitions.
-// Typography...........Some type helpers.
-//
-// GENERIC
-// Normalize.css........A level playing field.
-// Box-sizing...........Better default `box-sizing`.
-// Reset................A pared back reset to remove margins.
-// Shared...............Sensibly and tersely share global commonalities.
-// Keyframes............Animation keyframes.
-//
-// ELEMENTS
-// Headings.............Focus style resets.
-// Headings.............Heading styles.
-// Images...............Base image styles.
-// Links................Hyperlink styles.
-// Lists................Default list styles.
-// Page.................Page-level styles (HTML element).
-// Para.................Paragraph styles.
-//
-// OBJECTS
-// Wrappers.............Wrappers and page constraints.
-// Grid.................Float and inline grid setup.
-// Media................Media block.
-// List-inline..........Simple abstraction for setting lists out in a line.
-//
-// COMPONENTS
-// Buttons..............Button styles.
-// Icon Text............SVG icon and text combos.
-// Icons................SVG icon styles.
-// Images...............Image styles.
-// Links................Various link styles.
-// Logo.................Make our logo a reusable component.
-// Modals...............Modal skinning.
-// Nav primary..........The site’s main nav.
-// Page-content.........Page content styles.
-// Page-head............Page header styles.
-// Page-foot............Page footer styles.
-// Video................Video styles.
-// Tiles................Homepage tiles styling.
-//
-// UTILITIES
-// Align................Various alignment patterns.
-// Headings.............Assigning our heading styles to helper classes.
-// Margins..............Some custom margins.
-// Margins..............Typographic utilities.
-// Visibility...........Show/hide stuff.
-// Widths...............Simple width helper classes.
-// / ...................All the other helper stuff.
-//
-// OTHERS
-// Prose................Set up a new styling context for long-format text.
-// Theming..............Theming styles.
-
 @import 'settings/index';
 @import 'tools/index';
 
-@import '../../../node_modules/normalize.css/normalize';
 @import 'generic/index';
 @import 'elements/index';
 @import 'objects/index';
 @import 'components/index';
 @import 'utilities/index';
 
-@import 'scope.prose';
-
-@import 'theming';
-
-@import '../../../node_modules/h5bp-print-styles/print';
+@import 'theming/theming';
