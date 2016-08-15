@@ -37,3 +37,8 @@
     }
     @return $value;
 }
+
+// get ratio
+@function ratio($width, $height) {
+    @return ($height / $width) * 100%;
+}
