@@ -32,7 +32,7 @@
     "watch": "gulp watch",
     "docs": "mkdir -p core/static && npm run build -s && NODE_ENV=development node --harmony ./docs/index.js",
     "shrinkwrap": "npm shrinkwrap --dev",
-    "deploy": "git push -f origin master:deploy/production"
+    "deploy": "git push origin master:deploy/production"
   },
   "devDependencies": {
     "babel": "^6.3.26",
