@@ -109,10 +109,6 @@ npm run deploy
 From your local machine, it's a good idea to push to the master before
 pushing to the deploy branch. That way you know that both are up to date.
 
-### To staging
-
-TODO
-
 ### Setting up tests on continuous integration
 
 The CI tests require the following setup. Some of those might already be done within the CD build.
