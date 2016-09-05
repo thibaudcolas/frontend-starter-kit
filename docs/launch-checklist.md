@@ -56,7 +56,7 @@
 - [ ] Ensure all `a` tags have an href attribute.
 - [ ] Use absolute paths for all URLS. `/thing/` not `thing/`
 - [ ] Use HTTPS, or exclude protocol from URLs `//foo.com/` not `http://foo.com/`
-- [ ] TODO - HTML validation passes
+- [ ] [HTML validation](https://validator.w3.org/nu/#textarea) passes
 - [ ] Links do not use `target="_blank"`, or use [`rel="noopener`](https://mathiasbynens.github.io/rel-noopener/) if they need to.
 
 #### Images
