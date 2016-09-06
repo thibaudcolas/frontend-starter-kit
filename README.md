@@ -49,6 +49,8 @@ npm run build
 npm run lint
 # Runs tests.
 npm run test
+# View other available commands with:
+npm run
 ```
 
 ### Using the git hooks
