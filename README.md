@@ -39,7 +39,7 @@ npm install
 > Everything mentioned in the installation process should already be done.
 
 ```sh
-# Use the right node version
+# Make sure you use the right node version.
 nvm use
 # Start the server and the development tools.
 npm run start
