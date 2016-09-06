@@ -1,3 +1,5 @@
+import { IS_IE11 } from '../config/interface';
+
 export function getCookie(name) {
     let cookieValue = null;
     if (document.cookie && document.cookie !== '') {
@@ -164,6 +166,10 @@ export function getEventTarget(event) {
 export function initFeatureDetection() {
     const touchClass = 'ontouchstart' in window ? ' touch' : ' no-touch';
     document.documentElement.className += touchClass;
+
+    if (IS_IE11) {
+        document.documentElement.className = `${document.documentElement.className} ie11`;
+    }
 }
 
 export function initFlexboxSupport() {
