@@ -83,6 +83,7 @@
 - [ ] Forms use server-side validation, and client-side validation if relevant
 - [ ] Form errors are cleared when people change a field's value
 - [ ] Significant UI states (tabs, modals, etc) should be tracked in the URL via query parameter or the hash.
+- [ ] UI text uses correct typographic marks (`’` instead of `'`, `“”` instead of `""`)
 
 ### Build systems
 
