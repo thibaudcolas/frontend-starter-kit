@@ -33,7 +33,7 @@
     "svg": "gulp svg",
     "watch": "gulp watch",
     "docs": "mkdir -p core/static && npm run build -s && NODE_ENV=development node --harmony ./docs/index.js",
-    "shrinkwrap": "npm shrinkwrap --dev",
+    "shrinkwrap": "npm run lint:versions -s && npm shrinkwrap --dev",
     "deploy": "git push origin master:deploy/production"
   },
   "devDependencies": {
