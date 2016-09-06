@@ -165,7 +165,7 @@ export function getEventTarget(event) {
 
 export function initFeatureDetection() {
     const touchClass = 'ontouchstart' in window ? 'touch' : 'no-touch';
-    document.documentElement.className = `${document.documentElement.className}${touchClass}`;
+    document.documentElement.className = `${document.documentElement.className} ${touchClass}`;
 
     if (IS_IE11) {
         document.documentElement.className = `${document.documentElement.className} ie11`;
