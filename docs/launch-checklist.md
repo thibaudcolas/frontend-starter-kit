@@ -106,7 +106,7 @@
 - [ ] Unit tests pass (`npm run test:unit`)
 - [ ] Relevant integration tests are written
 - [ ] Integration tests pass (`npm run test:integration`)
-- [ ] Site works with JavaScript turned off, or the sections that do not work are [indicated to the user in `<noscript>` tags](https://github.com/springload/frontend-starter-kit/blob/master/core/templates/core/snippets/enable-javascript.html).
+- [ ] Site works with JavaScript turned off, or the sections that do not work are [indicated to the user via messages in `<noscript>` tags](https://github.com/springload/frontend-starter-kit/blob/master/core/templates/core/snippets/enable-javascript.html), styled according to the site's branding.
 - [ ] Site tested in [all relevant browsers and devices](https://github.com/springload/frontend-starter-kit/tree/master/docs#browser--device-support) (including IE if relevant)
 - [ ] ['Upgrade your browser'](https://github.com/springload/frontend-starter-kit/blob/master/core/templates/core/snippets/outdated-browser.html) message displayed on unsupported browsers.
 - [ ] Run site url through the Facebook debugger (https://developers.facebook.com/tools/debug/) to check it will appear correctly if shared.
@@ -129,6 +129,7 @@
 - [ ] Build service / CI is using `NODE_ENV=production` for compilation tasks
 - [ ] No unnecessary files (`node_modules`) are sent to the production server, slowing down the build.
 - [ ] CI runs the CI tests (`npm run test:ci`, or `npm run test`), and the build breaks if they fail
+- [ ] CI builds trigger notifications in the appropriate Slack channel.
 
 ### Semantics
 
@@ -173,13 +174,18 @@ header - `role="banner"`, main content - `role="main"`, footer - `role="contenti
 
 #### The README contains
 
+- [ ] Continuous integration service badge for the project (CodeShip)
+- [ ] A table of important links with,
+- [ ] Stage and Live site links
+- [ ] Links to Trello board, Harvest project, project run sheet, Drive folder
+- [ ] Links to design resources - Zeplin, InVision, other
+- [ ] Analytics and montoring URLs
+- [ ] Links to other important documents and services
 - [ ] Project installation instructions
 - [ ] Project development commands
 - [ ] Test commands
+- [ ] Deployment commands
 - [ ] [Browser support definition](https://github.com/springload/frontend-starter-kit#browser-support)
-- [ ] Stage and Live site URLs
-- [ ] Analytics and montoring URLs
-- [ ] Links to Trello board, Harvest project, important scope documents
 - [ ] The project's useful patterns to reuse
 - [ ] Debugging tricks
 - [ ] Testing data
