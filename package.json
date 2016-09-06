@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "npm run lint:versions -s && npm run watch -s",
-    "lint:versions": "NVM_VERSION=$(cat .nvmrc); NODE_VERSION=$(node --version); echo $NODE_VERSION | grep -q $NVM_VERSION && echo \"✓ node $NODE_VERSION - versions match\" || (echo \"✗ node $NODE_VERSION - expected $NVM_VERSION. Use nvm to install the right version.\" && exit 1)",
+    "lint:versions": "NVM_VERSION=$(cat .nvmrc); NODE_VERSION=$(node --version); echo $NODE_VERSION | grep -q $NVM_VERSION && echo \"✓ running node $NODE_VERSION - all clear\" || (echo \"✗ running node $NODE_VERSION - expected $NVM_VERSION. Use nvm to install the right version.\" && exit 1)",
     "linter:js": "eslint",
     "linter:js:ci": "eslint --no-eslintrc --config .ci-eslintrc",
     "linter:sass": "sass-lint -v -q",
