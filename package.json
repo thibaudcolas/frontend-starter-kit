@@ -20,7 +20,7 @@
     "lint:js:ci": "npm run linter:js:ci -s -- .",
     "lint:sass": "npm run linter:sass -s",
     "report:css": "gulp report:css",
-    "lint": "npm run lint:js -s && npm run lint:sass -s",
+    "lint": "npm run lint:versions -s && npm run lint:js -s && npm run lint:sass -s",
     "test": "npm run test:unit -s",
     "test:unit": "mocha --compilers js:babel-register core/static_src/js/tests",
     "test:unit:watch": "mocha --watch --compilers js:babel-register core/static_src/js/tests",
