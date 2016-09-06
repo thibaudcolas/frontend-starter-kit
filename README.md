@@ -27,9 +27,10 @@ To install our dependencies:
 
 ```sh
 nvm install
-npm install --global eslint eslint-plugin-react babel-eslint eslint-config-airbnb sass-lint
 # Then, install all project dependencies.
 npm install
+# Optionally, install global dependencies.
+npm install --global sass-lint babel-eslint eslint-config-airbnb eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y
 # Optionally, install the git hooks.
 ./.githooks/deploy
 ```
