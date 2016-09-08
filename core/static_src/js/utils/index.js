@@ -70,13 +70,8 @@ export function getTransformPropertyName() {
     return null;
 }
 
-export function querySelectArray(selector, el) {
-    let elParam = el;
-    if (!elParam) {
-        elParam = document;
-    }
-
-    return Array.prototype.slice.call(elParam.querySelectorAll(selector));
+export function querySelectArray(selector, el = document) {
+    return Array.prototype.slice.call(el.querySelectorAll(selector));
 }
 
 // Returns a function, that, as long as it continues to be invoked, will not
