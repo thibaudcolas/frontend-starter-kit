@@ -71,9 +71,9 @@
 - [ ] 404 page exists and is styled
 - [ ] 500 page exists and is styled
 - [ ] Maintenance page exists and is styled, if relevant
-- [ ] Site has a favicon.ico
 - [ ] Site uses a mobile-friendly, zoomable viewport
-- [ ] [Apple-specific](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html) meta tags and favicon added
+- [ ] Site has a favicon.ico
+- [ ] Platform-specific ([Apple](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html), Android, Windows, etc) meta tags and favicons are added and checked with the [Favicon checker](https://realfavicongenerator.net/favicon_checker)
 - [ ] Ensure meta tags, Open Graph tags, Twitter card tags, and descriptions are set
 - [ ] Ensure the social meta tags only use a default sharing image if there is no page-specific image to use
 - [ ] Google Search Console / Webmaster Tools is configured on the project
