@@ -126,7 +126,7 @@
 
 ### Deployment
 
-- [ ] Project uses [`npm shrinkwrap`](https://github.com/springload/frontend-starter-kit/#adding-and-upgrading-dependencies) to pin its dependencies.
+- [ ] The project is [`shrinkwrapped`](https://github.com/springload/frontend-starter-kit/#adding-and-upgrading-dependencies) to pin its dependencies.
 - [ ] Build service / CI is using `NODE_ENV=production` for compilation tasks
 - [ ] No unnecessary files (`node_modules`) are sent to the production server, slowing down the build.
 - [ ] CI runs the CI tests (`npm run test:ci`, or `npm run test`), and the build breaks if they fail
