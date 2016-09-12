@@ -190,3 +190,5 @@ header - `role="banner"`, main content - `role="main"`, footer - `role="contenti
 - [ ] The project's useful patterns to reuse
 - [ ] Debugging tricks
 - [ ] Testing data
+
+You made it to the end! Whoo, high five my friend! Now go treat yourself to a drink, a hug, or whatever rocks your boat.
