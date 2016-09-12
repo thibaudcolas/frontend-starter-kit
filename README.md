@@ -155,6 +155,15 @@ Analytics are set up with Google Analytics.
 | site.js: QuotaExceededError: DOM Exception 22: An attempt [...] (1:7333) | /page/compare/?filter=1913 | Safari | 9.0 | 1 |
 |  |  |  |  | 19 |
 
+### Favicons
+
+To generate new favicons,
+
+1. Go to https://realfavicongenerator.net/
+2. Upload your favicon source file (high-resolution PNG, or SVG)
+3. Configure the favicon generation
+4. Grab the files, [ImageOptim](https://imageoptim.com/) them
+5. Grab the HTML, add it to the [`core/templates/core/includes/favicons.html`](core/templates/core/includes/favicons.html) file.
 
 ### Debugging
 
