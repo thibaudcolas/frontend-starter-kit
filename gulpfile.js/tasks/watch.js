@@ -12,9 +12,6 @@ gulp.task('watch', ['js', 'css'], function() {
 
     var justReload = [
         path.join(config.paths.views, '**', '*.html'),
-        path.join(config.paths.views, '**', '*.php'),
-        path.join(config.paths.views, '**', '*.twig'),
-        path.join(config.paths.views, '**', '*.j2')
     ];
 
     gulp.watch(justReload, bs.reload);
