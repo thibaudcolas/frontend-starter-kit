@@ -99,6 +99,10 @@
 - [ ] If there are no non-field errors, still display a message, eg “Sorry, there were some errors” at the top of the form
 - [ ] Forms use CSRF tokens when they mutate state (POST/PUT/DELETE, eg. editing a user/booking/listing’s data)
 
+#### Search
+
+- [ ] Use GETs with query strings for all kinds of searches (as query strings can be easily bookmarked).
+
 ### Build systems
 
 - [ ] Use [Pleeease/Autoprefixer](http://pleeease.io) for all styles
@@ -110,9 +114,9 @@
 
 ### Server configuration
 
-- [ ] Static files are gzipped in production (JS/CSS/SVG)
-- [ ] Static files are cached for a long time in production (JS/CSS/images)
-- [ ] Static files are cache-busted in production (JS/CSS)
+- [ ] Static files are gzipped in production (JS/CSS/SVG/etc)
+- [ ] Static files are cached for a long time in production (JS/CSS/images/etc)
+- [ ] Static files are cache-busted in production (JS/CSS/etc)
 
 ### Testing
 
@@ -130,13 +134,14 @@
 
 ### Performance
 
+- [ ] All static assets (CSS, JS, SVG, JSON) are minified and concatenated
 - [ ] TODO - Single pages are less than the allocated performance budget (unless there's a very good reason not to)
 - [ ] Run through [Google page speed](https://developers.google.com/speed/pagespeed/), [GTmetrix](https://gtmetrix.com/)
-- [ ] Configure the performance monitoring on the site's most important page (homepage?) on [SpeedCurve](https://speedcurve.com)
-- [ ] Font files are available in WOFF, WOFF2, and EOT/OTF if relevant (IE8 / Android Stock Browser)
+- [ ] Use [SpeedCurve](https://speedcurve.com) to onfigure the performance monitoring on the site's most important page (homepage?)
 - [ ] TODO – Critical CSS is extracted and inlined in the HTML file if relevant
 - [ ] Web fonts should be kept to a minimum (talk with designers)
 - [ ] Subset webfonts to remove unused characters (http://www.subsetter.com/, https://github.com/miguelsousa/source-sans-pro-subset)
+- [ ] Font files are available in WOFF, WOFF2, and EOT/OTF if relevant (IE8 / Android Stock Browser)
 
 ### Deployment
 
@@ -173,7 +178,7 @@
 header - `role="banner"`, main content - `role="main"`, footer - `role="contentinfo"`
 - [ ] All images must have appropriate alt tags - extra great if you include all text that appears eg English and Māori translation text in a lot of company logos in NZ. [empty `alt=""` can be appropriate](http://osric.com/chris/accidental-developer/2012/01/when-should-alt-text-be-blank/)
 - [ ] If relevant, icons include an accessible label with the `<title>` SVG tag
-- [ ] html element has attribute `lang="en-nz"`
+- [ ] `<html>` element has attribute `lang="en-nz"`
 - [ ] If you have used outline: 0 anywhere make sure you have called the tab focus function in utils js file or any other alternative style for focus state.
 - [ ] Screen reader only text for links with images/icons only
 - [ ] Form fields are inside the label element
