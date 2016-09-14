@@ -78,12 +78,26 @@
 - [ ] Ensure the social meta tags only use a default sharing image if there is no page-specific image to use
 - [ ] Google Search Console / Webmaster Tools is configured on the project
 - [ ] Long-running actions (AJAX calls) trigger a spinner or other loading message in the UI.
+- [ ] UI text uses correct typographic marks (`’` instead of `'`, `“”` instead of `""`)
+- [ ] Significant UI states (tabs, modals, etc) should be tracked in the URL via query parameter or the hash.
+
+### Forms 
+
 - [ ] Form fields use the right [input types with the right mobile keyboard](http://baymard.com/labs/touch-keyboard-types)
 - [ ] Form fields have their [`name`, `autocomplete` and `autocorrect` attributes](https://html.spec.whatwg.org/multipage/forms.html#attr-fe-autocomplete) set correctly
+- [ ] Forms never trust client-side input, ensure it is valid
+- [ ] Prompt the user before navigating away from unsaved changes
+- [ ] Always re-populate fields when a user hits 'back', by using cache-control: private.
+- [ ] Multi-step forms save data after each step
+
+#### Form validation and errors
+
 - [ ] Forms use server-side validation, and client-side validation if relevant
+- [ ] Forms use HTML5 validation only for `required` and `min/maxlength` attributes
 - [ ] Form errors are cleared when people change a field's value
-- [ ] Significant UI states (tabs, modals, etc) should be tracked in the URL via query parameter or the hash.
-- [ ] UI text uses correct typographic marks (`’` instead of `'`, `“”` instead of `""`)
+- [ ] Forms display non-field errors at the top of the form
+- [ ] If there are no non-field errors, still display a message, eg “Sorry, there were some errors” at the top of the form
+- [ ] Forms use CSRF tokens when they mutate state (POST/PUT/DELETE, eg. editing a user/booking/listing’s data)
 
 ### Build systems
 
