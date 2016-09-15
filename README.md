@@ -76,10 +76,6 @@ npm run test
 npm run test:unit
 # Run unit tests in a watcher.
 npm run test:unit:watch
-# Run your tests and outputs code coverage.
-npm run test:unit:coverage
-# And then to see the coverage:
-open coverage/lcov-report/index.html
 ```
 
 #### Manual tests
