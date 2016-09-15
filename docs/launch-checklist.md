@@ -80,6 +80,7 @@
 - [ ] Long-running actions (AJAX calls) trigger a spinner or other loading message in the UI.
 - [ ] UI text uses correct typographic marks (`’` instead of `'`, `“”` instead of `""`)
 - [ ] Significant UI states (tabs, modals, etc) should be tracked in the URL via query parameter or the hash.
+- [ ] Canonical URL redirect exists, if relevant (`example.com` ➞ `www.example.com`)
 
 ### Forms 
 
