@@ -40,8 +40,8 @@
 - [ ] CSS classes use a consistent naming methodology (BEM)
 - [ ] Flexbox usage has a non-flexbox fallback if appropriate
 - [ ] Sass code is free of vendor prefixes and IE filters
-- [ ] TODO – CSS specificity graph is flat :rainbow:
-- [ ] TODO – Print stylesheets exist if appropriate
+- [x] TODO – CSS specificity graph is flat :rainbow:
+- [x] TODO – Print stylesheets exist if appropriate
 - [ ] Site does not use `-webkit-font-rendering: antialised;` for body copy
 
 #### JS
@@ -108,15 +108,9 @@
 - [ ] Use [Pleeease/Autoprefixer](http://pleeease.io) for all styles
 - [ ] No compiled code in the `master` branch
 - [ ] Assets are minified and concatenaded in production
-- [ ] Critical CSS is extracted from the stylesheets and inlined in the HTML
+- [x] TODO Critical CSS is extracted from the stylesheets and inlined in the HTML
 - [ ] JS development aids are removed in production
 - [ ] SVG icons are compressed in production
-
-### Server configuration
-
-- [ ] Static files are gzipped in production (JS/CSS/SVG/etc)
-- [ ] Static files are cached for a long time in production (JS/CSS/images/etc)
-- [ ] Static files are cache-busted in production (JS/CSS/etc)
 
 ### Testing
 
@@ -130,30 +124,36 @@
 - [ ] ['Upgrade your browser'](https://github.com/springload/frontend-starter-kit/blob/master/core/templates/core/snippets/outdated-browser.html) message displayed on unsupported browsers.
 - [ ] Run site url through the Facebook debugger (https://developers.facebook.com/tools/debug/) to check it will appear correctly if shared.
 - [ ] Run the link checker [`hyperlink -r http://example.com/`](https://github.com/springload/frontend-starter-kit/blob/master/docs/useful-tooling.md#hyperlink)
-- [ ] Spelling and grammar checked thoroughly (copy/paste the site's content in Google Docs)
+- [ ] Spelling and grammar checked thoroughly (copy/paste the site's content in Google Docs, or better yet get someone else on the team or from the client to do it for you)
 
 ### Performance
 
 - [ ] All static assets (CSS, JS, SVG, JSON) are minified and concatenated
-- [ ] TODO - Single pages are less than the allocated performance budget (unless there's a very good reason not to)
-- [ ] Run through [Google page speed](https://developers.google.com/speed/pagespeed/), [GTmetrix](https://gtmetrix.com/)
-- [ ] Use [SpeedCurve](https://speedcurve.com) to onfigure the performance monitoring on the site's most important page (homepage?)
-- [ ] TODO – Critical CSS is extracted and inlined in the HTML file if relevant
+- [x] TODO - Single pages are less than the allocated performance budget (unless there's a very good reason not to)
+- [ ] Run through [Google PageSpeed](https://developers.google.com/speed/pagespeed/), [GTmetrix](https://gtmetrix.com/)
+- [ ] Use [SpeedCurve](https://speedcurve.com) to configure the performance monitoring on the site's most important page (homepage?)
+- [x] TODO – Critical CSS is extracted and inlined in the HTML file if relevant
 - [ ] Web fonts should be kept to a minimum (talk with designers)
 - [ ] Subset webfonts to remove unused characters (http://www.subsetter.com/, https://github.com/miguelsousa/source-sans-pro-subset)
 - [ ] Font files are available in WOFF, WOFF2, and EOT/OTF if relevant (IE8 / Android Stock Browser)
+- [ ] Static files are cache-busted with a query parameter (eg. `?v=4hjk54j6`) in production (JS/CSS/etc)
+
+#### Server configuration
+
+- [ ] Static files are gzipped in production (JS/CSS/SVG/etc, check this with PageSpeed or GTmetrix)
+- [ ] Static files are cached for a long time in production (JS/CSS/images/etc, check this with PageSpeed or GTmetrix)
 
 ### Deployment
 
 - [ ] The project is [`shrinkwrapped`](https://github.com/springload/frontend-starter-kit/#adding-and-upgrading-dependencies) to pin its dependencies.
-- [ ] Build service / CI is using `NODE_ENV=production` for compilation tasks
-- [ ] No unnecessary files (`node_modules`) are sent to the production server, slowing down the build.
+- [ ] The build service / CI is using `NODE_ENV=production` for compilation tasks
+- [ ] No unnecessary files (`node_modules`) are sent to the production server, slowing down the build (look for the list of files sent to the server in the `rsync` step of the deployment)
 - [ ] CI runs the CI tests (`npm run test:ci`, or `npm run test`), and the build breaks if they fail
 - [ ] CI builds trigger notifications in the appropriate Slack channel.
 
 ### Semantics
 
-- [ ] Relevant site sections use [schema.org](http://schema.org/) annotations with microdata markup (events, products, persons, etc)
+- [ ] Relevant site sections use appropriate [schema.org](http://schema.org/) structured data (events, products, persons, etc), tested with https://search.google.com/structured-data/testing-tool.
 
 ### SEO
 
@@ -165,11 +165,11 @@
 
 ### Analytics
 
-- [ ] Google Tag Manager or Google Analytics are used on all pages
+- [ ] Google Tag Manager or Google Analytics are loaded on all pages (but not both)
 - [ ] Check analytics are configured in development with a development property
 - [ ] Check analytics are configured in production with the production property
 - [ ] Check the relevant client-side interactions are tracked with events
-- [ ] If relevant, client-side errors are logged as [exceptions](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions)
+- [ ] If relevant, client-side JS errors are logged as [exceptions](https://developers.google.com/analytics/devguides/collection/analyticsjs/exceptions)
 - [ ] Page and event tracking is being displayed correctly in the GA dashboard.
 
 ### Accessibility
@@ -210,4 +210,4 @@ header - `role="banner"`, main content - `role="main"`, footer - `role="contenti
 - [ ] Debugging tricks
 - [ ] Testing data
 
-You made it to the end! Whoo, high five my friend :pray:! Now go treat yourself to a drink :tropical_drink:, a hug :hugging_face:, or whatever rocks your boat :rainbow:. Don’t forget to let your team know that you’ve got this under control, and be proud of that top-notch site you just built. :metal:
+You made it to the end! Whoo, high five my friend :pray:! Now go treat yourself to a drink :tropical_drink:, a hug :hugging_face:, or whatever floats your boat :rainbow:. Don’t forget to let your team know that you’ve got this under control, and be proud of that top-notch site you just built. :metal:
