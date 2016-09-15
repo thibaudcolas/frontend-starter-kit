@@ -82,17 +82,12 @@ npm run test:unit:coverage
 open coverage/lcov-report/index.html
 ```
 
-#### Test twitter metas
+#### Manual tests
 
-Fill the metas and check them using this website:
-
-https://cards-dev.twitter.com/validator
-
-#### Test favicons
-
-Please check that the favicons meet all the standard requirements:
-
-https://realfavicongenerator.net/favicon_checker
+- Cross-platform favicons – https://realfavicongenerator.net/favicon_checker
+- Structured data (schema.org) – https://search.google.com/structured-data/testing-tool
+- Facebook Open Graph metadata – https://developers.facebook.com/tools/debug/sharing/
+- Twitter cards metadata — https://cards-dev.twitter.com/validator
 
 ### Adding and upgrading dependencies
 
