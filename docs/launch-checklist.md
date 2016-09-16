@@ -80,7 +80,6 @@
 - [ ] Long-running actions (AJAX calls) trigger a spinner or other loading message in the UI.
 - [ ] UI text uses correct typographic marks (`’` instead of `'`, `“”` instead of `""`)
 - [ ] Significant UI states (tabs, modals, etc) should be tracked in the URL via query parameter or the hash.
-- [ ] Canonical URL redirect exists, if relevant (`example.com` ➞ `www.example.com`)
 
 ### Forms 
 
@@ -108,9 +107,8 @@
 
 - [ ] Use [Pleeease/Autoprefixer](http://pleeease.io) for all styles
 - [ ] No compiled code in the `master` branch
-- [ ] Assets are minified and concatenaded in production
-- [x] TODO Critical CSS is extracted from the stylesheets and inlined in the HTML
 - [ ] JS development aids are removed in production
+- [ ] Source maps are removed in production
 - [ ] SVG icons are compressed in production
 
 ### Testing
@@ -129,7 +127,7 @@
 
 ### Performance
 
-- [ ] All static assets (CSS, JS, SVG, JSON) are minified and concatenated
+- [ ] All static assets (CSS, JS, SVG, JSON) are minified and concatenated in production
 - [x] TODO - Single pages are less than the allocated performance budget (unless there's a very good reason not to)
 - [ ] Run through [Google PageSpeed](https://developers.google.com/speed/pagespeed/), [GTmetrix](https://gtmetrix.com/)
 - [ ] Use [SpeedCurve](https://speedcurve.com) to configure the performance monitoring on the site's most important page (homepage?)
@@ -143,6 +141,7 @@
 
 - [ ] Static files are gzipped in production (JS/CSS/SVG/etc, check this with PageSpeed or GTmetrix)
 - [ ] Static files are cached for a long time in production (JS/CSS/images/etc, check this with PageSpeed or GTmetrix)
+- [ ] Canonical URL redirect exists, if relevant (`example.com` ➞ `www.example.com`)
 
 ### Deployment
 
