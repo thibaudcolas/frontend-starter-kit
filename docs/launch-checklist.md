@@ -93,7 +93,7 @@
 #### Form validation and errors
 
 - [ ] Forms use server-side validation, and client-side validation if relevant
-- [ ] Forms use HTML5 validation only for `required` and `min/maxlength` attributes
+- [ ] Forms do not use HTML5 validation. No `required`. Field `type`, `maxlength` and other consistent improvements that do not need to display validation messages are ok. `minlength` isn't.
 - [ ] Form errors are cleared when people change a field's value
 - [ ] Forms display non-field errors at the top of the form
 - [ ] If there are no non-field errors, still display a message, eg “Sorry, there were some errors” at the top of the form
