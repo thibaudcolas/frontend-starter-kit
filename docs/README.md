@@ -42,8 +42,9 @@ To learn React, in that order:
 - https://github.com/petehunt/react-howto
 - https://facebook.github.io/react/docs/thinking-in-react.html
 - https://www.youtube.com/watch?v=x7cQ3mrcKaY
+- https://www.codecademy.com/lrn/react-101
 
-To understand Flux:
+To understand Flux/Redux:
 
 - http://jonathancreamer.com/what-the-flux/
 - http://blog.andrewray.me/flux-for-stupid-people/
