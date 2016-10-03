@@ -103,8 +103,7 @@ This project is [shrinkwrapped](https://docs.npmjs.com/cli/shrinkwrap). Its depe
 npm run deploy
 ```
 
-From your local machine, it's a good idea to push to the master before
-pushing to the deploy branch. That way you know that both are up to date.
+From your local machine, it's a good idea to push to the master before pushing to the deploy branch. That way you know that both are up to date.
 
 ### Setting up tests on continuous integration
 
