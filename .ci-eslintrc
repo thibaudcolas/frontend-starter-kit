@@ -7,7 +7,7 @@
         "react"
     ],
 
-    "parserOptions": {,
+    "parserOptions": {
         "sourceType": "module",
         "ecmaFeatures": {
             "arrowFunctions": true,
