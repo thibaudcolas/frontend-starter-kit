@@ -119,6 +119,12 @@ Use `npm run test:ci` as part of the test pipeline.
 
 ## Documentation
 
+### Code styleguide and linting
+
+The project's code is linted with [ESLint](http://eslint.org/) for JavaScript and [Sass Lint](https://github.com/sasstools/sass-lint) for Sass.
+
+For Sublime Text 3 users, install [SublimeLinter](http://sublimelinter.readthedocs.io/en/latest/), [SublimeLinter-contrib-eslint](https://github.com/roadhump/SublimeLinter-eslint), and [SublimeLinter-contrib-sass-lint](https://github.com/skovhus/SublimeLinter-contrib-sass-lint).
+
 ### Browser support
 
 > Copy/paste & adapt [Browser & device support template](https://github.com/springload/frontend-starter-kit/blob/master/docs/README.md#browser--device-support)
