@@ -1,6 +1,6 @@
 # Frontend project launch checklist
 
-**:warning: To understand how this is meant to be used,have a look at [the complete launch checklist](launch-checklist.md).**
+**:warning: To understand how this is meant to be used, have a look at [the complete launch checklist](launch-checklist.md).**
 
 ### Code quality
 
