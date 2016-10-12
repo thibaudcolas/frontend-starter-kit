@@ -7,7 +7,7 @@ Documentation
 
 ### Languages
 
-> Our main front-end development languages are __JavaScript__ (ES6/ES2015) and __Sass__.
+> Our main front-end development languages are __JavaScript__ (ES6/ES2015) and __Sass (SCSS)__.
 
 The ES6 and Sass code are compiled to ES5 and CSS as part of our _build process_.
 
@@ -20,6 +20,14 @@ Learn more about JavaScript (ES6/ES2015):
 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript
 - https://babeljs.io/docs/learn-es2015/
+
+#### Flexbox
+
+We use Flexbox for our layouts when browser support allows it, providing appropriate fallbacks. Here are three great resources to learn Flexbox:
+
+- http://flexboxfroggy.com/, amazingly fun game to learn Flexbox.
+- https://philipwalton.github.io/solved-by-flexbox/, best resource for people who have learned layout the old ways.
+- https://github.com/philipwalton/flexbugs, necessary knowledge to make Flexbox work across browsers.
 
 ### Libraries
 
