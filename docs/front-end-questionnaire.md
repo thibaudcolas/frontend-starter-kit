@@ -1,9 +1,6 @@
 # [Frontend Guidelines Questionnaire](https://github.com/bradfrost/frontend-guidelines-questionnaire)
-A one-page questionnaire to help your team establish effective frontend guidelines, so that you can write consistent & cohesive code together.
 
-
-This document has been merged into the [Frontend Coding Standards document](https://github.com/springload/wiki/tree/master/coding-standards/front-end-development)
-
+> A one-page questionnaire to help your team establish effective frontend guidelines, so that you can write consistent & cohesive code together.
 
 ## HTML
 ### HTML Principles
