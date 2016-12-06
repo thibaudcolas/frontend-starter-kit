@@ -1,11 +1,10 @@
-var config = require('../config');
-var gulp = require('gulp');
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
-var path = require('path');
-var size = require('gulp-size');
-var rename = require('gulp-rename');
-var inject = require('gulp-inject');
+const config = require('../config');
+const gulp = require('gulp');
+const svgstore = require('gulp-svgstore');
+const svgmin = require('gulp-svgmin');
+const path = require('path');
+const size = require('gulp-size');
+const rename = require('gulp-rename');
 
 gulp.task('svg', function() {
     return gulp
