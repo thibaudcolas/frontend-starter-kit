@@ -53,7 +53,6 @@
     "eslint-plugin-react": "^4.3.0",
     "express": "^4.13.0",
     "gulp": "^3.9.0",
-    "gulp-inject": "^3.0.0",
     "gulp-parker": "^0.1.0",
     "gulp-pleeease": "^2.0.2",
     "gulp-rename": "^1.2.2",
