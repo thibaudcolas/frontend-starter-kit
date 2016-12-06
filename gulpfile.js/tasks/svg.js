@@ -13,6 +13,7 @@ gulp.task('svg', function() {
         .pipe(rename({ prefix: 'i-' }))
         .pipe(svgmin())
         .pipe(svgstore())
+        .pipe(rename('svg.html'))
         .pipe(size({ title: 'SVG', gzip: config.prod }))
-        .pipe(gulp.dest(config.paths.images));
+        .pipe(gulp.dest(config.paths.views));
 });
