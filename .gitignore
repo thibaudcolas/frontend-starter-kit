@@ -6,6 +6,7 @@
 # build
 # dist
 core/static
+core/svg.html
 static
 
 # -------------------------------------------------
