@@ -83,5 +83,5 @@
 - [ ] Stage and Live site links.
 - [ ] Links to Trello board, Harvest project, project run sheet, Drive folder.
 - [ ] Links to design resources - Zeplin, InVision, other.
-- [ ] Analytics and other monitoring URLs.
+- [ ] Analytics, Search Console, and other monitoring URLs.
 - [ ] Links to other important documents and services.
