@@ -44,8 +44,11 @@ To learn more about those libraries:
 To learn React, for beginners, in that order:
 
 - https://github.com/petehunt/react-howto
+- https://facebook.github.io/react/docs/hello-world.html
 - https://facebook.github.io/react/tutorial/tutorial.html
 - https://www.codecademy.com/lrn/react-101
+
+Once you want to start using React for small experiments on your own computer, use [create-react-app](https://github.com/facebookincubator/create-react-app/).
 
 To learn React, if you have experience with front-end frameworks, in that order:
 
