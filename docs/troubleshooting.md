@@ -1,6 +1,11 @@
 ## Troubleshooting all the things!
 
-### "Error: `libsass` bindings not found. Try reinstalling `node-sass`"
+### `npm install` taking a very long time to download packages and destroying network connectivity
+
+- Add `registry=http://registry.npmjs.org/` to `~/.npmrc` to force HTTP requests instead of HTTPS.
+- If the project is using a `npm-shrinkwrap.json` file, run `sed -i 's/https:/http:/g' npm-shrinkwrap.json` to change all of its URLS to HTTP.
+
+### Error: `libsass` bindings not found. Try reinstalling `node-sass`
 
 This means that the module you are using to compile Sass is not installed (at least not where Node expects it). This is a common error when switching between node versions on different projects, because you installed the project with one version and are now trying to use it with another.
 
@@ -15,18 +20,13 @@ npm install --save-dev grunt-sass
 
 Do not install `node-sass` directly unless you plan on using it directly.
 
-### `npm ERR! addLocal Could not install <project>/build`
+### Error: `npm ERR! addLocal Could not install <project>/build`
 
 This happens because of shrinkwrapped projects where some dependencies were resolved to a local cache of packages that were built on the computer before publishing.
 
 Use `cat npm-shrinkwrap.json | grep "file:build" --context=4` to find out which packages are impacted, then remove them from the local cache with `npm cache clean <package>` and `npm install --save` them again.
 
-### `npm install` taking a very long time to download packages and destroying network connectivity
-
-- Add `registry=http://registry.npmjs.org/` to `~/.npmrc` to force HTTP requests instead of HTTPS.
-- If the project is using a `npm-shrinkwrap.json` file, run `sed -i 's/https:/http:/g' npm-shrinkwrap.json` to change all of its URLS to HTTP.
-
-### `Error: listen EADDRINUSE :::3000`
+### Error: `listen EADDRINUSE :::3000`
 
 This means that the 3000 (or any other number) port is already being used by another process (web server, app, etc) on your computer. The port ranges from 3000 to 9000 are frequently used by web servers.
 
