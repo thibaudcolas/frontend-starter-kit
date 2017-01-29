@@ -4,6 +4,7 @@
 
 - Add `registry=http://registry.npmjs.org/` to `~/.npmrc` to force HTTP requests instead of HTTPS.
 - If the project is using a `npm-shrinkwrap.json` file, run `sed -i 's/https:/http:/g' npm-shrinkwrap.json` to change all of its URLS to HTTP.
+    - Additionnaly, make sure to update the `shrinkwrap` or `lock` command to do this automatically (see `package.json` on this project for an example).
 
 ### Error: `libsass` bindings not found. Try reinstalling `node-sass`
 
