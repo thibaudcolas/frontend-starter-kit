@@ -57,3 +57,9 @@ thibaud          10642   0.0  0.2  3078404  30444 s002  S+    9:24PM   0:05.03 n
 ```
 
 Here, the offender is either `13290` or `10642`. So `kill 13290` first, and `kill 10642` second if that was not enough.
+
+### Error: `Failed at the iconv@2.2.1 install script 'node-gyp rebuild'`
+
+TLDR: Make sure your local version of Python is `2.7.x`.
+
+While the error message will instruct you to check `npm-debug.log`, it is likely that the file wasn't generated. Trying to run `node-gyp rebuild` from the `iconv` module folder was a little bit more verbose, the post install script fails because it is only compatible with Python 2 and you're running Python 3.
