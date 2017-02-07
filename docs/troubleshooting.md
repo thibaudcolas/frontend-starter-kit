@@ -60,6 +60,6 @@ Here, the offender is either `13290` or `10642`. So `kill 13290` first, and `kil
 
 ### Error: `Failed at the iconv@2.2.1 install script 'node-gyp rebuild'`
 
-TLDR: Make sure your local version of Python is `2.7.x`.
+TLDR: Make sure your local version of Python is `2.7.x`. If your project is using Python 3, instruct NPM to use Python 2 instead with `npm install --python=python2.7` or `npm config set python python2.7` before running `npm install` (or even `PYTHON=python2.7 npm install`.
 
 While the error message will instruct you to check `npm-debug.log`, it is likely that the file wasn't generated. Trying to run `node-gyp rebuild` from the `iconv` module folder was a little bit more verbose, the post install script fails because it is only compatible with Python 2 and you're running Python 3.
