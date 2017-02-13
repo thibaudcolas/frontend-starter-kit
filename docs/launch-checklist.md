@@ -85,3 +85,5 @@
 - [ ] Links to design resources - Zeplin, InVision, other.
 - [ ] Analytics, Search Console, and other monitoring URLs.
 - [ ] Links to other important documents and services.
+- [ ] Instructions on how to deploy to production
+- [ ] Instructions on how to deploy to staging
