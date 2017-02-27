@@ -87,3 +87,9 @@
 - [ ] Links to other important documents and services.
 - [ ] Instructions on how to deploy to production
 - [ ] Instructions on how to deploy to staging
+
+#### The GitHub repository has
+
+- [ ] A description set on GitHub.
+- [ ] If relevant, a website set on GitHub.
+- [ ] Appropriate topics / tags set on GitHub.
