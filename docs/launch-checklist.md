@@ -19,7 +19,7 @@
 > This is meant to be used when a site goes live, but do go through it sooner to make sure there won't be too many surprises.
 
 1. It will take you **around 2 hours** to go through this list if you've done it before. Make sure you have the time. Ask for support.
-2. Open the [raw markdown files](#checklists), copy the content of the checklist sections and paste it into a new GitHub issue on the relevant project.
+2. Open the [raw markdown files](https://raw.githubusercontent.com/springload/frontend-starter-kit/master/docs/launch-checklist.md), copy the content of the checklist sections and paste it into a new GitHub issue on the relevant project.
 3. In the GitHub issue, move through the whole list and check items as you go.
   - All of the items should be checked.
   - If an item is irrelevant it should be checked and a reason should be mentioned.
