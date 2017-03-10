@@ -36,7 +36,8 @@ else
     # || [ -n "$SASS_FILES" ];
     if [ -n "$JS_FILES" ] || [ -n "$SNAPSHOT_FILES" ];
     then
-        npm run test -s;
-        exit 0
+        npm run test -s
     fi
+
+    exit 0
 fi
