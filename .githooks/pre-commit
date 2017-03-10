@@ -19,6 +19,7 @@ else
 
     NEW_FILES=$(git --no-pager diff --name-only --cached --diff-filter=d)
     JS_FILES=$(echo "$NEW_FILES" | { grep .js$ || true; })
+    SNAPSHOT_FILES=$(echo "$NEW_FILES" | { grep .snap$ || true; })
     SASS_FILES=$(echo "$NEW_FILES" | { grep .sass$ || true; })
 
     if [ -n "$JS_FILES" ];
@@ -32,8 +33,8 @@ else
     fi
 
     # To test if there are changes to Sass files as well (not useful at the moment):
-    # if [ -n "$JS_FILES" ] || [ -n "$SASS_FILES" ];
-    if [ -n "$JS_FILES" ];
+    # || [ -n "$SASS_FILES" ];
+    if [ -n "$JS_FILES" ] || [ -n "$SNAPSHOT_FILES" ];
     then
         npm run test -s;
         exit 0

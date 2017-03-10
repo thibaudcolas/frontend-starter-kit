@@ -22,7 +22,7 @@ fi
 # Clean up existing hooks.
 rm -f $BASE/hooks/*
 
-# Synlink new hooks.
+# Symlink new hooks.
 for HOOK in $HOOKS
 do
     (cd $BASE/hooks ; ln -s $HOOK `basename $HOOK` || echo "Failed to link $HOOK to `basename $HOOK`.")
