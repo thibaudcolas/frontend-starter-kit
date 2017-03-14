@@ -58,7 +58,6 @@
     "webpack": "^2.2.1"
   },
   "dependencies": {
-    "h5bp-print-styles": "springload/h5bp-print-styles#master",
     "normalize.css": "^5.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
