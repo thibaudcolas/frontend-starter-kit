@@ -10,9 +10,6 @@ set -e
 # then
 # fi
 
-# Make sure the front-end build works.
-npm run dist
-
 # Start the server if relevant.
 npm run start &
 SERVER_PID=$!
@@ -31,8 +28,8 @@ trap before_exit EXIT
 # Only lint files updated in the last commit.
 # A bit counterintuitive but our linting is not there yet.
 NEW_FILES=$(git --no-pager diff --name-only HEAD..HEAD~1)
-JS_FILES=$(echo "$NEW_FILES" | { grep core/static_src/js || true; })
-SASS_FILES=$(echo "$NEW_FILES" | { grep core/static_src/sass || true; })
+JS_FILES=$(echo "$NEW_FILES" | { grep .js$ || true; })
+SASS_FILES=$(echo "$NEW_FILES" | { grep .scss$ || true; })
 
 if [ -n "$JS_FILES" ];
 then
@@ -49,10 +46,10 @@ then
 fi
 
 # Project tests.
-npm run test
+npm run test:coverage
 
 # Link checking
-hyperlink "http://example.com/"
+# hyperlink "http://example.com/"
 
 ## Dependencies checking.
 david || echo ok
