@@ -11,8 +11,8 @@ set -e
 # fi
 
 # Start the server if relevant.
-npm run start &
-SERVER_PID=$!
+# npm run start &
+# SERVER_PID=$!
 
 # Run cleanup before exiting.
 function before_exit {
@@ -23,7 +23,7 @@ function before_exit {
     kill $SERVER_PID
 }
 
-trap before_exit EXIT
+# trap before_exit EXIT
 
 # Only lint files updated in the last commit.
 # A bit counterintuitive but our linting is not there yet.
