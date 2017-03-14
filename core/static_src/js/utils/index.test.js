@@ -1,8 +1,8 @@
-import { debounce } from '../utils';
+import { debounce } from './index';
 
 jest.useFakeTimers();
 
-describe('Utils', () => {
+describe('utils', () => {
     it('has a debounce function', () => {
         expect(debounce).toBeDefined();
     });

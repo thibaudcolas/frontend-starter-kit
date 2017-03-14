@@ -1,4 +1,4 @@
-import { humanNumber, padNumber, monthName } from '../utils/format';
+import { humanNumber, padNumber, monthName } from './format';
 
 describe('format', () => {
     describe('#humanNumber', () => {

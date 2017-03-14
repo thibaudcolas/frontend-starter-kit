@@ -1,4 +1,4 @@
-import { buildFacebookLink, buildTwitterLink } from '../utils/social-worker';
+import { buildFacebookLink, buildTwitterLink } from './social-worker';
 
 describe('Social Worker', () => {
     describe('#buildFacebookLink', () => {

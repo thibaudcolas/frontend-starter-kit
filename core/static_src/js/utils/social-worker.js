@@ -1,11 +1,12 @@
 export function createYoutubePlayer(videoId, options) {
-    const src = 'https://www.youtube.com/embed/' + videoId + '?';
-    const playerElement = document.createElement('iframe');
-    const queryString = [];
-    const params = {
+    const params = Object.assign({
         enablejsapi: 1,
         origin: window.location.origin,
-    };
+    }, options.playerVars);
+
+    const queryString = Object.keys(params).map(key => `${key}=${params[key]}`).join('&');
+
+    const playerElement = document.createElement('iframe');
 
     playerElement.className = 'modal__video-wrapper';
     playerElement.setAttribute('frameborder', 0);
@@ -13,28 +14,8 @@ export function createYoutubePlayer(videoId, options) {
     playerElement.setAttribute('title', 'YouTube video player');
     playerElement.setAttribute('width', options.width);
     playerElement.setAttribute('height', options.height);
+    playerElement.setAttribute('src', `https://www.youtube.com/embed/${videoId}?${queryString}`);
 
-    const extraVars = options.playerVars;
-
-    // Extend the params object
-    if (extraVars) {
-        let opt;
-        for (opt in extraVars) {
-            if (extraVars.hasOwnProperty(opt)) {
-                params[opt] = extraVars[opt];
-            }
-        }
-    }
-
-    let key;
-    for (key in params) {
-        if (params.hasOwnProperty(key)) {
-            const str = key + '=' + params[key];
-            queryString.push(str);
-        }
-    }
-
-    playerElement.setAttribute('src', src + queryString.join('&'));
     return playerElement;
 }
 

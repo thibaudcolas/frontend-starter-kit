@@ -1,6 +1,6 @@
-import renderer from 'react-test-renderer';
-import FormField from '../../components/FormField';
 import React from 'react';
+import renderer from 'react-test-renderer';
+import FormField from './FormField';
 
 describe('FormField', () => {
     it('minimum', () => {
