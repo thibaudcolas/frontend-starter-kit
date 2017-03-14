@@ -1,14 +1,14 @@
-Front-end starter kit [![Dependency Status](https://david-dm.org/springload/frontend-starter-kit.svg?style=flat-square)](https://david-dm.org/springload/frontend-starter-kit) [![devDependency Status](https://david-dm.org/springload/frontend-starter-kit/dev-status.svg?style=flat-square)](https://david-dm.org/springload/frontend-starter-kit#info=devDependencies) [ ![Codeship Status for springload/frontend-starter-kit](https://codeship.com/projects/88aa9190-7930-0133-0261-2292869b3ab0/status?branch=master)](https://codeship.com/projects/118683)
-=====================
+# Front-end starter kit [![Build Status](https://travis-ci.org/springload/frontend-starter-kit.svg?branch=master)](https://travis-ci.org/springload/frontend-starter-kit) [![Coverage Status](https://coveralls.io/repos/github/springload/frontend-starter-kit/badge.svg)](https://coveralls.io/github/springload/frontend-starter-kit) [![Dependency Status](https://david-dm.org/springload/frontend-starter-kit.svg?style=flat-square)](https://david-dm.org/springload/frontend-starter-kit) [![devDependency Status](https://david-dm.org/springload/frontend-starter-kit/dev-status.svg?style=flat-square)](https://david-dm.org/springload/frontend-starter-kit#info=devDependencies)
 
-> A reference  for our latest code standards and examples of gulp tasks, CSS components, etc.
+> Springload's reference and starter kit for front-end development.
 
-| Documentation in [`docs/`](https://github.com/springload/frontend-starter-kit/tree/master/docs) :book:|
+| Documentation in [`docs/`](docs/) :book:|
 |---------------------|
 |[Front-end tech stack](docs/README.md)|
+|[Front-end principles](docs/front-end-principles.md)|
+|[Frontend guidelines questionnaire](docs/front-end-questionnaire.md)|
+|[Launch QA checklists](docs/launch-checklist.md)|
 |[Useful tooling](docs/useful-tooling.md)|
-|[Frontend Guidelines Questionnaire](docs/front-end-questionnaire.md)|
-|[Launch Checklist](docs/launch-checklist.md)|
 |[Demo page](https://rawgit.com/springload/frontend-starter-kit/master/core/templates/demo.html)|
 
 ## Installation
