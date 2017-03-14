@@ -16,6 +16,7 @@ gulp.task('watch', ['build'], function() {
             const hasErrors = err || stats.hasErrors();
             if (err) {
                 console.error(err.stack || err);
+                console.log('details');
                 if (err.details) {
                     console.error(err.details);
                 }
@@ -25,12 +26,10 @@ gulp.task('watch', ['build'], function() {
                 const info = stats.toJson();
 
                 if (stats.hasErrors()) {
-                    console.error(info.errors);
                     bs.notify(info.errors[0].split('\n\n')[0], 10000);
                 }
 
                 if (stats.hasWarnings()) {
-                    console.warn(info.warnings);
                     bs.notify(info.warnings[0], 10000);
                 }
 
