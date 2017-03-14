@@ -4,6 +4,7 @@ export function getCookie(name) {
     let cookieValue = null;
     if (document.cookie && document.cookie !== '') {
         const cookies = document.cookie.split(';');
+        /* eslint-disable */
         for (let i = 0; i < cookies.length; i++) {
             const cookie = cookies[i].trim();
 
@@ -13,55 +14,10 @@ export function getCookie(name) {
                 break;
             }
         }
+        /* eslint-enable */
     }
 
     return cookieValue;
-}
-
-export function whichTransitionEvent() {
-    let tr;
-    const el = document.createElement('fakeelement');
-    const transitions = {
-        transition: 'transitionend',
-        OTransition: 'oTransitionEnd',
-        MozTransition: 'transitionend',
-        WebkitTransition: 'webkitTransitionEnd',
-    };
-
-    for (tr in transitions) {
-        if (el.style[tr] !== undefined) {
-            return transitions[tr];
-        }
-    }
-}
-
-export function whichAnimationEvent() {
-    let tr;
-    const el = document.createElement('fakeelement');
-    const transitions = {
-        animation: 'animationend',
-        OAnimation: 'oAnimationEnd',
-        MozAnimation: 'animationend',
-        WebkitAnimation: 'webkitAnimationEnd',
-    };
-
-    for (tr in transitions) {
-        if (el.style[tr] !== undefined) {
-            return transitions[tr];
-        }
-    }
-}
-
-export function getTransformPropertyName() {
-    const properties = ['transform', 'msTransform', 'webkitTransform', 'mozTransform', 'oTransform'];
-
-    for (let i = 0; i < properties.length; i++) {
-        if (typeof document.body.style[properties[i]] !== 'undefined') {
-            return properties[i];
-        }
-    }
-
-    return null;
 }
 
 export function querySelectArray(selector, el = document) {

@@ -1,12 +1,9 @@
-import { whichTransitionEvent } from '../utils';
-
 export default class Menu {
     constructor(options) {
         const { trigger, el } = options;
 
         this.trigger = trigger;
         this.el = el;
-        this.event = whichTransitionEvent();
         this.toggleMenu = this.toggleMenu.bind(this);
         this.handleKeyDown = this.handleKeyDown.bind(this);
 
@@ -28,18 +25,12 @@ export default class Menu {
         this.el.classList.add('-closing');
 
         const onEndTransition = () => {
-            if (this.event) {
-                this.removeEventListener(this.event, onEndTransition, false);
-            }
+            this.removeEventListener('transitionend', onEndTransition, false);
 
             this.classList.remove('-closing');
         };
 
-        if (this.event) {
-            this.el.addEventListener(this.event, onEndTransition, false);
-        } else {
-            onEndTransition();
-        }
+        this.el.addEventListener('transitionend', onEndTransition, false);
 
         window.removeEventListener('keydown', this.handleKeyDown);
     }

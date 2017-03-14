@@ -1,5 +1,3 @@
-import { whichAnimationEvent } from '../utils';
-
 // This class describes the target of a toggle action
 export class ToggleTarget {
     constructor(options) {
@@ -13,7 +11,6 @@ export class ToggleTarget {
         this.handleBody = this.handleBody.bind(this);
         this.onAnimEnd = this.onAnimEnd.bind(this);
         this.onAnimIn = this.onAnimIn.bind(this);
-        this.animEvent = whichAnimationEvent();
         this.store.on('toggle', this.handleToggle);
     }
 
@@ -41,7 +38,7 @@ export class ToggleTarget {
     }
 
     onAnimIn() {
-        this.el.removeEventListener(this.animEvent, this.onAnimIn, false);
+        this.el.removeEventListener('animationend', this.onAnimIn, false);
         this.el.classList.remove('u-hide');
     }
 
@@ -51,16 +48,16 @@ export class ToggleTarget {
         }
 
         if (data.open) {
-            if (this.animated && this.animEvent) {
-                this.el.addEventListener(this.animEvent, this.onAnimIn, false);
+            if (this.animated) {
+                this.el.addEventListener('animationend', this.onAnimIn, false);
             }
 
             this.el.classList.remove('u-hide');
             this.el.classList.remove('-out');
             this.addListeners();
         } else {
-            if (this.animated && this.animEvent) {
-                this.el.addEventListener(this.animEvent, this.onAnimEnd, false);
+            if (this.animated) {
+                this.el.addEventListener('animationend', this.onAnimEnd, false);
                 this.el.classList.add('-out');
             } else {
                 this.el.classList.add('u-hide');
@@ -75,7 +72,7 @@ export class ToggleTarget {
         }
 
         this.removeListeners();
-        this.el.removeEventListener(this.animEvent, this.onAnimEnd);
+        this.el.removeEventListener('animationend', this.onAnimEnd);
         this.el.classList.add('u-hide');
         this.el.classList.remove('-out');
     }
