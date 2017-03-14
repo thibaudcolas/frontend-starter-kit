@@ -85,8 +85,10 @@ class Lightbox {
 
     // By default this doesn't do anything. You should subclass the Lightbox
     // to make it append some content. See VideoLightbox for an example
+    // eslint-disable-next-line
     renderContent() {}
 
+    // eslint-disable-next-line
     sandboxClick(e) {
         e.stopPropagation();
     }

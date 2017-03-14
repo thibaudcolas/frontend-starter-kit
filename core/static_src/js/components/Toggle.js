@@ -14,6 +14,7 @@ export class ToggleTarget {
         this.store.on('toggle', this.handleToggle);
     }
 
+    // eslint-disable-next-line
     handleClick(e) {
         e.stopPropagation();
     }
