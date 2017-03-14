@@ -29,10 +29,10 @@ To install our dependencies:
 nvm install
 # Then, install all project dependencies.
 npm install
-# Optionally, install global dependencies.
-npm install --global sass-lint babel-eslint eslint-config-airbnb eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y
-# Optionally, install the git hooks.
+# Install the git hooks.
 ./.githooks/deploy
+# Install global dependencies to integrate tooling with your editor of choice.
+npm install --global sass-lint babel-eslint eslint-config-airbnb eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y
 ```
 
 ## Working on the project
@@ -61,19 +61,23 @@ npm run
 ```sh
 # To enable the hooks, from the project root:
 ./.githooks/deploy
-# To disable the hooks for a single commit, use the appropriate flag:
+# To disable the hooks for a single commit, use the --no-verify flag:
 git commit --no-verify
 ```
 
 ### Tests
 
-We use `jest` for unit tests.
+We use [Jest](https://facebook.github.io/jest/) for unit tests.
 
 ```sh
 # Run all the tests.
 npm run test
 # Run tests in a watcher.
 npm run test:watch
+# Run test coverage
+npm run test:coverage
+# Open the coverage report with:
+open coverage/lcov-report/index.html
 ```
 
 #### Manual tests

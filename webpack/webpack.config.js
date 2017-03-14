@@ -6,7 +6,10 @@ const config = require('../gulpfile.js/config');
  */
 module.exports = {
     entry: {
-        site: path.join(config.paths.source, 'js', 'site.js'),
+        site: [
+            path.join(config.paths.source, 'js', 'utils', 'polyfills.js'),
+            path.join(config.paths.source, 'js', 'site.js'),
+        ],
     },
 
     output: {
@@ -26,10 +29,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 enforce: 'pre',
-                use: [{
-                    // Point ESLint to our predefined config.
-                    loader: 'eslint-loader',
-                }],
+                use: ['eslint-loader'],
                 include: path.join(config.paths.source, 'js'),
             },
             {

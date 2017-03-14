@@ -31,9 +31,8 @@ We use the [Airbnb style for Javascript](https://github.com/airbnb/javascript) e
 
 ##### Polyfills
 
-* Babel's Polyfills
+* As little as necessary.
 * Mostly for IE10-11 compatibility.
-* or [any of these](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)
 
 ### Sass
 
