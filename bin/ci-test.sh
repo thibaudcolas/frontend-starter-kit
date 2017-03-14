@@ -25,25 +25,10 @@ function before_exit {
 
 # trap before_exit EXIT
 
-# Only lint files updated in the last commit.
-# A bit counterintuitive but our linting is not there yet.
-NEW_FILES=$(git --no-pager diff --name-only HEAD..HEAD~1)
-JS_FILES=$(echo "$NEW_FILES" | { grep .js$ || true; })
-SASS_FILES=$(echo "$NEW_FILES" | { grep .scss$ || true; })
+npm run lint:js
 
-if [ -n "$JS_FILES" ];
-then
-    # Standard stylistic linting cannot break the build.
-    npm run linter:js -- $JS_FILES || echo ok
-    # CI-specific "error catcher" linting breaks the build.
-    npm run linter:js:ci -- $JS_FILES
-fi
-
-if [ -n "$SASS_FILES" ];
-then
-    # Sass file linting errors cannot break the build
-    npm run linter:sass -- $SASS_FILES || echo ok
-fi
+# Sass file linting errors cannot break the build
+npm run lint:sass || echo ok
 
 # Project tests.
 npm run test:coverage
