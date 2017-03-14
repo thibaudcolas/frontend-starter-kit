@@ -61,7 +61,7 @@
         "valid-jsdoc": [0],
         "valid-typeof": [2],
         "react/jsx-no-undef": [2],
-        "react/jsx-uses-react": [2, { pragma: "React" }],
+        "react/jsx-uses-react": [2],
         "react/jsx-uses-vars": [2]
     },
 }

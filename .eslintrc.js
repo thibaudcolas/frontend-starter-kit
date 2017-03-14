@@ -3,6 +3,7 @@ const config = {
 
     rules: {
         'indent': [2, 4],
+        'react/jsx-indent': [2, 4],
         'max-len': [1, 120, 4, {'ignoreUrls': true}],
         'id-length': [1, {'min': 2, 'exceptions': ['x', 'y', 'e', 'i', 'j', 'k', 'd', 'n', '_', '$']}],
         'object-shorthand': [2, 'methods'],
@@ -15,11 +16,13 @@ const config = {
         'react/jsx-no-bind': [0],
         'react/prefer-es6-class': [0, 'never'],
         'react/jsx-indent-props': [2, 4],
-        'jsx-quotes': [1, 'prefer-double']
+        'jsx-quotes': [1, 'prefer-double'],
+        'react/jsx-filename-extension': [2, { 'extensions': ['.js']}],
     },
 
     env: {
-        'jest': true
+        'jest': true,
+        'browser': true,
     }
 };
 
