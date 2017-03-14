@@ -133,10 +133,7 @@ For Sublime Text 3 users, install [SublimeLinter](http://sublimelinter.readthedo
 
 ### Polyfills
 
-- fetch -> watchwg-fetch
-- Promise -> es6-promise
-- classList -> classlist-polyfill
-- Internet Explorer: https://github.com/springload/frontend-starter-kit/blob/master/core/templates/index.html#L32
+Basic polyfills are included in the starter kit, and loaded via Webpack.
 
 ### Analytics
 
