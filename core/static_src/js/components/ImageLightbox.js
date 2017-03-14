@@ -24,13 +24,9 @@ class ImageLightbox extends Lightbox {
         this.imageEl = imageEl;
     }
 
-    renderContent() {
+    renderContent() {}
 
-    }
-
-    componentWillUnmount() {
-
-    }
+    componentWillUnmount() {}
 }
 
 export default ImageLightbox;

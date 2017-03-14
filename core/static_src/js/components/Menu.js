@@ -1,6 +1,6 @@
 import { whichTransitionEvent } from '../utils';
 
-export default class {
+export default class Menu {
     constructor(options) {
         const { trigger, el } = options;
 
@@ -12,11 +12,7 @@ export default class {
 
         trigger.forEach((item) => {
             item.addEventListener('click', this.toggleMenu, false);
-        }, this);
-    }
-
-    sandbox(e) {
-        e.stopPropagation();
+        });
     }
 
     closeMenu() {
@@ -93,5 +89,4 @@ export default class {
             this.openMenu();
         }
     }
-
 }

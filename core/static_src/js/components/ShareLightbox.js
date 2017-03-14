@@ -35,9 +35,7 @@ export class SocialShareLightbox extends Lightbox {
         this.contentNode.appendChild(innerDiv);
     }
 
-    componentWillUnmount() {
-
-    }
+    componentWillUnmount() {}
 }
 
 export class ShareButton {

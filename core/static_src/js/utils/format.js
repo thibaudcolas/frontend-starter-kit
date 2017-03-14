@@ -9,11 +9,8 @@ export function padNumber(num) {
     return `${num >= 0 && num <= 9 ? '0' : ''}${num}`;
 }
 
-export function monthName(monthNumber = (new Date()).getMonth()) {
-    const names = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December',
-    ];
+export function monthName(monthNumber = new Date().getMonth()) {
+    const names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
     return names[monthNumber];
 }

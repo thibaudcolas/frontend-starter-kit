@@ -85,9 +85,7 @@ class Lightbox {
     }
 
     // Thanks React for this awesome concept.
-    componentDidMount() {
-
-    }
+    componentDidMount() {}
 
     handleClose(e) {
         e.preventDefault();
@@ -105,9 +103,7 @@ class Lightbox {
 
     // By default this doesn't do anything. You should subclass the Lightbox
     // to make it append some content. See VideoLightbox for an example
-    renderContent() {
-
-    }
+    renderContent() {}
 
     sandboxClick(e) {
         e.stopPropagation();

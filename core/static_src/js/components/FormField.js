@@ -1,14 +1,10 @@
 import React from 'react';
 
 const FormField = React.createClass({
-
     propTypes: {
         id: React.PropTypes.string.isRequired,
         name: React.PropTypes.string,
-        value: React.PropTypes.oneOfType([
-            React.PropTypes.string,
-            React.PropTypes.number,
-        ]),
+        value: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
         label: React.PropTypes.string,
         type: React.PropTypes.string,
         error: React.PropTypes.string,
@@ -57,10 +53,7 @@ const FormField = React.createClass({
 
         return (
             <div className="form-field">
-                <label
-                    className="h6"
-                    htmlFor={this.props.id}
-                >
+                <label className="h6" htmlFor={this.props.id}>
                     {this.props.label}
                 </label>
                 <input
@@ -79,11 +72,10 @@ const FormField = React.createClass({
                     spellCheck={this.props.spellCheck}
                     defaultValue={this.props.defaultValue}
                 />
-                {this.props.error ? (<div className={classError}>{this.props.error}</div>) : null}
+                {this.props.error ? <div className={classError}>{this.props.error}</div> : null}
             </div>
         );
     },
-
 });
 
 module.exports = FormField;

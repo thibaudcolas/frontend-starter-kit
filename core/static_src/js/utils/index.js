@@ -53,13 +53,7 @@ export function whichAnimationEvent() {
 }
 
 export function getTransformPropertyName() {
-    const properties = [
-        'transform',
-        'msTransform',
-        'webkitTransform',
-        'mozTransform',
-        'oTransform',
-    ];
+    const properties = ['transform', 'msTransform', 'webkitTransform', 'mozTransform', 'oTransform'];
 
     for (let i = 0; i < properties.length; i++) {
         if (typeof document.body.style[properties[i]] !== 'undefined') {
@@ -98,6 +92,7 @@ export function debounce(func, wait, immediate) {
 
 // Generates a UUID
 export function uuid() {
+    /* eslint-disable */
     let i;
     let random;
     let uuidGen = '';
@@ -107,12 +102,11 @@ export function uuid() {
             uuidGen += '-';
         }
 
-        /* eslint-disable no-nested-ternary */
-        uuidGen += (i === 12 ? 4 : (i === 16 ? (random & 3 | 8) : random)).toString(16);
-        /* eslint-enable no-nested-ternary */
+        uuidGen += (i === 12 ? 4 : i === 16 ? random & 3 | 8 : random).toString(16);
     }
 
     return uuidGen;
+    /* eslint-enable */
 }
 
 // Remove CSS outlines in an accessible manner
@@ -122,13 +116,14 @@ export function tabFocus(selector = '.accessTab') {
     const tabFocusElmt = document.querySelector(selector);
     window.addEventListener('mousedown', () => {
         tabFocusElmt.innerHTML = '';
-    }, false);
+    });
 
     window.addEventListener('keydown', (e) => {
-        if (e.keyCode === 9) {
+        const isTabKey = e.keyCode === 9;
+        if (isTabKey) {
             tabFocusElmt.innerHTML = 'a:focus { outline: solid 3px #6cc6ee; }';
         }
-    }, false);
+    });
 }
 
 // Adds the YouTube Player API
@@ -138,7 +133,6 @@ export function addYouTubePlayerAPI() {
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 }
-
 
 // Returns the width of an element.
 export function getWidth(elem) {
@@ -169,6 +163,6 @@ export function initFeatureDetection() {
 
 export function initFlexboxSupport() {
     const docStyles = document.documentElement.style;
-    const flexClass = ('flexWrap' in docStyles) || ('WebkitFlexWrap' in docStyles) || ('msFlexWrap' in docStyles) ? ' flexbox' : ' no-flexbox';
+    const flexClass = 'flexWrap' in docStyles || 'WebkitFlexWrap' in docStyles || 'msFlexWrap' in docStyles ? ' flexbox' : ' no-flexbox';
     document.documentElement.className += flexClass;
 }

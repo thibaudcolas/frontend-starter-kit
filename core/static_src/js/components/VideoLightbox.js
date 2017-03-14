@@ -70,8 +70,7 @@ class VideoLightbox extends Lightbox {
         // e.target.playVideo();
     }
 
-    onPlayerStateChange() {
-    }
+    onPlayerStateChange() {}
 }
 
 export default VideoLightbox;

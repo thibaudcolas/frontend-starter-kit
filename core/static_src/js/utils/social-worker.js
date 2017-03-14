@@ -58,10 +58,7 @@ export function buildTwitterLink(message, url, via = '') {
 }
 
 export function buildMailtoLink(email = '', subject = '', body = '') {
-    const fields = [
-        `subject=${encodeURIComponent(subject)}`,
-        `body=${encodeURIComponent(body)}`,
-    ];
+    const fields = [`subject=${encodeURIComponent(subject)}`, `body=${encodeURIComponent(body)}`];
 
     return `mailto:${encodeURIComponent(email)}?${fields.join('&')}`;
 }
