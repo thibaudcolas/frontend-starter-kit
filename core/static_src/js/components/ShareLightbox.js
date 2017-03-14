@@ -1,5 +1,5 @@
 import Lightbox from './Lightbox';
-import utils from '../utils/social-worker';
+import { buildFacebookLink, buildTwitterLink } from '../utils/social-worker';
 
 export class SocialShareLightbox extends Lightbox {
     constructor(options) {
@@ -16,8 +16,8 @@ export class SocialShareLightbox extends Lightbox {
     componentDidMount() {
         const innerDiv = document.createElement('div');
         const html = ['<h3>Share this</h3>'];
-        const facebookLink = utils.buildFacebookLink(this.url);
-        const twitterLink = utils.buildTwitterLink('Check this out', this.url);
+        const facebookLink = buildFacebookLink(this.url);
+        const twitterLink = buildTwitterLink('Check this out', this.url);
         const facebookHtml = `<p>
         <a href="${facebookLink}" class="icon-text btn-primary btn-icon">
             <svg><use xlink:href="#twitter"></svg>

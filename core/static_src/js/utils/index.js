@@ -119,6 +119,6 @@ export function initFeatureDetection() {
 
 export function initFlexboxSupport() {
     const docStyles = document.documentElement.style;
-    const flexClass = 'flexWrap' in docStyles || 'WebkitFlexWrap' in docStyles || 'msFlexWrap' in docStyles ? ' flexbox' : ' no-flexbox';
-    document.documentElement.className += flexClass;
+    const hasFlexbox = 'flexWrap' in docStyles || 'WebkitFlexWrap' in docStyles || 'msFlexWrap' in docStyles;
+    document.documentElement.className += hasFlexbox ? ' flexbox' : ' no-flexbox';
 }

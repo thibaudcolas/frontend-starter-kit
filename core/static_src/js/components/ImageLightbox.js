@@ -24,6 +24,7 @@ class ImageLightbox extends Lightbox {
         this.imageEl = imageEl;
     }
 
+    // eslint-disable-next-line
     renderContent() {}
 
     componentWillUnmount() {}

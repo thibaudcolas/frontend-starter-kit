@@ -4,11 +4,14 @@ const FormField = React.createClass({
     propTypes: {
         id: React.PropTypes.string.isRequired,
         name: React.PropTypes.string,
-        value: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
-        label: React.PropTypes.string,
+        value: React.PropTypes.oneOfType([
+            React.PropTypes.string,
+            React.PropTypes.number,
+        ]).isRequired,
+        label: React.PropTypes.string.isRequired,
         type: React.PropTypes.string,
         error: React.PropTypes.string,
-        onChange: React.PropTypes.func,
+        onChange: React.PropTypes.func.isRequired,
         onEnterKey: React.PropTypes.func,
         autoCorrect: React.PropTypes.string,
         autoCapitalize: React.PropTypes.string,
@@ -22,10 +25,13 @@ const FormField = React.createClass({
             onEnter: null,
             name: null,
             type: 'text',
+            error: null,
+            onEnterKey: null,
             autoCorrect: 'off',
             autoCapitalize: 'off',
             spellCheck: 'off',
             errorClass: 'theme__text-invert',
+            defaultValue: null,
         };
     },
 
@@ -49,11 +55,14 @@ const FormField = React.createClass({
             className.push('error');
         }
 
-        const classError = 'form-field__error ' + this.props.errorClass;
+        const classError = `form-field__error ${this.props.errorClass}`;
 
         return (
             <div className="form-field">
-                <label className="h6" htmlFor={this.props.id}>
+                <label
+                    className="h6"
+                    htmlFor={this.props.id}
+                >
                     {this.props.label}
                 </label>
                 <input
@@ -72,10 +81,11 @@ const FormField = React.createClass({
                     spellCheck={this.props.spellCheck}
                     defaultValue={this.props.defaultValue}
                 />
-                {this.props.error ? <div className={classError}>{this.props.error}</div> : null}
+                {this.props.error ? (<div className={classError}>{this.props.error}</div>) : null}
             </div>
         );
     },
+
 });
 
-module.exports = FormField;
+export default FormField;

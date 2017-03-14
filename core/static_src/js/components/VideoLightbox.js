@@ -66,10 +66,12 @@ class VideoLightbox extends Lightbox {
         }
     }
 
+    // eslint-disable-next-line
     onPlayerReady() {
         // e.target.playVideo();
     }
 
+    // eslint-disable-next-line
     onPlayerStateChange() {}
 }
 

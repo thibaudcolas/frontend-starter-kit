@@ -26,20 +26,20 @@ export class ToggleTarget {
 
     removeListeners() {
         if (this.bodyClose) {
-            document.body.removeEventListener('click', this.handleBody, false);
-            this.el.removeEventListener('click', this.handleClick, false);
+            document.body.removeEventListener('click', this.handleBody);
+            this.el.removeEventListener('click', this.handleClick);
         }
     }
 
     addListeners() {
         if (this.bodyClose) {
-            this.el.addEventListener('click', this.handleClick, false);
-            document.body.addEventListener('click', this.handleBody, false);
+            this.el.addEventListener('click', this.handleClick);
+            document.body.addEventListener('click', this.handleBody);
         }
     }
 
     onAnimIn() {
-        this.el.removeEventListener('animationend', this.onAnimIn, false);
+        this.el.removeEventListener('animationend', this.onAnimIn);
         this.el.classList.remove('u-hide');
     }
 
@@ -50,20 +50,18 @@ export class ToggleTarget {
 
         if (data.open) {
             if (this.animated) {
-                this.el.addEventListener('animationend', this.onAnimIn, false);
+                this.el.addEventListener('animationend', this.onAnimIn);
             }
 
             this.el.classList.remove('u-hide');
             this.el.classList.remove('-out');
             this.addListeners();
+        } else if (this.animated) {
+            this.el.addEventListener('animationend', this.onAnimEnd);
+            this.el.classList.add('-out');
         } else {
-            if (this.animated) {
-                this.el.addEventListener('animationend', this.onAnimEnd, false);
-                this.el.classList.add('-out');
-            } else {
-                this.el.classList.add('u-hide');
-                this.removeListeners();
-            }
+            this.el.classList.add('u-hide');
+            this.removeListeners();
         }
     }
 
@@ -87,7 +85,7 @@ export class Toggle {
         this.targetName = this.affordance.getAttribute('data-toggle-affordance');
         this.store = options.store;
         this.toggle = this.toggle.bind(this);
-        this.affordance.addEventListener('click', this.toggle, false);
+        this.affordance.addEventListener('click', this.toggle);
     }
 
     toggle(e) {

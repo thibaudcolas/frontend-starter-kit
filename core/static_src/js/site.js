@@ -1,7 +1,7 @@
 import GA from 'springload-analytics.js';
 
 import { initErrorTracking } from './api/analytics';
-import { querySelectArray, tabFocus, initFeatureDetection, initFlexboxSupport } from './utils';
+import { tabFocus, initFeatureDetection, initFlexboxSupport } from './utils';
 
 // Set to false to disable performance tracking.
 const TRACK_PERFORMANCE = true && !!console.time;

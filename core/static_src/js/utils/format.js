@@ -1,6 +1,7 @@
 export function humanNumber(num) {
     const parts = num.toString().split('.');
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g,
+    ',');
 
     return parts.join('.');
 }
@@ -10,7 +11,20 @@ export function padNumber(num) {
 }
 
 export function monthName(monthNumber = new Date().getMonth()) {
-    const names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const names = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+    ];
 
     return names[monthNumber];
 }

@@ -3,6 +3,5 @@ node_modules
 **/lib/
 public/
 coverage/
-gulp/
 gulpfile.js
 core/static/

@@ -29,7 +29,7 @@ const config = {
 if (process.env.NODE_ENV === 'development') {
     config.rules = Object.assign({}, config.rules, {
         'no-console': 0,
-    })
+    });
 }
 
 module.exports = config;
