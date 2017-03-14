@@ -5,7 +5,7 @@ const base = require('./webpack.config.js');
  * Production Webpack config, with performance optimisations.
  */
 module.exports = Object.assign({}, base, {
-    devtool: 'source-map',
+    // devtool: 'source-map',
 
     plugins: base.plugins.concat([
         new webpack.DefinePlugin({
