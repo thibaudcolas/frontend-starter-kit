@@ -1,23 +1,22 @@
-var path = require('path');
+const path = require('path');
 
-var sourcePath = path.join('.', 'core', 'static_src');
-var distPath = path.join('.', 'core', 'static');
+const source = path.join(__dirname, '..', 'core', 'static_src');
+const dist = path.join(__dirname, '..', 'core', 'static');
 
-var prod = process.env.NODE_ENV === 'production';
+const prod = process.env.NODE_ENV === 'production';
 
 module.exports = {
     prod: prod,
 
     paths: {
-        appName: 'site.js',
-        sass: path.join(sourcePath, 'sass'),
-        css: path.join(distPath, 'css'),
-        jsSrc: path.join(sourcePath, 'js'),
-        js: path.join(distPath, 'js'),
-        svg: path.join(sourcePath, 'svg'),
-        images: path.join(distPath, 'images'),
-        slug: 'my-site',
+        source: source,
+        dist: dist,
+
+        sass: path.join(source, 'sass'),
+        svg: path.join(source, 'svg'),
         views: path.join('.', 'core'),
+        css: path.join(dist, 'css'),
+        images: path.join(dist, 'images'),
     },
 
     PlzOptions: {
