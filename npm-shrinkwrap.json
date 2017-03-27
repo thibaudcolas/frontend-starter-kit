@@ -5685,9 +5685,9 @@
       "dev": true
     },
     "normalize.css": {
-      "version": "5.0.0",
-      "from": "normalize.css@>=5.0.0 <6.0.0",
-      "resolved": "http://registry.npmjs.org/normalize.css/-/normalize.css-5.0.0.tgz"
+      "version": "6.0.0",
+      "from": "normalize.css@>=6.0.0 <7.0.0",
+      "resolved": "http://registry.npmjs.org/normalize.css/-/normalize.css-6.0.0.tgz"
     },
     "npmlog": {
       "version": "4.0.2",
