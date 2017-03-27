@@ -15,7 +15,7 @@ Why we like Zeplin:
 How we use it:
 
 - Designs are exported from Sketch to Zeplin.
-- The "Scene" is useful to share designs with clients / third parties without giving them complete access.
+- The "Scene" is useful to share designs with clients / third parties without giving them complete access as well as enabling in-situ commenting. 
 - The "Styleguide" provides a good overview of type sizes, colors, components. It is automated so it picks up inconsistencies right away.
 - Structuring the Sketch file accordingly initially takes time, but then updating it is very simple/fast.
 
