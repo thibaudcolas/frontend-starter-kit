@@ -8,7 +8,7 @@ We use [Zeplin](https://zeplin.io/) to do designer / developer handovers.
 
 Why we like Zeplin:
 
-- It forces designers to be more accurate and consistent in their designs for things such as margins / measurements, text styls and components over multiple screens.
+- It forces designers to be more accurate and consistent in their designs for things such as margins / measurements, text styles and components over multiple screens.
 - The CSS export of specific styles is copy/pasteable as a starting point, to refactor.
 - It facilitates sharing naming conventions between disciplines.
 
@@ -17,7 +17,7 @@ How we use it:
 - Designs are exported from Sketch to Zeplin.
 - The "Scene" is useful to share designs with clients / third parties without giving them complete access.
 - The "Styleguide" provides a good overview of type sizes, colors, components. It is automated so it picks up inconsistencies right away.
-- Setting up Zeplin and structuring the Sketch file accordingly takes time, but then updating it is very simple/fast.
+- Structuring the Sketch file accordingly initially takes time, but then updating it is very simple/fast.
 
 ## Node tooling
 
