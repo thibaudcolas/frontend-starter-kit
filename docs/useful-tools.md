@@ -8,7 +8,7 @@ We use [Zeplin](https://zeplin.io/) to do designer / developer handovers.
 
 Why we like Zeplin:
 
-- It forces designers to be very accurate and consistent in their designs (margins / measurements), over multiple screens.
+- It forces designers to be more accurate and consistent in their designs for things such as margins / measurements, text styls and components over multiple screens.
 - The CSS export of specific styles is copy/pasteable as a starting point, to refactor.
 - It facilitates sharing naming conventions between disciplines.
 
