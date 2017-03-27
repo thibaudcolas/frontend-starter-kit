@@ -164,8 +164,3 @@ We use inline SVG for our icons. They are made accessible by including text that
 
 - [Performance Review Template](https://github.com/springload/frontend-starter-kit/blob/master/docs/performance-review-template.md)
 - [Check performance off on the Launch list](https://github.com/springload/frontend-starter-kit/blob/master/docs/launch-checklist.md#performance)
-
-## Other documentation
-
-- [Useful tooling](https://github.com/springload/frontend-starter-kit/blob/master/docs/useful-tooling.md)
-- [Troubleshooting](https://github.com/springload/frontend-starter-kit/blob/master/docs/troubleshooting.md)
