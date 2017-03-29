@@ -1,23 +1,28 @@
-import { debounce } from './index';
-
-jest.useFakeTimers();
+import { querySelectArray, debounce } from './index';
 
 describe('utils', () => {
-    it('has a debounce function', () => {
-        expect(debounce).toBeDefined();
+    describe('#querySelectArray', () => {
+        it('works', () => {
+            document.body.innerHTML = '<ul><li>1</li><li>2</li><li>3</li></ul>';
+            expect(querySelectArray('li').map(e => e.innerHTML)).toEqual(['1', '2', '3']);
+        });
     });
 
-    it('debounce calls its callback', () => {
-        const callback = jest.fn();
-        const proxy = debounce(callback, 5000);
+    describe('#debounce', () => {
+        it('calls its callback', () => {
+            jest.useFakeTimers();
 
-        proxy();
+            const callback = jest.fn();
+            const proxy = debounce(callback, 5000);
 
-        // Fast forward and exhaust only currently pending timers
-        // (but not any new timers that get created during that process)
-        jest.runOnlyPendingTimers();
+            proxy();
 
-        expect(callback).toBeCalled();
-        expect(callback).toHaveBeenCalledTimes(1);
+            // Fast forward and exhaust only currently pending timers
+            // (but not any new timers that get created during that process)
+            jest.runOnlyPendingTimers();
+
+            expect(callback).toBeCalled();
+            expect(callback).toHaveBeenCalledTimes(1);
+        });
     });
 });
