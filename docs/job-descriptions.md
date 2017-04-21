@@ -28,7 +28,7 @@ The world is your oyster. |  `\.__.-''       `.
 - Reports to: [Front-end Director](#front-end-director)
 - Direct reports: N/A
 
-### Brief description of the job
+### Description
 
 > Develop, maintain and improve user interfaces for browser-based products and services. You’ll do this by producing high quality, cross-browser, cross-device, standards compliant, front-end code (HTML, CSS, SVG and JavaScript).
 
@@ -37,6 +37,8 @@ The world is your oyster. |  `\.__.-''       `.
 ### Key responsibilities
 
 Working closely with the design and development teams, and the Account Managers, produce high-performance front-end code for responsive sites and applications. 
+
+Work with the content team to architect the site structure and identify content management requirements.
 
 Work with the design team to realise projects with a high level of visual refinement. 
 
@@ -48,17 +50,22 @@ Contribute to project documentation.
 
 Write valid, compliant HTML and CSS.
 
-Develop rich interactions through JavaScript with progressive enhancement.
+Develop rich interactions and single-page applications through JavaScript.
 
 Communication – talking to clients and team members about requirements, decisions, limitations – in clear, simple language. 
 
 Maintain websites and test changes across a range of browsers and devices. Be familiar with unit and integration tests and use them where applicable.
 
-Basic server administration where necessary. Set-up, deploy, and test using command line tools. 
+Basic server administration where necessary.
 
-Continually improve your knowledge of languages and technologies, stay abreast of new ideas as the industry develops. Contribute these learnings to the business.
+Set-up, deploy, and test using command line tools.
 
-Assist in developing Springload’s front-end development capabilities.
+Continually improve your knowledge of languages and technologies, stay abreast of new ideas as the industry develops. 
+Contribute these learnings to the business and assist in developing Springload’s front-end development capabilities.
+
+Contribute to Springload’s internal front-end toolkit and shared code repositories.
+
+Assist the Front-end Director and Technical director with reviewing code produced by the team.
 
 Any other tasks as required.
 
@@ -66,25 +73,35 @@ Any other tasks as required.
 
 ### Required skills
 
-Understanding of browser, platform, device, performance and accessibility issues. 
+Ability to communicate front-end development matters clearly to other team members, clients, and partners.
 
-Experience with browser development tools (such as Chrome or FireFox DevTools). 
+Understanding of browser, platform, device, performance, and accessibility constraints.
+
+Experience with browser development tools (such as Chrome or FireFox DevTools).
 
 Working knowledge of the Unix command line and a shell of your choice.
 
-Advanced HTML and CSS – standards compliance, pattern libraries, templating languages (for instance smarty-syntax languages such as Twig, Jinja2 and Django Templates). 
+Advanced HTML and CSS knowledge – standards compliance, pattern libraries.
 
-Experience with CSS architecture (Block-Element-Modifier and Object-oriented CSS). 
+Experience with CSS preprocessing (SCSS, PostCSS) and HTML templating. 
 
-High level of experience with JavaScript (vanilla), and libraries such as jQuery and lodash.
+Experience with large-scale CSS architecture (BEM, ITCSS).
 
-Basic understanding of Object-oriented programming.  
+High level of experience with JavaScript (vanilla).
 
-Familiarity with version control via Git, and issue trackers, wikis and pull requests with tools like GitHub. 
+Experience with client-side frameworks such as React, Angular, or Backbone.
 
-Familiarity with build tools and pre-processors (npm, Gulp, Webpack, Browserify, Sass). 
+Basic understanding of object-oriented and functional programming concepts.
 
-Competence in graphic software (Sketch, Photoshop, etc), working with vectors and SVG.
+Familiarity with content management systems or e-commerce platforms.
+
+Familiarity with version control via Git, continuous integration, issue trackers, wikis, and pull request workflows. 
+
+Familiarity with front-end build tools and task runners (npm, Grunt, Gulp, Webpack, Browserify).
+
+Familiarity with software testing – unit tests, integration tests.
+
+Working knowledge of graphic software (Illustrator, Sketch, Photoshop), comfortable working with vectors and SVG.
 
 Eye for detail, understanding of fundamentals of typography. Pixels out of place will annoy you.
 
@@ -92,15 +109,21 @@ Eye for detail, understanding of fundamentals of typography. Pixels out of place
 
 ### Other useful skills
 
-Experience with JavaScript frameworks (React, Angular, Backbone or similar).
+Advanced knowledge of React – Redux, client-side routing, code splitting, etc.
 
-Experience writing ES6/ES2015 JavaScript, using Node-based tooling (Babel, module bundlers, etc)
+Experience writing ES6/ES2015 JavaScript.
 
-Experience with Python, the Django framework, and Wagtail CMS.
+Ability to do basic server administration from the command-line.
 
-Familiarity with the web development and open-source communities.
+Familiarity with server-side programming stacks (we use Python and Node).
 
-- Could be something about meetups, dev slack groups, open source projects, personal projects, etc. 
+Experience with the Django framework, and Wagtail CMS.
+
+Understanding of RESTful principles and HTTP verbs.
+
+Advanced testing skills – accessibility tests, automated cross-browser tests, automated UI regression.
+
+Experience working with web development and open-source communities.
 
 ---
 
@@ -113,7 +136,7 @@ Familiarity with the web development and open-source communities.
 - Reports to: [Front-end Director](#front-end-director)
 - Direct reports: N/A
 
-### Brief description of the job
+### Description
 
 > Work with Springload’s Designers and Developers to deliver finished web sites and applications. Producing high quality, cross-browser, cross-device, standards compliant, front-end code (HTML, CSS and JavaScript).
 
@@ -185,6 +208,18 @@ Familiarity with server-side programming languages (we use Python and PHP).
 
 Understanding of RESTful principles and HTTP verbs.
 
+Advanced knowledge of React – Redux, client-side routing, split bundles, etc
+
+Knowledge of ES6/ES2015+, transpilers (Babel)
+
+Ability to do basic server administration from the command-line.
+
+Familiarity with server-side programming languages (we use Python and Node).
+
+Understanding of RESTful principles and HTTP verbs.
+
+Advanced testing skills – accessibility tests, automated cross-browser tests, automated UI regression
+
 ---
 
 > :seedling: :sunglasses: [This is What a Programmer Looks Like](http://love.djangogirls.org/)
@@ -196,7 +231,7 @@ Understanding of RESTful principles and HTTP verbs.
 - Reports to: [Front-end Director](#front-end-director)
 - Direct reports: N/A
 
-### Brief description of the job
+### Description
 
 > Assist with developing, maintaining and improving user interfaces for browser-based products and services. You’ll do this by helping the team to produce high quality, cross-browser, cross-device, standards compliant, front-end code (HTML, CSS, SVG, and JavaScript).
 
@@ -267,7 +302,7 @@ Experience with JavaScript frameworks (React, Vue, or similar).
 - Reports to: Head of Delivery
 - Direct reports: Front-end Development Team
 
-### Brief description of the job
+### Description
 
 > To lead the Front-end Development Team and the technical output of Springload.
  
@@ -314,7 +349,7 @@ Passionate about what you do and driven by a desire to be great.
 
 Always showing curiosity and desire to keep growing and learning.
 
-Commitment to working collaboratively with others in the team, creating a sense of unity and that everyone contributes to the decision making process.
+- [ ] Commitment to working collaboratively with others in the team, creating a sense of unity and that everyone contributes to the decision making process.
 
 ---
 
@@ -327,7 +362,7 @@ Commitment to working collaboratively with others in the team, creating a sense 
 - Reports to: [Role](#role)
 - Direct reports: N/A
 
-### Brief description of the job
+### Description
 
 > Keep it short.
 
