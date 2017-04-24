@@ -112,8 +112,9 @@ The front-end team frequently collaborates on their different projects, formally
 
 ### Doing a code review
 
-When presenting code for review, or reviewing a code, follow those guidelines:
+When presenting code for review, or reviewing a given piece of code, follow those guidelines:
 
-```
-// TODO
-```
+- Keep the review concise. Ideally, the code under review should fit on one's screen.
+- Think about the bigger picture.
+- Concentrate on the intention rather than the syntax – if there are stylistic issues, suggest using a linter.
+- Reviews do not need to focus on the negative - if a piece of code is good, it is worth stating as well.
