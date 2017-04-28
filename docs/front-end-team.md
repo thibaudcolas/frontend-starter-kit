@@ -97,6 +97,57 @@ Also have a look at:
     - 3 public relations items done about it (blog posts, meetup talks, open-source projects)
     - 10 feature changes / new features delivered according to user feedback after the first launch
 
+## Front-end leadership tasks
+
+> A concise overview of all of the areas that fall under front-end leadership, with designated responsibility/accountability for each.
+> 
+> FED leadership team: Person as Role, Person as Role, Person as Role
+
+### Recruiting - Person
+
+- Nurture relationships with external people.
+- In-person and over the air interviews with potential candidates.
+- Skill assessment and job offers.
+
+### Training - Person
+
+- Organisation of learning workshops.
+- Pair programming sessions and mentoring.
+- Nurture a culture of learning.
+
+### Tooling - Person
+
+- Build and testing tools.
+- CI & CD pipelines.
+- Monitoring tools.
+
+### Career progression - Person
+
+- OKR / action / goal definition in regular HR milestones.
+- Follow-up, ongoing support and monitoring to reach goals.
+- Preparation for performance review milestones.
+
+### Reusable pattern library - Person
+
+- Maintaining a library of reusable patterns.
+- Ensuring all projects use it and contribute to it.
+
+### Sales and business development - Person
+
+- Oversight and execution on proposals, pitches, and other pre-sales exercises.
+- Oversight and execution on business development efforts with existing clients.
+
+### Public relations - Person
+
+- Oversight and execution on blog posts and other communications to our audience.
+- Ensuring our open-source efforts are ongoing, and publicly visible.
+- Organisation of FED-related Meetups and events.
+
+### Project/client: Name - Person
+
+- Direction for the project.
+- Owning the relationship with stakeholders and partners.
+
 ## Front-end code reviews
 
 The front-end team frequently collaborates on their different projects, formally and informally. This collaboration can happen through pair programming and code reviews, among other practices.
