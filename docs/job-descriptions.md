@@ -64,8 +64,6 @@ Evolving our practices.
 - Contribute to Springload’s internal and open-source projects and toolkits.
 - Contribute to reviewing your pairs' code to ensure quality and consistency.
 
-Any other tasks as required.
-
 ---
 
 ### Required skills
