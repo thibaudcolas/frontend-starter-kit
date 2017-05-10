@@ -9,7 +9,6 @@ var path = require('path');
 var sass = require('gulp-sass');
 var gutil = require('gulp-util');
 var plz = require("gulp-pleeease");
-var parker = require('gulp-parker');
 var size = require('gulp-size');
 var bs = require('browser-sync').get('main');
 var sourcemaps = require('gulp-sourcemaps');
@@ -54,38 +53,4 @@ gulp.task('critical:css', function (cb) {
             height: 1200
         }]
     });
-});
-
-
-
-// ----------------------------------------------------------------------------
-// CSS Reporter
-// ----------------------------------------------------------------------------
-
-// Helpful link to decipher these results:
-// http://csswizardry.com/2016/06/improving-your-css-with-parker/
-gulp.task('report:css', function() {
-    return gulp.src( path.join(config.paths.css, '**', '*.css') )
-        .pipe(parker({
-            file: path.join(config.paths.css, 'css-report.md'),
-            title: 'Gulp test report',
-            metrics: [
-                'TotalStylesheets',
-                'TotalStylesheetSize',
-                'TotalRules',
-                'TotalSelectors',
-                'TotalIdentifiers',
-                'TotalDeclarations',
-                'SelectorsPerRule',
-                'IdentifiersPerSelector',
-                'SpecificityPerSelector',
-                'TopSelectorSpecificity',
-                'TopSelectorSpecificitySelector',
-                'TotalIdSelectors',
-                'TotalUniqueColours',
-                'TotalImportantKeywords',
-                'TotalMediaQueries'
-            ]
-        })
-    );
 });
