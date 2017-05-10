@@ -61,7 +61,8 @@
 
 - [ ] Static files are gzipped in production (JS/CSS/SVG/etc, check this with [PageSpeed](https://developers.google.com/speed/pagespeed/insights/) or [GTmetrix](https://gtmetrix.com/)) on the live site.
 - [ ] Static files are cached for a long time in production (JS/CSS/images/etc, check this with [PageSpeed](https://developers.google.com/speed/pagespeed/insights/) or [GTmetrix](https://gtmetrix.com/)) on the live site.
-- [ ] Canonical URL redirect exists, if relevant (`example.com` ➞ `www.example.com`).
+- [ ] Canonical URL redirect exists, if relevant (eg. `example.com` ➞ `www.example.com`).
+- [ ] HTTP to HTTPS redirect exists, if relevant.
 
 #### Deployment
 
