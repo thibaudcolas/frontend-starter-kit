@@ -85,11 +85,13 @@
 - [ ] Links to design resources - Zeplin, InVision, other.
 - [ ] Analytics, Search Console, and other monitoring URLs.
 - [ ] Links to other important documents and services.
-- [ ] Instructions on how to deploy to production
-- [ ] Instructions on how to deploy to staging
+- [ ] Instructions on how to deploy to production.
+- [ ] Instructions on how to deploy to staging/preview.
 
 #### The GitHub repository has
 
 - [ ] A description set on GitHub.
 - [ ] If relevant, a website set on GitHub.
 - [ ] Appropriate labels set on GitHub. See https://github.com/springload/labels.
+- [ ] Branch protection enabled with CI checks and code reviews on `master`.
+- [ ] Basic branch protection enabled on deployment branches.
