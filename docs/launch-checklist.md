@@ -80,7 +80,7 @@
 
 - [ ] Continuous integration service badge for the project (CodeShip, CircleCI, Travis).
 - [ ] All of the important links as a table.
-- [ ] Stage and Live site links.
+- [ ] Live and Preview/staging sites links.
 - [ ] Links to Trello board, Harvest project, project run sheet, Drive folder.
 - [ ] Links to design resources - Zeplin, InVision, other.
 - [ ] Analytics, Search Console, and other monitoring URLs.
