@@ -78,7 +78,7 @@
 
 #### The README contains
 
-- [ ] Continuous integration service badge for the project (CodeShip).
+- [ ] Continuous integration service badge for the project (CodeShip, CircleCI, Travis).
 - [ ] All of the important links as a table.
 - [ ] Stage and Live site links.
 - [ ] Links to Trello board, Harvest project, project run sheet, Drive folder.
