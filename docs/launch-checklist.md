@@ -43,10 +43,9 @@
 
 #### SEO
 
-- [ ] Link to sitemap `<link rel=”sitemap” type=”application/xml” title=”Sitemap” href=”/sitemap.xml”>”`.
-- [ ] Sitemap content is relevant.
-- [ ] `/robots.txt` is here.
-- [ ] `/humans.txt` is here (Disallowed in robots.txt).
+- [ ] `/sitemap.xml` is here, with relevant and up to date content.
+- [ ] `/robots.txt` is here, with relevant and up to date content.
+- [ ] `/humans.txt` is here, disallowed in `/robots.txt`.
 
 #### Tests
 
