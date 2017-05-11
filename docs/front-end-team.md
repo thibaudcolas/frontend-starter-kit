@@ -47,40 +47,118 @@ Also have a look at:
 
 > [BetterWorks](https://www.betterworks.com/resources/) also has comprehensive resources and examples of OKRs across all disciplines.
 
+Here are examples of Objectives and Key Results taken from the ones we have used in the past.
+
+#### Technologies and practices
+
+- __Wagtail: Get more in-depth knowledge of Wagtail/Django__
+    - Deliver 3 Wagtail/Django sites
+    - Get 10 code reviews on Wagtail/Django projects
+
 - __React: Deliver first-class interfaces with React__
     - 10 React components created with 100% test coverage
     - 3 blog posts published showing our (your) React expertise
     - 5 React components open-sourced in self-contained, reusable form
-
-- __Street cred: Make Springload outshine other businesses within the tech community__
-    - 5 technical meetups spoken at
-    - 100+ GitHub stars on 3 new open-source projects
-    - 5 blog posts published about our open-source projects
 
 - __JavaScript: Put big sites/apps live with bug-free, top-notch JavaScript__
     - 100 end to end browser test cases running successfully in CI
     - 0 ESLint errors over 10'000+ lines of JS code
     - 20 JS code reviews from senior JavaScripters
 
+- __JavaScript: Deliver first-class JS experiences__
+    - Set up 5 JS tools on projects
+    - Get 10 JS code reviews
+    - Use 5 advanced JS libraries
+    - Use 5 build / package publishing tools
+    - Ship 1 new library
+    
+- __JavaScript: Become the FED team JS consultant__
+    - Contribute to 1 client proposals (RFP, RFI)
+    - Contribute to 3 estimates
+    - Oversee 2 React / React Native projects
+
 - __Accessibility: Become Springload's accessibility expert__
     - 15 accessibility audits done on our work
     - 5 2h team training workshops ran about accessibility
     - 3 projects delivered with WCAG 2.0 AA+ compliance confirmed on all 12 guidelines
 
-- __Sales: Make Springload win $500k+ of work__
-    - 5 $100k+ proposals for new clients done and won
-    - 5 $50k+ proposals for existing clients done and won
-    - 3 silver/gold awards won for our projects
+- __Accessibility: Raise the awareness of accessibility and progressive enhancement matters in the FED team__
+    - Lead 3 discussions on those topics
+    - Do 10 code reviews on those topics
 
 - __CSS: Deliver first-class CSS architectures__
     - 3 projects delivered with pattern libraries
     - 50 UI regression tests in place on our work
     - 20 code reviews done on other people's CSS
+    - Get 5 CSS code reviews on your projects
+    - Lead 3 discussions on CSS architecture
+    
+- __UI: Take Springload's reusable patterns to the next level__
+    - Contribute to 3 projects with pattern libraries or styleguides built in
+    - Deliver 3 new releases of our starter kit's styleguide
+    
+- __UI: Become the FED team UI/UX consultant__
+    - Contribute to 3 client proposal (RFP, RFI) or estimates
+    - Oversee the UX/UI direction on 2 projects
+    - Do 10 code reviews on UI components
+
+- __UI: Deliver great user experiences via UI components__
+    - Build 3 visual experiments for client projects or OS hub
+    - Explore 5 CSS techniques
+    - Get 10 JS code reviews
+
+#### Leadership
+
+- __Leadership: Make Springload outshine other businesses within the tech community__
+    - 5 technical meetups spoken at
+    - 100+ GitHub stars on 3 new open-source projects
+    - 5 blog posts published about our open-source projects
+    - Contributing to 1 hackathon demonstrating our tech excellence
+    - Publicise 10 Springload OS projects on the internets
+    - Organise 1 React Meetup
+    
+- __Leadership: Promote Wagtail as the cornerstone of Springload's tech offering__
+    - Write or make 10 public pieces on Wagtail @ Springload and related topics
+    - Push 10 Wagtail success stories to Springload's public presence
+    - Develop and dashboard 5 measurements of Wagtail's impact on our business
+
+#### Team operations
 
 - __Team: Build a world-class development team__
     - 3 teammates with weekly pair programming sessions
     - 100 code reviews done on other people's code
     - 20 training workshops ran
+
+- __Team: Own the Springload websites__
+    - Deliver 3 new releases on the Springload site
+    - Deliver 3 new releases on the Springload OS hub
+    - Deliver 3 new releases on Made with Wagtail
+    
+- __Team: Become the FED team's tech "architecht"__
+    - Contribute to 5 client proposal (RFP, RFI) or estimates
+    - Oversee the technical direction on 5 projects
+    - Do 10 tech architecture reviews
+    
+- __Team: Own the design + front-end collaboration__
+    - Organise 5 design + front-end sharing session
+    - Lead 5 discussions on design + FED topics
+    
+- __Team: Lead the FED team JS learnings__
+    - Contribute to 3 workshops or other learning events
+    - Do 10 code reviews on other people's code on all front-end topics
+    - Get 10 code reviews on your code by others, on all front-end topics
+    
+- __Team: Champion the "Learning & Growth" effort__
+    - Facilitate the organisation of 5 workshops
+    - Organise 1 hack day
+    - Set up 1 event calendar with 10 events
+    
+- __Team: Grow a world-class FED team__
+    - Write or make 10 public pieces on our FED practice
+    - Get 60% completion rate across the team's OKRs
+    - Develop and dashboard 5 measurements of the FED team's success
+    
+#### Special projects
 
 - __Special project - OSS: open-source existing site or app__
     - 100+ GitHub stars on on the project
@@ -96,6 +174,8 @@ Also have a look at:
     - 15 Springloaders using it every week
     - 3 public relations items done about it (blog posts, meetup talks, open-source projects)
     - 10 feature changes / new features delivered according to user feedback after the first launch
+
+------------
 
 ## Front-end leadership tasks
 
@@ -147,6 +227,8 @@ Also have a look at:
 
 - Direction for the project.
 - Owning the relationship with stakeholders and partners.
+
+------------
 
 ## Front-end code reviews
 
