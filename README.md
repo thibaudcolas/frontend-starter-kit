@@ -4,7 +4,7 @@
 
 | Important links :book:                                                      |
 |-----------------------------------------------------------------------------|
-| Documentation in [`docs/`](docs/)                                           |
+| Documentation in [`docs/`](docs/)                                             |
 | [Front-end tech stack](docs/README.md) |
 | [Front-end principles](docs/front-end-principles.md) |
 | [Frontend guidelines questionnaire](docs/front-end-questionnaire.md) |
@@ -73,14 +73,14 @@ We use [Jest](https://facebook.github.io/jest/) for unit tests.
 ```sh
 # Run all the tests.
 npm run test
-# Run all the tests, collecting coverage.
-npm run test:coverage
 # Run tests in a watcher.
 npm run test:watch
-# Run tests in a watcher, with coverage.
-npm run test:watch:coverage
+# Run test coverage
+npm run test:coverage
 # Open the coverage report with:
 npm run report:coverage
+# Run the CI test suit.
+npm run test:ci
 ```
 
 #### Manual tests
