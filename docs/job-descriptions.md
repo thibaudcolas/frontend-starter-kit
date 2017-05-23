@@ -171,7 +171,7 @@ See [Front-end Developer](#front-end-developer). In addition,
 
 See [Front-end Developer](#front-end-developer). In addition,
 
-> Throughout the work, get direct access to senior practicioners and receive ongoing support from the wider team.
+> Throughout the work, collaborate with and receive support from the wider front-end team.
 
 ---
 
