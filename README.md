@@ -102,13 +102,13 @@ This project is [shrinkwrapped](https://docs.npmjs.com/cli/shrinkwrap). Its depe
 
 ## Deployments
 
-### To production
-
 ```sh
-npm run deploy
+# To preview.
+npm run deploy:preview
+# To production.
+# From your local machine, push to the master branch before pushing to the production branch so they are always both up to date.
+npm run deploy:production
 ```
-
-From your local machine, it's a good idea to push to the master before pushing to the deploy branch. That way you know that both are up to date.
 
 ### Setting up tests on continuous integration
 
