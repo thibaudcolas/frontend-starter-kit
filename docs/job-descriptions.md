@@ -126,6 +126,8 @@ See [Front-end Developer](#front-end-developer). In addition,
 
 See [Front-end Developer](#front-end-developer). In addition,
 
+Leading the front-end team.
+
 - Contribute to business development by pitching for new work and finding new opportunities with existing relationships.
 - Assist in growing the team by sourcing and recruiting professionals to join Springload.
 - Train others via workshops, code reviews, pair programming, and other forms of collaboration.
@@ -138,6 +140,8 @@ See [Front-end Developer](#front-end-developer). In addition,
 ### Required skills
 
 See [Front-end Developer](#front-end-developer). In addition,
+
+Leadership.
 
 - Higher level of expertise across the board.
 - Experience training development teams.
