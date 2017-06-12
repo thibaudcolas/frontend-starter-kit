@@ -29,6 +29,24 @@
       ],
       "react"
     ]
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "targets": {
+                "browsers": [
+                  "> 1%",
+                  "IE 11"
+                ]
+              }
+            }
+          ],
+          "react"
+        ]
+      }
+    }
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
