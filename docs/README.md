@@ -84,16 +84,16 @@ To understand Flux/Redux:
 
 ### Tooling
 
+All of our front-end tooling is built upon [Node](https://nodejs.org/) and [npm](https://www.npmjs.com/). Our projects should use the [latest LTS release](https://github.com/nodejs/LTS) of Node, along with the npm version it ships with.
+
 #### Build tools
 
 > Our build process is based on __npm scripts__, __Gulp__, and __Webpack__.
 
-- [Node](https://nodejs.org/) – The platform on top of which the tools run.
 - [Gulp](http://gulpjs.com/) – The glue between all of our build tools.
 - [Webpack](https://webpack.js.org/) – Modern module bundler.
 - [Babel](https://babeljs.io/) – JavaScript compiler to transform ES6 and beyond into ES5.
 - [Pleeease](http://pleeease.io/) – "All the annoying CSS stuff we don't want to do in 1 tool!"
-- [npm](https://www.npmjs.com) – Package manager for everything that runs on Node (and more).
 
 Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm). For Windows users, there are recommended alternatives on the project's homepage. Those tools look at the [`.nvmrc`](https://github.com/springload/frontend-starter-kit/blob/master/.nvmrc) file to determine which version of node to activate when running `nvm install` from within the project's root directory.
 
