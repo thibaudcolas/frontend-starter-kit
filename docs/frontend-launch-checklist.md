@@ -40,6 +40,7 @@
 - [ ] Images use the right file format (SVG if possible, PNG for graphics, JPG for pictures).
 - [ ] All images with the `img` tag define `width` and `height` attributes to prevent content reflows when the images load.
 - [ ] Icons are built using [SVG icons](https://github.com/springload/frontend-starter-kit/blob/master/core/templates/core/snippets/icon.html), with appropriate fallback if necessary.
+- [ ] Run SVG's through [https://jakearchibald.github.io/svgomg/](https://jakearchibald.github.io/svgomg/) 
 
 ### Functional completeness
 
