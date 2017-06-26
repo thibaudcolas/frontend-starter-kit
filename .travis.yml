@@ -9,6 +9,8 @@ script:
 - npm run dist
 - npm run test:ci
 - npm run patterns:dist
+- .githooks/deploy
+- .githooks/pre-commit
 after_success:
 - cat ./coverage/lcov.info | coveralls
 branches:
