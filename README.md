@@ -31,7 +31,7 @@ nvm install
 # Then, install all project dependencies.
 npm install
 # Install the git hooks.
-./.githooks/deploy
+.githooks/deploy
 # Install global dependencies to integrate tooling with your editor of choice.
 npm install --global sass-lint babel-eslint eslint-config-airbnb eslint eslint-plugin-react eslint-plugin-import eslint-plugin-jsx-a11y
 ```
