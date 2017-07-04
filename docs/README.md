@@ -132,16 +132,6 @@ Our Node/npm versions are managed with [nvm](https://github.com/creationix/nvm).
 
 > Those browser / device / version combinations are the ones the site *is tested* on. Our development standards ensure that the site is usable on other browsers **and will work on future browsers**.
 
-**Unsupported:**
-
-| Browser | Device/OS | Version |
-|---------|-----------|---------|
-| Stock browser | Android | All |
-| IE | Desktop | 10 |
-| IE | Desktop | 9 |
-| IE | Desktop | 8 |
-| Safari | Windows | All |
-
 ### No-JavaScript users
 
 Features should only be built in JavaScript where relevant. JavaScript should be applied as a [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) (PE) where possible.
