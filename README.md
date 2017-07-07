@@ -90,16 +90,6 @@ npm run test:ci
 - Facebook Open Graph metadata – https://developers.facebook.com/tools/debug/sharing/
 - Twitter cards metadata — https://cards-dev.twitter.com/validator
 
-### Adding and upgrading dependencies
-
-This project is [shrinkwrapped](https://docs.npmjs.com/cli/shrinkwrap). Its dependencies are locked down in `npm-shrinkwrap.json` file. To update them,
-
-1. Use `npm run lint:versions` to confirm you are using the right node version.
-2. Use `npm install <package>` with `--save` or `--save-dev` options to change the dependencies.
-3. Check the project still works with the new dependencies / new versions.
-4. Run **`npm run lock`** to regenerate `npm-shrinkwrap.json`.
-5. Commit this file, and push.
-
 ### Pattern library
 
 Our projects come with a [pattern library](https://springload.github.io/frontend-starter-kit/pattern-library) to facilitate development, documentation, and long-term maintenance.

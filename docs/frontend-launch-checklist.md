@@ -122,7 +122,6 @@
 
 ### Deployment
 
-- [ ] The project is [`shrinkwrapped`](https://github.com/springload/frontend-starter-kit/#adding-and-upgrading-dependencies) to pin its dependencies.
 - [ ] The build service / CI is using `NODE_ENV=production` for compilation tasks via the `npm run dist` command.
 - [ ] CI runs the CI tests (`npm run test:ci`, or `npm run test`), and the build breaks if they fail.
 
