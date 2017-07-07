@@ -212,10 +212,10 @@ See Supporting design, front-end skills for [Front-end Developer](#front-end-dev
 
 ---
 
-## Front-end Director
+## Lead Front-end Developer
 
-- Reports to: CEO
-- Direct reports: Front-end Development Team
+- Reports to: [Front-end Director](#front-end-director)
+- Direct reports: N/A
 
 ### Description
 
