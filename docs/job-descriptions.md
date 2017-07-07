@@ -7,6 +7,7 @@
 | [Front-end Developer](#front-end-developer) |
 | [Senior Front-end Developer](#senior-front-end-developer) |
 | [Junior Front-end Developer](#junior-front-end-developer) |
+| [Lead Front-end Developer](#lead-front-end-developer) |
 | [Front-end Director](#front-end-director) |
 | [Template](#template) |
 
@@ -208,6 +209,99 @@ See Supporting design, front-end skills for [Front-end Developer](#front-end-dev
 ```
 
 > [Wat](https://www.destroyallsoftware.com/talks/wat) – A lightning talk by Gary Bernhardt from CodeMash 2012
+
+---
+
+## Front-end Director
+
+- Reports to: CEO
+- Direct reports: Front-end Development Team
+
+### Description
+
+> To lead the Front-end Development Team and set our strategic front-end direction towards achieving our vision.
+> 
+> To direct the front-end output for our clients and projects - liaising with clients, identifying requirements, planning, implementation, solution architecting, strategic thinking. This includes both oversight and execution, as required.
+> 
+> To set the front-end standards internally and externally, oversee training, career progression and recruiting.
+
+---
+
+### Key responsibilities
+
+Direction in a multidisciplinary environment.
+
+- Working closely with the Digital Strategy Team to direct Springload’s projects and ensure that all work meets our high standards and follows established internal processes. 
+- Contributing to Springload’s sales process. Working with potential clients to understand their needs, developing solutions, estimating costs, helping prepare pitches and presenting to potential clients. 
+- Contributing to the long-term client relationship and short-term project needs for all of our clients and projects, with the Client Service Team.
+- Contributing to the planning and architecture of all of our projects as required, in concertation with other discipline leads.
+
+Producing high-quality work, efficiently.
+
+- Overseeing the front-end team’s output to ensure that all work meets our high standards and follows established internal processes.
+- Working closely with all other disciplines to ensure our systems efficiently deliver client projects.
+
+Evolving our practices.
+
+- Directing, developing and maintaining Springload’s internal and public projects and toolkits.
+- Keeping Springload up to date with developing technologies and methodologies.
+- Keeping the front-end team’s skills up to date with the needs of our projects, in coordination with other learning & growth efforts.
+
+---
+
+### Required skills
+
+Leadership skills.
+
+- Strong leadership ability, vision, and flexibility to initiate change where appropriate.
+- Strategic thinking and problem solving skills.
+- Thorough understanding of project management and software development methodologies.
+- Strong coaching skills to support and develop the Springload team.
+- Outstanding abilities to collaborate with other teams and individuals, creating a sense of unity and that everyone contributes to the decision making process.
+
+Core front-end skills.
+
+- Strong ability to communicate front-end development matters clearly to other team members, clients, and partners.
+- Expert knowledge of the Web as a medium of expression and a development platform.
+- Advanced understanding of browser, platform, device, performance, and accessibility constraints.
+- Experience with large-scale website and webapp architectures.
+- Solid understanding of object-oriented and functional programming concepts.
+
+Supporting design, engineering skills.
+
+- Experience with client-side frameworks (such as React, Angular, or Backbone).
+- Experience architecting web apps around (REST) APIs.
+- Experience with content management systems or e-commerce platforms.
+- Familiarity with version control via Git, continuous integration, issue trackers, wikis, and pull request workflows.
+- Familiarity with front-end build tools and task runners (npm, Grunt, Gulp, Webpack, Browserify).
+- Familiarity with software testing – unit tests, integration tests.
+- Working knowledge of the Unix command line and a shell of your choice.
+- Working knowledge of graphic software (Illustrator, Sketch, Photoshop), comfortable working with vectors and SVG.
+- Eye for detail, understanding of fundamentals of typography. Pixels out of place will annoy you.
+- Experience working with styleguides and pattern libraries.
+- Familiarity with web development and open-source communities.
+
+---
+
+### Other useful skills
+
+- Experience designing user interfaces with a user experience (UX) approach.
+- Experience with programming in ES6/ES2015+ JavaScript.
+- Ability to do basic server administration from the command line.
+- Familiarity with server-side programming stacks (we use Python and Node).
+- Experience with the Django framework, and Wagtail CMS.
+
+---
+
+> [What are the key differences between software engineers and programmers?](https://softwareengineering.stackexchange.com/a/182147)
+
+```
+Software engineers are people who work at companies that call the people who write software for them "software engineers."
+
+Programmers are people who work at companies that call the people who write software for them "programmers."
+ 
+There are also developers, or software developers. They are people who work at companies that call the people who write software for them "developers" or "software developers," respectively.
+```
 
 ---
 
