@@ -18,7 +18,7 @@ then
     exit 1
 fi
 
-CHANGED_FILES=$(git --no-pager diff --name-only --cached --diff-filter=d)
+CHANGED_FILES=$(git --no-pager diff --name-only --cached --diff-filter=ACM)
 JS_FILES=$(echo "$CHANGED_FILES" | { grep .js$ || true; })
 SNAPSHOT_FILES=$(echo "$CHANGED_FILES" | { grep .snap$ || true; })
 SASS_FILES=$(echo "$CHANGED_FILES" | { grep .scss$ || true; })
