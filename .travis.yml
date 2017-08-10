@@ -4,7 +4,7 @@ cache:
   - node_modules
 install:
 - npm install
-- npm install -g david hyperlink coveralls
+- npm install -g coveralls
 script:
 - npm run dist
 - npm run test:ci

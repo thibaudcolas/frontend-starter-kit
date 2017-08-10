@@ -34,7 +34,4 @@ npm run test:coverage -- --runInBand
 # Link checking
 # hyperlink "http://example.com/"
 
-## Dependencies checking.
-david || echo ok
-
 exit 0
