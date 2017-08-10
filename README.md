@@ -55,17 +55,6 @@ npm run test
 npm run
 ```
 
-### Using the git hooks
-
-> Git hooks automatically check your code before every commit.
-
-```sh
-# To enable the hooks, from the project root:
-./.githooks/deploy
-# To disable the hooks for a single commit, use the --no-verify flag:
-git commit --no-verify
-```
-
 ### Tests
 
 We use [Jest](https://facebook.github.io/jest/) for unit tests.
