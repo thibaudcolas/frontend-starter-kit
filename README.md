@@ -1,4 +1,4 @@
-# [Front-end starter kit](https://springload.github.io/frontend-starter-kit/) [![Build Status](https://travis-ci.org/springload/frontend-starter-kit.svg?branch=master)](https://travis-ci.org/springload/frontend-starter-kit) [![Coverage Status](https://coveralls.io/repos/github/springload/frontend-starter-kit/badge.svg)](https://coveralls.io/github/springload/frontend-starter-kit) [![Greenkeeper badge](https://badges.greenkeeper.io/springload/frontend-starter-kit.svg)](https://greenkeeper.io/)
+# [Front-end starter kit](https://springload.github.io/frontend-starter-kit/) [![Build Status](https://travis-ci.org/springload/frontend-starter-kit.svg?branch=master)](https://travis-ci.org/springload/frontend-starter-kit) [![Coverage Status](https://coveralls.io/repos/github/springload/frontend-starter-kit/badge.svg)](https://coveralls.io/github/springload/frontend-starter-kit)
 
 > Springload’s reference and starter kit for front-end development.
 
