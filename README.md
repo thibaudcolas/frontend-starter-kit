@@ -68,6 +68,8 @@ npm run test:watch
 npm run test:coverage
 # Open the coverage report with:
 npm run report:coverage
+# Open the build report with:
+npm run report:build
 # Run the CI test suit.
 npm run test:ci
 ```
