@@ -52,6 +52,8 @@ const webpackConfig = (environment) => {
                 openAnalyzer: false,
                 logLevel: environment === 'production' ? 'info' : 'warn',
             }),
+            // Ignore moment's locales by default, presuming we only use english.
+            new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
             new webpack.DefinePlugin({
                 'process.env': {
                     NODE_ENV: JSON.stringify(environment),
